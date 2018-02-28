@@ -6,28 +6,29 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Start Bootstrap
-email: your-email@domain.com
+title: Linas Kondrackis
+email: linaskondrackis@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Web Developer - Graphic Artist - User Experience Designer
-baseurl: "/startbootstrap-freelancer-jekyll" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+  AI Graduate - Robotics Developer - Deep Learning Enthusiast
+baseurl: "/portfolio" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
 
 # Social media profiles - feel free to add more here
-twitter_username: SBootstrap
-github_username:  BlackrockDigital
-facebook_username: StartBootstrap
-#instagram_username: beyonce
-#stackoverflow_url: https://
-#googleplus_username: BobMarley
-#skype_username: echo123
-#linkedin_url: https://
+social:
+  - title: linkedin
+    url: https://www.linkedin.com/in/linas-kondrackis/
+  - title: gitlab
+    url: https://gitlab.com/LinasKo
+  - title: github
+    url: https://github.com/LinasKo
+  - title: bitbucket
+    url: https://bitbucket.org/DeKondra/
 
 # Address information
-address_street: 3034 Melrose Place
-address_city: Beverly Hills
-address_state: CA
-address_zip: 90201
+location: Bristol, UK
+address:
+  - line: Milsom Street
+  - line: BS5 0SS
 
 # Build settings
 markdown: kramdown
