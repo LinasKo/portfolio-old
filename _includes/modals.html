@@ -9,20 +9,27 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
+                <div class="col-lg-12">
                     <div class="modal-body">
                         <h2>{{ post.title }}</h2>
                         <hr class="star-primary">
-                        <img src="{{ site.baseurl }}/{{ post.img }}" class="img-responsive img-centered" alt="">
+
+                        {% for img in post.images %}
+                            <div class="col-sm-4 portfolio-item">
+                                <img src="{{ site.baseurl }}/{{ img }}" class="img-responsive img-centered" alt="">
+                            </div>
+                        {% endfor %}
+
                         {{ post.content }}
+
                         <ul class="list-inline item-details">
-                            <li>Category:
-                                <strong>{{ post.category }}
-                                    </strong>
+                            <li>
+                                Category:
+                                <strong>{{ post.category }}</strong>
                             </li>
-                            <li>Date:
-                                <strong>{{ post.date | date: "%B %Y" }}
-                                    </strong>
+                            <li>
+                                Date:
+                                <strong>{{ post.date | date: "%B %Y" }}</strong>
                             </li>
                         </ul>
                         <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
