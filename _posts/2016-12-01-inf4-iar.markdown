@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "Inf4 - Intelligent Autonomous Robotics"
+date:   2016-02-01 15:08:10
+thumb_image: assets/inf4-iar/images/a_robot-front.png
+images:
+  - assets/inf4-iar/images/a_marked-map.png
+  - assets/inf4-iar/images/a_robot-front.png
+  - assets/inf4-iar/images/a_ir-sensors.png
+  - assets/inf4-iar/images/a_architecture.png
+  - assets/inf4-iar/images/a_khepera_on_side.png
+  - assets/inf4-iar/images/a_wave-graph.png
+modalID: modalIar
+category: University
+---
+Use this area of the page to describe your project.
+
+In the Jekyll version of Freelancer, each portfolio item is a separate post that you can edit using markdown!

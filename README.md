@@ -1,5 +1,6 @@
 # Portfolio site
 This is a portfolio site, showing the basic projects I have undertaken during my studies in University of Edinburgh, as well as on my free time.
+Site can be found at: https://linasko.github.io/portfolio/
 
 ## Original Creator of the Template
 
