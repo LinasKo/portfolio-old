@@ -1,0 +1,29 @@
+---
+layout: post
+modalID: modalAv1
+title:  Inf4 - Advanced Vision
+start_date:   2016-09-01
+end_date:     2016-11-01
+thumb_image: assets/inf4-av-1/images/gaussian_subtractor-cropped.png
+images:
+  - assets/inf4-av-1/images/centroid.png
+  - assets/inf4-av-1/images/gaussian_detection_in_progress.png
+  - assets/inf4-av-1/images/gaussian_error.png
+  - assets/inf4-av-1/images/masked_image_0.png
+  - assets/inf4-av-1/images/gaussian_subtractor.png
+  - assets/inf4-av-1/images/Screenshot from 2017-02-15 19-02-09.png
+category: University of Edinburgh
+course_name: Inf4 - Advanced Vision
+project_title: "Person Detection in series of images"
+thumb_text: Person detection in an office using different background subtraction techniques
+collaborators:
+  - Dalius Grazinskis
+
+---
+
+We were given a set of a over 6000 images, depicting one working day of a man working in his office. The task was to track the person and count the number of frames he was performing a certain activity.
+
+For this task, we have devised an image player to play the images as a video and allow playback control. It would also show any contours that we would detect using the methods we develop later. Initial observations of inter-frame difference showed that some areas produce movement but can easily be masked. E.g. computer screen and the window were masked, as they produced strong changes, irrelevant to our task. After RGB normalization we have then implemented and tested background subtraction methods of inter-frame difference, mean subtraction, Gaussian subtraction, adaptive subtraction. The resulting motion was morphologically transformed to provide a centroid of the detected person. Lastly, the activities the person performed were mapped to locations, allowing very easy classification.
+
+Report: [Google Drive](https://drive.google.com/open?id=1H2Vc-TMACEamRlyMmcv_jhvaJ4QL8EQY)
+For code, scroll down to the end of the report or contact me.

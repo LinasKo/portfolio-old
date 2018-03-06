@@ -15,7 +15,7 @@ images:
 category: University of Edinburgh
 course_name: Inf4 - Intelligent Autonomous Robotics
 project_title: "Strategically navigating a fixed arena using a Khepera II robot"
-thumb_text: Localization and navigation for a Khepera II robot, to search an obstacle course for "food" and home return.
+thumb_text: Localization and navigation for a Khepera II robot, to search an obstacle course for "food" and home return
 collaborators:
   - Ramsey El-Naggar
 ---
@@ -35,5 +35,5 @@ During the course of this course we have developed, tested and re-developed a la
 In the end, it was the simplicity of reactive approach to navigation that let us achieve the most consistent and reliable results.
 
 
-Reports for all 3 tasks: [Google Drive](https://drive.google.com/drive/folders/1NFmrsW8NIIT-TGLA41VM5yh5Kz3KCo_u?usp=sharing)
+Reports for all 3 tasks: [Google Drive](https://drive.google.com/open?id=1NFmrsW8NIIT-TGLA41VM5yh5Kz3KCo_u)
 Code repository: [Gitlab](https://gitlab.com/iar/iar)
