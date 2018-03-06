@@ -1,0 +1,31 @@
+---
+layout: post
+modalID: modalAv2
+title:  Inf4 - Advanced Vision
+start_date:   2016-09-01
+end_date:     2016-11-01
+thumb_image: assets/inf4-av-2/images/detection_errors.jpg
+images:
+  - assets/inf4-av-2/images/detection_errors.jpg
+  - assets/inf4-av-2/images/xm112d.png
+  - assets/inf4-av-2/images/ymovehighlight.png
+  - assets/inf4-av-2/images/zs113d.png
+  - assets/inf4-av-2/images/zstatic_colour.png
+  - assets/inf4-av-2/images/zstatichighlight.png
+category: University of Edinburgh
+course_name: Inf4 - Advanced Vision
+project_title: "3D Reconstruction Evaluation"
+thumb_text: Evaluation of 3D reconstruction data, given series of source images of a moving textured plane
+collaborators:
+  - Calum McLeod
+tech:
+  - Matlab
+
+---
+
+A 3D reconstruction of a textured plane has been carried out. In different sets, the plane was either still or moving either vertically, horizontally, or away with respect to the camera. Given the source images and resulting pointcloud data, the task was to evaluate the accuracy of the reconstruction.
+
+We have applied FAST Corner detection to detect and features of the texture on the plane, letting us track its motion over time. The Root Mean Square error was computed to detect the reconstruction accuracy averaged over time. The resulting error was visualized as a colored plot.
+
+Report: [Google Drive](https://drive.google.com/open?id=1ZpRGiCunMkxpUFoPKrcb-0iSWPA-pJkz)
+Code Repository: [Gitlab](https://gitlab.com/LinasKo/Inf4-AV-CW2)

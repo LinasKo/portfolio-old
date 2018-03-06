@@ -18,6 +18,9 @@ project_title: "Strategically navigating a fixed arena using a Khepera II robot"
 thumb_text: Localization and navigation for a Khepera II robot, to search an obstacle course for "food" and home return
 collaborators:
   - Ramsey El-Naggar
+tech:
+  - Python
+  - Numpy
 ---
 For this task, we were given a Khepera II robot, that uses infrared proximity sensors to sense the environment. We were tasked with developing various algorithms for the robot, so that it could perform desired actions within an arena:
 * Task 1: The robot must navigate the arena without collisions, follow long walls and not get stuck in corners or dead ends.

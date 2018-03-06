@@ -18,6 +18,10 @@ project_title: "Person Detection in series of images"
 thumb_text: Person detection in an office using different background subtraction techniques
 collaborators:
   - Dalius Grazinskis
+tech:
+  - Python
+  - OpenCV
+  - Numpy
 
 ---
 
