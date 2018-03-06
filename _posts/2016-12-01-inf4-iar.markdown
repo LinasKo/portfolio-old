@@ -1,7 +1,9 @@
 ---
 layout: post
-title:  "Inf4 - Intelligent Autonomous Robotics"
-date:   2016-02-01 15:08:10
+modalID: modalIar
+title:  Inf4 - Intelligent Autonomous Robotics
+start_date:   2016-09-01
+end_date:     2016-11-01
 thumb_image: assets/inf4-iar/images/a_robot-front.png
 images:
   - assets/inf4-iar/images/a_marked-map.png
@@ -10,9 +12,24 @@ images:
   - assets/inf4-iar/images/a_architecture.png
   - assets/inf4-iar/images/a_khepera_on_side.png
   - assets/inf4-iar/images/a_wave-graph.png
-modalID: modalIar
-category: University
+category: University of Edinburgh
+course_name: Inf4 - Intelligent Autonomous Robotics
+project_title: "Strategically navigating a fixed arena using a Khepera II robot"
+thumb_text: Localization and navigation for a Khepera II robot, to search an obstacle course for "food" and home return.
+collaborators:
+  - Ramsey El-Naggar
 ---
-Use this area of the page to describe your project.
+For this task, we were given a Khepera II robot, that uses infrared proximity sensors to sense the environment. We were tasked with developing various algorithms for the robot, so that it could perform desired actions within an arena:
+* Task 1: The robot must navigate the arena without collisions, follow long walls and not get stuck in corners or dead ends.
+* Task 2: Implement odometry for the robot so it could return to the starting location after navigating the enclosure.
+* Task 3: Implement a navigation algorithm to look for "food pellets" in the arena and bring them to the starting location. The goal is to gather as many as possible in 5 minutes.
 
-In the Jekyll version of Freelancer, each portfolio item is a separate post that you can edit using markdown!
+During the course of this course we have developed, tested and re-developed a large range of solutions.
+* We turned the regression problem of finding distances from raw sensor values into a classification problem by developing an auto-calibration method that robot performs, before the run.
+* A subsumptive architecture with exploration, obstacle avoidance and control layers allowed the robot to successfully function in a stochastic, partially observable environment.
+* Particle Filter localization was attempted to be used, yet due to noisy sensor input and sensor value discretization, the system did not provide accurate results. The accuracy could have been improved given more processing power, as even with the fully vectorized solution, the computation time with many particles was prohibitively expensive.
+* Odometry was implemented and calibrated, such that the drift remained low if no collisions were made.
+* Obstacle mapping and A*-based navigation was tested. Due to sensor noise, a reliable map could not be built.
+* Ultimately, Bug 0 algorithm was chosen for navigation, by which the robot attempts to reach a given location while going around objects if any are encountered.
+
+In the end, it was the simplicity of reactive approach to navigation that let us achieve the most consistent and reliable results.
