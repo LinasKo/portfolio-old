@@ -4,9 +4,9 @@ modalID: modalIvr2
 title:  Inf3 - Introduction to Robotics and Vision
 start_date:   2015-09-01
 end_date:     2015-12-30
-thumb_image: assets/inf3-ivr-2/images/DSC_0110[1].jpg
+thumb_image: assets/inf3-ivr-2/images/DSC_0110.jpg
 images:
-  - assets/inf3-ivr-2/images/DSC_0110[1].jpg
+  - assets/inf3-ivr-2/images/DSC_0110.jpg
   - assets/inf3-ivr-2/images/slice of big code.png
   - assets/inf3-ivr-2/images/Untitled.png
 category: University of Edinburgh

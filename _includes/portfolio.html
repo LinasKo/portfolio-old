@@ -9,19 +9,19 @@
             </div>
             <div class="row">
                 {% for post in site.posts %}
-                    <div class="col-sm-4 portfolio-item">
-                        <a href="#{{ post.modalID }}" class="portfolio-link" data-toggle="modal">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
+                    <div class="col-sm-4">
+                        <div class="thumbnail">
+                            <div class="img-wrapper">
+                                <a href="#{{ post.modalID }}" class="portfolio-link" data-toggle="modal">
+                                    <img src="{{ site.baseurl }}/{{ post.thumb_image }}" class="img-responsive" alt="">
+                                </a>
                             </div>
-                            <img src="{{ site.baseurl }}/{{ post.thumb_image }}" class="img-responsive" alt="">
-                        </a>
+                        </div>
                     </div>
                 {% else %}
                     <p align="center">Site under construction. Portfolio items will be added soon!</p>
                 {% endfor %}
             </div>
+
         </div>
     </section>

@@ -7,7 +7,7 @@ end_date:     2017-03-30
 thumb_image: assets/inf4-mlp/images/AUGM_FLIPPED_confusion_matrix.png
 images:
   - assets/inf4-mlp/images/cifar10_preview.png
-  - assets/inf4-mlp/images/Batch_Normalization_a%3D0%2C05_error_train_.png
+  - assets/inf4-mlp/images/Batch_Normalization_a005_error_train_.png
   - assets/inf4-mlp/images/elastic_pre.png
   - assets/inf4-mlp/images/accuracy-e200.png
   - assets/inf4-mlp/images/Screenshot from 2018-03-07 21-14-14.png
