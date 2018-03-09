@@ -17,3 +17,15 @@
 	right: 0;
 	min-height: 100%; /* optional: if you want the smallest images to fill the .thumbnail */
 }
+
+.text-left{
+     text-align: left;
+}
+
+.text-center{
+    text-align: center;
+}
+
+li{
+    font-size: 16px;
+}

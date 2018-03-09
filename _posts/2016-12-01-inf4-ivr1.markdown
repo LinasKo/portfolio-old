@@ -23,10 +23,15 @@ tech:
 ---
 
 This task required us to track three colored robots in a sequence of images. Images had three different background types and had to work with an unknown forth one, only revealed during assessment.
+{: .text-left}
 
 To tackle the task, we subtracted the background and found morphological operations on the image to reveal the triangles on the top. Shapes were checked that they were the triangles using a ratio of perimeter and area that we found. Triangle corners were then found - for this K-means clustering was used due to a large number of datapoints at the ends of the triangles. Color reading was then taken just behind the triangle, identifying the robot.
+{: .text-left}
 
 In the end, the solution was robust and managed to track the robots successfully (the failure cases shown occurred during development). The only issue we did not manage to fix was an inefficiency in the plotting, gradually slowing down the program.
+{: .text-left}
 
 Report: [Google Drive](https://drive.google.com/open?id=1wYzYK88y1drcs3xgZwLJoZGRkNKFC8VH)
+{: .text-center}
 If you would like to take a look at the code, please contact me.
+{: .text-center}

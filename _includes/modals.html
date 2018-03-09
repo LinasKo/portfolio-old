@@ -15,8 +15,12 @@
                         <hr class="star-primary">
 
                         {% for img in post.images %}
-                            <div class="col-sm-4 portfolio-item">
-                                <img src="{{ site.baseurl }}/{{ img }}" class="img-responsive img-centered" alt="">
+                            <div class="col-sm-4">
+                                <div class="thumbnail">
+                                    <div class="img-wrapper">
+                                        <img src="{{ site.baseurl }}/{{ img }}" class="img-responsive img-centered" alt="">
+                                    </div>
+                                </div>
                             </div>
                         {% endfor %}
 

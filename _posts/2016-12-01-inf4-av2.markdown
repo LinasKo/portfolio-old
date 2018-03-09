@@ -24,8 +24,12 @@ tech:
 ---
 
 A 3D reconstruction of a textured plane has been carried out. In different sets, the plane was either still or moving either vertically, horizontally, or away with respect to the camera. Given the source images and resulting pointcloud data, the task was to evaluate the accuracy of the reconstruction.
+{: .text-left}
 
 We have applied FAST Corner detection to detect and features of the texture on the plane, letting us track its motion over time. The Root Mean Square error was computed to detect the reconstruction accuracy averaged over time. The resulting error was visualized as a colored plot.
+{: .text-left}
 
 Report: [Google Drive](https://drive.google.com/open?id=1ZpRGiCunMkxpUFoPKrcb-0iSWPA-pJkz)
+{: .text-center}
 Code Repository: [Gitlab](https://gitlab.com/LinasKo/Inf4-AV-CW2)
+{: .text-center}
