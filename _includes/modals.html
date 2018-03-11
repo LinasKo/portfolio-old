@@ -18,11 +18,17 @@
                             <div class="col-sm-4">
                                 <div class="thumbnail">
                                     <div class="img-wrapper">
-                                        <img src="{{ site.baseurl }}/{{ img }}" class="img-responsive img-centered" alt="">
+                                        <a href="{{ img }}", target="_blank">
+                                            <img src="{{ site.baseurl }}/{{ img }}" class="img-responsive img-centered" alt="">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         {% endfor %}
+
+                        {% if post.images %}
+                            <p class="small" align="center">Click on the images to enlarge (opens new tab).</p>
+                        {% endif %}
 
                         {{ post.content }}
 
