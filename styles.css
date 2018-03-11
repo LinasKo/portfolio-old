@@ -1,33 +1,58 @@
 .thumbnail {
-	margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .thumbnail-card {
-	margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
-.thumbnail-card p {
-	height: 2em;
+.caption-text {
+    height: 2em;
 }
 
 .thumbnail img{
     max-width: 100%; /* do not stretch the bootstrap column */
 }
 
+/* Portfolio image fade */
+.thumbnail-card .thumbnail .img-wrapper:hover img {
+    opacity: 0.3;
+}
+.thumbnail-card .thumbnail img,
+    .work-text-content {
+      -webkit-transition: opacity 0.5s ease-out;
+      -moz-transition: opacity 0.5s ease-out;
+      -o-transition: opacity 0.5s ease-out;
+      transition: opacity 0.5s ease-out;
+    }
+.thumbnail-card .img-wrapper:hover .image-fade-text {
+  opacity: 1.0;
+}
+
+.image-fade-text {
+    vertical-align: middle;
+    height: auto;   
+    position: relative;
+    opacity: 0;
+    text-align: center;
+    color: white;
+}
+
 .img-wrapper{
-	width: 100%;
-	padding-bottom: 75%; /* your aspect ratio here! */
-	position: relative;
+    width: 100%;
+    padding-bottom: 75%; /* your aspect ratio here! */
+    position: relative;
     overflow: hidden;
+    background-color: black;
 }
 
 .img-wrapper img{
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	min-height: 100%; /* optional: if you want the smallest images to fill the .thumbnail */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 100%; /* optional: if you want the smallest images to fill the .thumbnail */
 }
 
 .text-left{
