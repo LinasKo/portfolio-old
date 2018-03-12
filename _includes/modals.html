@@ -40,6 +40,9 @@
                             <li>
                                 Date:
                                 <strong>{{ post.start_date | date: "%B %Y" }}</strong>
+                                {% if post.end_date %}
+                                     <strong>- {{ post.end_date | date: "%B %Y" }}</strong>
+                                {% endif %}
                             </li>
                         </ul>
                         <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
