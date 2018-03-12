@@ -4,14 +4,14 @@ modalID: modalAv1
 title:  Inf4 - Advanced Vision
 start_date:   2016-09-01
 end_date:     2016-11-01
-thumb_image: assets/inf4-av-1/images/gaussian_subtractor-cropped.png
+thumb_image: assets/inf4-av-1/images/cropped/gaussian_subtractor_cropped.png
 images:
   - assets/inf4-av-1/images/centroid.png
-  - assets/inf4-av-1/images/gaussian_detection_in_progress.png
+  - assets/inf4-av-1/images/gaussian_detection.png
   - assets/inf4-av-1/images/gaussian_error.png
-  - assets/inf4-av-1/images/masked_image_0.png
+  - assets/inf4-av-1/images/masks.png
   - assets/inf4-av-1/images/gaussian_subtractor.png
-  - assets/inf4-av-1/images/Screenshot from 2017-02-15 19-02-09.png
+  - assets/inf4-av-1/images/inter_frame_motion.png
 category: University of Edinburgh
 course_name: Inf4 - Advanced Vision
 project_title: "Person Detection in series of images"

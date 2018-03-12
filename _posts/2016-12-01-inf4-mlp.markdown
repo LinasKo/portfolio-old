@@ -7,11 +7,11 @@ end_date:     2017-03-30
 thumb_image: assets/inf4-mlp/images/AUGM_FLIPPED_confusion_matrix.png
 images:
   - assets/inf4-mlp/images/cifar10_preview.png
-  - assets/inf4-mlp/images/Batch_Normalization_a005_error_train_.png
-  - assets/inf4-mlp/images/elastic_pre.png
-  - assets/inf4-mlp/images/accuracy-e200.png
-  - assets/inf4-mlp/images/Screenshot from 2018-03-07 21-14-14.png
-  - assets/inf4-mlp/images/elastic_post.png
+  - assets/inf4-mlp/images/Batch_Normalization_a005_error_train.png
+  - assets/inf4-mlp/images/elastic_deformation_pre.png
+  - assets/inf4-mlp/images/accuracy_e200.png
+  - assets/inf4-mlp/images/sample_results.png
+  - assets/inf4-mlp/images/elastic_deformation_post.png
 category: University of Edinburgh
 course_name: Inf4 - Machine Learning Practical
 project_title: "Image Classification using DNN and CNN"
@@ -22,6 +22,7 @@ tech:
   - Numpy
   - Jupyter Notebooks
   - TensorFlow
+  - Linux
 
 ---
 

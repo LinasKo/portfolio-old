@@ -4,14 +4,14 @@ modalID: modalAv2
 title:  Inf4 - Advanced Vision
 start_date:   2016-09-01
 end_date:     2016-11-01
-thumb_image: assets/inf4-av-2/images/detection_errors.jpg
+thumb_image: assets/inf4-av-2/images/feature_displacement.jpg
 images:
-  - assets/inf4-av-2/images/detection_errors.jpg
-  - assets/inf4-av-2/images/xm112d.png
-  - assets/inf4-av-2/images/ymovehighlight.png
-  - assets/inf4-av-2/images/zs113d.png
-  - assets/inf4-av-2/images/zstatic_colour.png
-  - assets/inf4-av-2/images/zstatichighlight.png
+  - assets/inf4-av-2/images/feature_displacement.jpg
+  - assets/inf4-av-2/images/x_motion_plane.png
+  - assets/inf4-av-2/images/y_motion_colour.png
+  - assets/inf4-av-2/images/z_static_plane_side_render.png
+  - assets/inf4-av-2/images/z_static_colour.png
+  - assets/inf4-av-2/images/z_static_plane_region_of_interest.png
 category: University of Edinburgh
 course_name: Inf4 - Advanced Vision
 project_title: "3D Reconstruction Evaluation"
