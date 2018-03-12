@@ -32,7 +32,7 @@
 
                         {{ post.content }}
 
-                        <ul class="list-inline item-details">
+                        <ul class="list-inline item-details" style="margin-bottom: 0px">
                             <li>
                                 Category:
                                 <strong>{{ post.category }}</strong>
@@ -45,6 +45,19 @@
                                 {% endif %}
                             </li>
                         </ul>
+                        {% if post.collaborators %}
+                            <ul class="list-inline item-details" style="margin-top: 0px">
+                                <li>
+                                    Collaborators: 
+                                    {% for person in post.collaborators %}
+                                        <strong>{{ person }}</strong>
+                                        {% if forloop.last == false %}
+                                            <strong>, </strong>>
+                                        {% endif %}
+                                    {% endfor %}
+                                </li>
+                            </ul>
+                        {% endif %}
                         <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                     </div>
                 </div>
