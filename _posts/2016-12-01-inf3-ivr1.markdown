@@ -1,7 +1,8 @@
 ---
 layout: post
 modalID: modalIvr1
-title:  Inf3 - Introduction to Robotics and Vision
+permalink: /:categories/:slug/
+main_title:  Inf3 - Introduction to Robotics and Vision
 start_date:   2015-09-01
 end_date:     2015-12-30
 thumb_image: assets/inf3-ivr-1/images/filter_noisy.png
@@ -12,7 +13,7 @@ images:
   - assets/inf3-ivr-1/images/background_1.png
   - assets/inf3-ivr-1/images/background_2.png
   - assets/inf3-ivr-1/images/background_3.png
-category: University of Edinburgh
+category: projects
 course_name: Inf3 - Introduction to Robotics and Vision
 project_title: "Multiple robot tracking in images"
 thumb_text: Tracking of three shapes in a sequence of images using basic shape and color recognition techniques

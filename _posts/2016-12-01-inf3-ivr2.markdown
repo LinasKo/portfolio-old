@@ -1,7 +1,8 @@
 ---
 layout: post
 modalID: modalIvr2
-title:  Inf3 - Introduction to Robotics and Vision
+permalink: /:categories/:slug/
+main_title:  Inf3 - Introduction to Robotics and Vision
 start_date:   2015-09-01
 end_date:     2015-12-30
 thumb_image: assets/inf3-ivr-2/images/robot_front.jpg
@@ -9,7 +10,7 @@ images:
   - assets/inf3-ivr-2/images/robot_front.jpg
   - assets/inf3-ivr-2/images/robot_side.jpg
   - assets/inf3-ivr-2/images/sense_code.png
-category: University of Edinburgh
+category: projects
 course_name: Inf3 - Introduction to Robotics and Vision
 project_title: "PID control and obstacle avoidance of self-balancing robot"
 thumb_text: Anaysis of PID control variables and implementation of obstacle avoidance behaviour in a two-wheeled self-balancing robot
