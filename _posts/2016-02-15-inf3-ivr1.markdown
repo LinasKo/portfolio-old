@@ -2,9 +2,9 @@
 layout: post
 modalID: modalIvr1
 permalink: /:categories/:slug/
-main_title:  Inf3 - Introduction to Robotics and Vision
-start_date:   2015-09-01
-end_date:     2015-12-30
+main_title:  Inf3 - Introduction to Vision and Robotics
+start_date:   2016-01-15
+end_date:     2016-02-15
 thumb_image_url: assets/inf3-ivr-1/images/filter_noisy.png
 images:
   - {url: assets/inf3-ivr-1/images/filter_correct.png, caption: "", id: filter_correct}
@@ -14,7 +14,7 @@ images:
   - {url: assets/inf3-ivr-1/images/background_2.png, caption: "", id: background_2}
   - {url: assets/inf3-ivr-1/images/background_3.png, caption: "", id: background_3}
 category: projects
-course_name: Inf3 - Introduction to Robotics and Vision
+course_name: Inf3 - Introduction to Vision and Robotics
 project_title: "Multiple robot tracking in images"
 thumb_text: Tracking of three shapes in a sequence of images using basic shape and color recognition techniques
 collaborators:
@@ -32,7 +32,7 @@ To tackle the task, we subtracted the background and found morphological operati
 In the end, the solution was robust and managed to track the robots successfully (the failure cases shown occurred during development). The only issue we did not manage to fix was an inefficiency in the plotting, gradually slowing down the program.
 {: .text-left}
 
-Report: [Google Drive](https://drive.google.com/open?id=1wYzYK88y1drcs3xgZwLJoZGRkNKFC8VH)
+Report: [Google Drive](https://drive.google.com/open?id=1wYzYK88y1drcs3xgZwLJoZGRkNKFC8VH){:target="_blank"}
 {: .text-center}
 If you would like to take a look at the code, please contact me.
 {: .text-center}

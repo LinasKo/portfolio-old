@@ -3,8 +3,8 @@ layout: post
 modalID: modalMlp
 permalink: /:categories/:slug/
 main_title:  Inf4 - Machine Learning Practical
-start_date:   2016-09-01
-end_date:     2017-03-30
+start_date:   2016-09-21
+end_date:     2017-03-21
 thumb_image_url: assets/inf4-mlp/images/AUGM_FLIPPED_confusion_matrix.png
 images:
   - {url: assets/inf4-mlp/images/cifar10_preview.png, caption: "", id: cifar10_preview}
@@ -45,7 +45,7 @@ In tasks 3 and 4 we used TensorFlow and both Densely connected neural networks, 
  * **Task 4:** Investigate the use of Convolutional neural networks for image recognition in CIFAR-10 and CIFAR-100 datasets. Here I have experimented with CNNs, different network configurations, hyperparameters, as well as dropout, fractional max-pooling and data augmentation.
 {: .text-left}
 
-Reports: [Google Drive](https://drive.google.com/open?id=1ivjc3oO2prNyn2vHfLZhiUSz4JXDk7lf)
+Reports: [Google Drive](https://drive.google.com/open?id=1ivjc3oO2prNyn2vHfLZhiUSz4JXDk7lf){:target="_blank"}
 {: .text-center}
 Code Repository: [Gitlab](https://gitlab.com/LinasKo/Inf4-MLP)
 {: .text-center}

@@ -2,16 +2,16 @@
 layout: post
 modalID: modalIvr2
 permalink: /:categories/:slug/
-main_title:  Inf3 - Introduction to Robotics and Vision
-start_date:   2015-09-01
-end_date:     2015-12-30
+main_title:  Inf3 - Introduction to Vision and Robotics
+start_date:   2016-02-16
+end_date:     2016-03-30
 thumb_image_url: assets/inf3-ivr-2/images/robot_front.jpg
 images:
   - {url: assets/inf3-ivr-2/images/robot_front.jpg, caption: "", id: robot_front}
   - {url: assets/inf3-ivr-2/images/robot_side.jpg, caption: "", id: robot_side}
   - {url: assets/inf3-ivr-2/images/sense_code.png, caption: "", id: sense_code}
 category: projects
-course_name: Inf3 - Introduction to Robotics and Vision
+course_name: Inf3 - Introduction to Vision and Robotics
 project_title: "PID control and obstacle avoidance of self-balancing robot"
 thumb_text: Anaysis of PID control variables and implementation of obstacle avoidance behaviour in a two-wheeled self-balancing robot
 collaborators:
@@ -31,7 +31,7 @@ The task given to us consisted of four stages:
 * Implement either line following using an IR color sensor or obstacle avoidance using an ultrasonic sensor. We have chosen to perform the latter. The robot was redesigned to have a rotating head to scan the environment and would move where no objects were detected.
 {: .text-left}
 
-Report: [Google Drive](https://drive.google.com/open?id=1SnbbNkHMdz9dvIcwKRAZnuuKPNzqTMip)
+Report: [Google Drive](https://drive.google.com/open?id=1SnbbNkHMdz9dvIcwKRAZnuuKPNzqTMip){:target="_blank"}
 {: .text-center}
 If you would like to take a look at the code, please contact me.
 {: .text-center}

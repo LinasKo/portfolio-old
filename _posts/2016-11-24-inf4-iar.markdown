@@ -3,8 +3,8 @@ layout: post
 modalID: modalIar
 permalink: /:categories/:slug/
 main_title:  Inf4 - Intelligent Autonomous Robotics
-start_date:   2016-09-01
-end_date:     2016-11-01
+start_date:   2016-09-18
+end_date:     2016-11-24
 thumb_image_url: assets/inf4-iar/images/processed/p_khepera.png
 images:
   - {url: assets/inf4-iar/images/processed/p_marked_map.png, caption: "", id: p_marked_map}
@@ -50,7 +50,7 @@ During the course of this course we have developed, tested and re-developed a la
 In the end, it was the simplicity of reactive approach to navigation that let us achieve the most consistent and reliable results.
 {: .text-left}
 
-Reports for all 3 tasks: [Google Drive](https://drive.google.com/open?id=1NFmrsW8NIIT-TGLA41VM5yh5Kz3KCo_u)
+Reports for all 3 tasks: [Google Drive](https://drive.google.com/open?id=1NFmrsW8NIIT-TGLA41VM5yh5Kz3KCo_u){:target="_blank"}
 {: .text-center}
 Code repository: [Gitlab](https://gitlab.com/iar/iar)
 {: .text-center}

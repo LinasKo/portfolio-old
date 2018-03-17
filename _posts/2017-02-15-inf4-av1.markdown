@@ -3,8 +3,8 @@ layout: post
 modalID: modalAv1
 permalink: /:categories/:slug/
 main_title:  Inf4 - Advanced Vision
-start_date:   2016-09-01
-end_date:     2016-11-01
+start_date:   2016-01-15
+end_date:     2016-02-15
 thumb_image_url: assets/inf4-av-1/images/cropped/gaussian_subtractor_cropped.png
 images:
   - {url: assets/inf4-atestv-1/images/centroid.png, caption: "", id: centroid}
@@ -32,7 +32,7 @@ We were given a set of a over 6000 images, depicting one working day of a man wo
 For this task, we have devised an image player to play the images as a video and allow playback control. It would also show any contours that we would detect using the methods we develop later. Initial observations of inter-frame difference showed that some areas produce movement but can easily be masked. E.g. computer screen and the window were masked, as they produced strong changes, irrelevant to our task. After RGB normalization we have then implemented and tested background subtraction methods of inter-frame difference, mean subtraction, Gaussian subtraction, adaptive subtraction. The resulting motion was morphologically transformed to provide a centroid of the detected person. Lastly, the activities the person performed were mapped to locations, allowing very easy classification.
 {: .text-left}
 
-Report: [Google Drive](https://drive.google.com/open?id=1H2Vc-TMACEamRlyMmcv_jhvaJ4QL8EQY)
+Report: [Google Drive](https://drive.google.com/open?id=1H2Vc-TMACEamRlyMmcv_jhvaJ4QL8EQY){:target="_blank"}
 {: .text-center}
 For code, scroll down to the end of the report or contact me.
 {: .text-center}

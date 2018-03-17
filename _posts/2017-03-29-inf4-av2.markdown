@@ -3,8 +3,8 @@ layout: post
 modalID: modalAv2
 permalink: /:categories/:slug/
 main_title:  Inf4 - Advanced Vision
-start_date:   2016-09-01
-end_date:     2016-11-01
+start_date:   2016-02-16
+end_date:     2016-03-29
 thumb_image_url: assets/inf4-av-2/images/feature_displacement.jpg
 images:
   - {url: assets/inf4-av-2/images/feature_displacement.jpg, caption: "", id: feature_displacement}
@@ -30,7 +30,7 @@ A 3D reconstruction of a textured plane has been carried out. In different sets,
 We have applied FAST Corner detection to detect and features of the texture on the plane, letting us track its motion over time. The Root Mean Square error was computed to detect the reconstruction accuracy averaged over time. The resulting error was visualized as a colored plot.
 {: .text-left}
 
-Report: [Google Drive](https://drive.google.com/open?id=1ZpRGiCunMkxpUFoPKrcb-0iSWPA-pJkz)
+Report: [Google Drive](https://drive.google.com/open?id=1ZpRGiCunMkxpUFoPKrcb-0iSWPA-pJkz){:target="_blank"}
 {: .text-center}
 Code Repository: [Gitlab](https://gitlab.com/LinasKo/Inf4-AV-CW2)
 {: .text-center}
