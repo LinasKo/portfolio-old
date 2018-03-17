@@ -1,0 +1,35 @@
+{% for img_obj in page.images %}
+
+<div class="portfolio-modal modal fade" id="{{ img_obj.id }}" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="modal-body">
+
+                        <a href="{{ img_obj.url }}", target="_blank">
+                            <img src="{{ site.baseurl }}/{{ img_obj.url }}" class="img-responsive img-centered" alt="">
+                        </a>
+
+                        <p>{{ img_obj.caption }}</p>
+
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            <i class="fa fa-times"></i>
+                            Close
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}

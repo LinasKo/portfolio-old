@@ -5,14 +5,14 @@ permalink: /:categories/:slug/
 main_title:  Inf3 - Introduction to Robotics and Vision
 start_date:   2015-09-01
 end_date:     2015-12-30
-thumb_image: assets/inf3-ivr-1/images/filter_noisy.png
+thumb_image_url: assets/inf3-ivr-1/images/filter_noisy.png
 images:
-  - assets/inf3-ivr-1/images/filter_correct.png
-  - assets/inf3-ivr-1/images/filter_test.png
-  - assets/inf3-ivr-1/images/filter_noisy.png
-  - assets/inf3-ivr-1/images/background_1.png
-  - assets/inf3-ivr-1/images/background_2.png
-  - assets/inf3-ivr-1/images/background_3.png
+  - {url: assets/inf3-ivr-1/images/filter_correct.png, caption: "", id: filter_correct}
+  - {url: assets/inf3-ivr-1/images/filter_test, id: test_id.png, caption: "", id: filter_test}
+  - {url: assets/inf3-ivr-1/images/filter_noisy.png, caption: "", id: filter_noisy}
+  - {url: assets/inf3-ivr-1/images/background_1.png, caption: "", id: background_1}
+  - {url: assets/inf3-ivr-1/images/background_2.png, caption: "", id: background_2}
+  - {url: assets/inf3-ivr-1/images/background_3.png, caption: "", id: background_3}
 category: projects
 course_name: Inf3 - Introduction to Robotics and Vision
 project_title: "Multiple robot tracking in images"

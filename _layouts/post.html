@@ -11,12 +11,12 @@ layout: default
 		                <h2>{{ page.title }}</h2>
 		                <hr class="star-primary">
 
-		                {% for img in page.images %}
+		                {% for img_obj in page.images %}
 		                    <div class="col-sm-4">
 		                        <div class="thumbnail">
 		                            <div class="img-wrapper">
-		                                <a href="{{ site.baseurl }}/{{ img }}", target="_blank">
-		                                    <img src="{{ site.baseurl }}/{{ img }}" class="img-responsive img-centered" alt="">
+		                                <a href="#{{ img_obj.id }}" class="portfolio-link" data-toggle="modal">
+		                                    <img src="{{ site.baseurl }}/{{ img_obj['url'] }}" class="img-responsive img-centered" alt="">
 		                                </a>
 		                            </div>
 		                        </div>
@@ -24,7 +24,7 @@ layout: default
 		                {% endfor %}
 
 		                {% if page.images %}
-		                    <p class="small" align="center">Click on the images to enlarge (opens new tab).</p>
+		                    <p class="small" align="center">Click on the images to enlarge.</p>
 		                {% endif %}
 
 		                {{ content }}
@@ -61,3 +61,5 @@ layout: default
 		</div>
 	</div>
 </div>
+
+{% include plain_image_modals.html %}

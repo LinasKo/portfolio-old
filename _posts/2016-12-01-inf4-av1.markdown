@@ -5,14 +5,14 @@ permalink: /:categories/:slug/
 main_title:  Inf4 - Advanced Vision
 start_date:   2016-09-01
 end_date:     2016-11-01
-thumb_image: assets/inf4-av-1/images/cropped/gaussian_subtractor_cropped.png
+thumb_image_url: assets/inf4-av-1/images/cropped/gaussian_subtractor_cropped.png
 images:
-  - assets/inf4-av-1/images/centroid.png
-  - assets/inf4-av-1/images/gaussian_detection.png
-  - assets/inf4-av-1/images/gaussian_error.png
-  - assets/inf4-av-1/images/masks.png
-  - assets/inf4-av-1/images/gaussian_subtractor.png
-  - assets/inf4-av-1/images/inter_frame_motion.png
+  - {url: assets/inf4-atestv-1/images/centroid.png, caption: "", id: centroid}
+  - {url: assets/inf4-av-1/images/gaussian_detection.png, caption: "", id: gaussian_detection}
+  - {url: assets/inf4-av-1/images/gaussian_error.png, caption: "", id: gaussian_error}
+  - {url: assets/inf4-av-1/images/masks.png, caption: "", id: masks}
+  - {url: assets/inf4-av-1/images/gaussian_subtractor.png, caption: "", id: gaussian_subtractor}
+  - {url: assets/inf4-av-1/images/inter_frame_motion.png, caption: "", id: inter_frame_motion}
 category: projects
 course_name: Inf4 - Advanced Vision
 project_title: "Person Detection in series of images"

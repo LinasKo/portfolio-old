@@ -5,14 +5,14 @@ permalink: /:categories/:slug/
 main_title:  Inf4 - Advanced Vision
 start_date:   2016-09-01
 end_date:     2016-11-01
-thumb_image: assets/inf4-av-2/images/feature_displacement.jpg
+thumb_image_url: assets/inf4-av-2/images/feature_displacement.jpg
 images:
-  - assets/inf4-av-2/images/feature_displacement.jpg
-  - assets/inf4-av-2/images/x_motion_plane.png
-  - assets/inf4-av-2/images/y_motion_colour.png
-  - assets/inf4-av-2/images/z_static_plane_side_render.png
-  - assets/inf4-av-2/images/z_static_colour.png
-  - assets/inf4-av-2/images/z_static_plane_region_of_interest.png
+  - {url: assets/inf4-av-2/images/feature_displacement.jpg, caption: "", id: feature_displacement}
+  - {url: assets/inf4-av-2/images/x_motion_plane.png, caption: "", id: x_motion_plane}
+  - {url: assets/inf4-av-2/images/y_motion_colour.png, caption: "", id: y_motion_colour}
+  - {url: assets/inf4-av-2/images/z_static_plane_side_render.png, caption: "", id: z_static_plane_side_render}
+  - {url: assets/inf4-av-2/images/z_static_colour.png, caption: "", id: z_static_colour}
+  - {url: assets/inf4-av-2/images/z_static_plane_region_of_interest.png, caption: "", id: z_static_plane_region_of_interest}
 category: projects
 course_name: Inf4 - Advanced Vision
 project_title: "3D Reconstruction Evaluation"

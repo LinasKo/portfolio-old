@@ -5,14 +5,14 @@ permalink: /:categories/:slug/
 main_title:  Inf4 - Intelligent Autonomous Robotics
 start_date:   2016-09-01
 end_date:     2016-11-01
-thumb_image: assets/inf4-iar/images/processed/p_khepera.png
+thumb_image_url: assets/inf4-iar/images/processed/p_khepera.png
 images:
-  - assets/inf4-iar/images/processed/p_marked_map.png
-  - assets/inf4-iar/images/processed/p_khepera.png
-  - assets/inf4-iar/images/processed/p_ir_sensors.png
-  - assets/inf4-iar/images/processed/p_architecture.png
-  - assets/inf4-iar/images/processed/p_khepera_in_arena.png
-  - assets/inf4-iar/images/processed/p_wave_graph.png
+  - {url: assets/inf4-iar/images/processed/p_marked_map.png, caption: "", id: p_marked_map}
+  - {url: assets/inf4-iar/images/processed/p_khepera.png, caption: "", id: p_khepera}
+  - {url: assets/inf4-iar/images/processed/p_ir_sensors.png, caption: "", id: p_ir_sensors}
+  - {url: assets/inf4-iar/images/processed/p_architecture.png, caption: "", id: p_architecture}
+  - {url: assets/inf4-iar/images/processed/p_khepera_in_arena.png, caption: "", id: p_khepera_in_arena}
+  - {url: assets/inf4-iar/images/processed/p_wave_graph.png, caption: "", id: p_wave_graph}
 category: projects
 course_name: Inf4 - Intelligent Autonomous Robotics
 project_title: "Strategically navigating a fixed arena using a Khepera II robot"

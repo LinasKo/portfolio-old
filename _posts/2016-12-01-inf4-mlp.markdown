@@ -5,14 +5,14 @@ permalink: /:categories/:slug/
 main_title:  Inf4 - Machine Learning Practical
 start_date:   2016-09-01
 end_date:     2017-03-30
-thumb_image: assets/inf4-mlp/images/AUGM_FLIPPED_confusion_matrix.png
+thumb_image_url: assets/inf4-mlp/images/AUGM_FLIPPED_confusion_matrix.png
 images:
-  - assets/inf4-mlp/images/cifar10_preview.png
-  - assets/inf4-mlp/images/Batch_Normalization_a005_error_train.png
-  - assets/inf4-mlp/images/elastic_deformation_pre.png
-  - assets/inf4-mlp/images/accuracy_e200.png
-  - assets/inf4-mlp/images/sample_results.png
-  - assets/inf4-mlp/images/elastic_deformation_post.png
+  - {url: assets/inf4-mlp/images/cifar10_preview.png, caption: "", id: cifar10_preview}
+  - {url: assets/inf4-mlp/images/Batch_Normalization_a005_error_train.png, caption: "", id: Batch_Normalization_a005_error_train}
+  - {url: assets/inf4-mlp/images/elastic_deformation_pre.png, caption: "", id: elastic_deformation_pre}
+  - {url: assets/inf4-mlp/images/accuracy_e200.png, caption: "", id: accuracy_e200}
+  - {url: assets/inf4-mlp/images/sample_results.png, caption: "", id: sample_results}
+  - {url: assets/inf4-mlp/images/elastic_deformation_post.png, caption: "", id: elastic_deformation_post}
 category: projects
 course_name: Inf4 - Machine Learning Practical
 project_title: "Image Classification using DNN and CNN"

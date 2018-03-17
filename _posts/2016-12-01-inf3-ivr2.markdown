@@ -5,11 +5,11 @@ permalink: /:categories/:slug/
 main_title:  Inf3 - Introduction to Robotics and Vision
 start_date:   2015-09-01
 end_date:     2015-12-30
-thumb_image: assets/inf3-ivr-2/images/robot_front.jpg
+thumb_image_url: assets/inf3-ivr-2/images/robot_front.jpg
 images:
-  - assets/inf3-ivr-2/images/robot_front.jpg
-  - assets/inf3-ivr-2/images/robot_side.jpg
-  - assets/inf3-ivr-2/images/sense_code.png
+  - {url: assets/inf3-ivr-2/images/robot_front.jpg, caption: "", id: robot_front}
+  - {url: assets/inf3-ivr-2/images/robot_side.jpg, caption: "", id: robot_side}
+  - {url: assets/inf3-ivr-2/images/sense_code.png, caption: "", id: sense_code}
 category: projects
 course_name: Inf3 - Introduction to Robotics and Vision
 project_title: "PID control and obstacle avoidance of self-balancing robot"
