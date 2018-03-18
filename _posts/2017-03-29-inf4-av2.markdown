@@ -7,12 +7,12 @@ start_date:   2016-02-16
 end_date:     2016-03-29
 thumb_image_url: assets/inf4-av-2/images/feature_displacement.jpg
 images:
-  - {url: assets/inf4-av-2/images/feature_displacement.jpg, caption: "", id: feature_displacement}
-  - {url: assets/inf4-av-2/images/x_motion_plane.png, caption: "", id: x_motion_plane}
-  - {url: assets/inf4-av-2/images/y_motion_colour.png, caption: "", id: y_motion_colour}
-  - {url: assets/inf4-av-2/images/z_static_plane_side_render.png, caption: "", id: z_static_plane_side_render}
-  - {url: assets/inf4-av-2/images/z_static_colour.png, caption: "", id: z_static_colour}
-  - {url: assets/inf4-av-2/images/z_static_plane_region_of_interest.png, caption: "", id: z_static_plane_region_of_interest}
+  - {url: assets/inf4-av-2/images/feature_displacement.jpg, caption: "FAST corner matching in consecutive frames of the horizontally moving plane. Consecutive frames are superimposed in gray and cyan.", id: feature_displacement}
+  - {url: assets/inf4-av-2/images/x_motion_plane.png, caption: "A single image of horizontally moving plane.", id: x_motion_plane}
+  - {url: assets/inf4-av-2/images/x_motion_colour.png, caption: "RMS errors in region of interest of the horizontally moving plane, also expressing the motion. Red regions represent the highest error and blue represent the lowest.", id: y_motion_colour}
+  - {url: assets/inf4-av-2/images/z_static_plane_side_render.png, caption: "Pointcloud data of one motionless plane frame, as viewed from the side.", id: z_static_plane_side_render}
+  - {url: assets/inf4-av-2/images/z_static_colour.png, caption: "RMS error of the region of interest of a motionless plane. Red regions represent the highest error and blue represent the lowest.", id: z_static_colour}
+  - {url: assets/inf4-av-2/images/z_static_plane_region_of_interest.png, caption: "Region of interest of a plane, moving away from the camera. Typically, several empirical experiments would be performed when selecting the starting region of interest, to minimize the number of datapoints with missing depth values.", id: z_static_plane_region_of_interest}
 category: projects
 course_name: Inf4 - Advanced Vision
 project_title: "3D Reconstruction Evaluation"
@@ -27,7 +27,7 @@ tech:
 A 3D reconstruction of a textured plane has been carried out. In different sets, the plane was either still or moving either vertically, horizontally, or away with respect to the camera. Given the source images and resulting pointcloud data, the task was to evaluate the accuracy of the reconstruction.
 {: .text-left}
 
-We have applied FAST Corner detection to detect and features of the texture on the plane, letting us track its motion over time. The Root Mean Square error was computed to detect the reconstruction accuracy averaged over time. The resulting error was visualized as a colored plot.
+We have applied FAST Corner detection to detect and features of the texture on the plane, letting us track its motion over time. A rectangular region of interest was selected for each dataset using the observed displacement of the features to move together with the plane. The Root Mean Square error was computed in this region to detect the reconstruction accuracy, averaged over time. The resulting error was visualized as a colored plot.
 {: .text-left}
 
 Report: [Google Drive](https://drive.google.com/open?id=1ZpRGiCunMkxpUFoPKrcb-0iSWPA-pJkz){:target="_blank"}
