@@ -18,6 +18,7 @@ course_name: Inf3 - Introduction to Vision and Robotics
 project_title: "Multiple robot tracking in images"
 thumb_text: Tracking of three shapes in a sequence of images using basic shape and color recognition techniques
 collaborators:
+  - Dalius Grazinskis
 tech:
   - Matlab
 
