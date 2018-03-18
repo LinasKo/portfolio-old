@@ -37,11 +37,8 @@ In tasks 3 and 4 we used TensorFlow and both Densely connected neural networks, 
 {: .text-left}
 
 * **Task 1:** Establish a baseline for MNIST classification using densely connected neural networks and investigating different learning rate schedules.
-{: .text-left}
 * **Task 2:** Experiment with different network configurations, observing how much different layer count, hyperparameter tuning and batch normalization can increase the classification accuracy above the baseline. Data augmentation was used due to limited datasets and provided good results.
-{: .text-left}
 * **Task 3:** Perform experiments to determine the baseline accuracy that a densely connected neural network can achieve. I have experimented with different numbers of hidden units, epochs, activation functions, adaptive learning rate variations and dropout.
-{: .text-left}
  * **Task 4:** Investigate the use of Convolutional neural networks for image recognition in CIFAR-10 and CIFAR-100 datasets. Here I have experimented with CNNs, different network configurations, hyperparameters, as well as dropout, fractional max-pooling and data augmentation.
 {: .text-left}
 
