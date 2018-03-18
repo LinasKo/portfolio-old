@@ -7,12 +7,12 @@ start_date:   2016-01-15
 end_date:     2016-02-15
 thumb_image_url: assets/inf3-ivr-1/images/filter_noisy.png
 images:
-  - {url: assets/inf3-ivr-1/images/filter_correct.png, caption: "", id: filter_correct}
-  - {url: assets/inf3-ivr-1/images/filter_test, id: test_id.png, caption: "", id: filter_test}
-  - {url: assets/inf3-ivr-1/images/filter_noisy.png, caption: "", id: filter_noisy}
-  - {url: assets/inf3-ivr-1/images/background_1.png, caption: "", id: background_1}
-  - {url: assets/inf3-ivr-1/images/background_2.png, caption: "", id: background_2}
-  - {url: assets/inf3-ivr-1/images/background_3.png, caption: "", id: background_3}
+  - {url: assets/inf3-ivr-1/images/filter_correct.png, caption: "Perfectly detected and classified robots. The triangles are not noisy at all, corners are detected perfectly and robots are each assigned a unique color value, most likely matching with the actual color of the robot.", id: filter_correct}
+  - {url: assets/inf3-ivr-1/images/filter_test.png, caption: "Insufficiently detailed detection. Either color detection thresholds are not fine enough, or dilation is too strong.", id: filter_test}
+  - {url: assets/inf3-ivr-1/images/filter_noisy.png, caption: "Due to noise, incomplete triangles are formed, preventing corner detection. Therefore, these shapes cannot be classified as robots. Furthermore, noise below the robot is visible, hinting the lack of erosion. A difficult situation as the two upper triangles are too eroded.", id: filter_noisy}
+  - {url: assets/inf3-ivr-1/images/background_1.png, caption: "The three 'robots' on the first background. You can see that our methods were successful in plotting their motion path.", id: background_1}
+  - {url: assets/inf3-ivr-1/images/background_2.png, caption: "The three 'robots' on the second background. You can see that our methods were successful in plotting their motion path.", id: background_2}
+  - {url: assets/inf3-ivr-1/images/background_3.png, caption: "The three 'robots' on the third, the most difficult, background. You can see the blue robot misclassified as red and the green one having his direction incorrect. The red robot is not recognized at all.", id: background_3}
 category: projects
 course_name: Inf3 - Introduction to Vision and Robotics
 project_title: "Multiple robot tracking in images"
@@ -26,7 +26,7 @@ tech:
 This task required us to track three colored robots in a sequence of images. Images had three different background types and had to work with an unknown forth one, only revealed during assessment.
 {: .text-left}
 
-To tackle the task, we subtracted the background and found morphological operations on the image to reveal the triangles on the top. Shapes were checked that they were the triangles using a ratio of perimeter and area that we found. Triangle corners were then found - for this K-means clustering was used due to a large number of datapoints at the ends of the triangles. Color reading was then taken just behind the triangle, identifying the robot.
+To tackle the task, we subtracted the background and found morphological operations on the image to reveal the triangles on the top. Shapes were verified to be triangles using a ratio of perimeter and area that we found. Triangle corners were then found - for this K-means clustering was used due to a large number of datapoints at the ends of the triangles. Color reading was then taken just behind the triangle, identifying the robot.
 {: .text-left}
 
 In the end, the solution was robust and managed to track the robots successfully (the failure cases shown occurred during development). The only issue we did not manage to fix was an inefficiency in the plotting, gradually slowing down the program.
