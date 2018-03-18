@@ -7,7 +7,7 @@ start_date:   2016-09-21
 end_date:     2017-03-21
 thumb_image_url: assets/inf4-mlp/images/AUGM_FLIPPED_confusion_matrix.png
 images:
-  - {url: assets/inf4-mlp/images/cifar10_preview.png, caption: "CIFAR-10 classes with 10 examples of each", id: cifar10_preview}
+  - {url: assets/inf4-mlp/images/cifar10_preview.png, caption: "CIFAR-10 classes with 10 examples of each.", id: cifar10_preview}
   - {url: assets/inf4-mlp/images/Batch_Normalization_a005_error_train.png, caption: "Comparison of training errors for densely connected neural networks using batch normalization and different number of layers.", id: Batch_Normalization_a005_error_train}
   - {url: assets/inf4-mlp/images/elastic_deformation_pre.png, caption: "Examples of digits in the MNIST dataset before data augmentation is applied.", id: elastic_deformation_pre}
   - {url: assets/inf4-mlp/images/accuracy_e200.png, caption: "Training (blue) and validation accuracy (purple) of a densely connected neural network, training for 200 epochs, displayed in TensorBoard.", id: accuracy_e200}
