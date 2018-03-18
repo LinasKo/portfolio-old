@@ -7,12 +7,12 @@ start_date:   2016-09-18
 end_date:     2016-11-24
 thumb_image_url: assets/inf4-iar/images/processed/p_khepera.png
 images:
-  - {url: assets/inf4-iar/images/processed/p_marked_map.png, caption: "", id: p_marked_map}
-  - {url: assets/inf4-iar/images/processed/p_khepera.png, caption: "", id: p_khepera}
-  - {url: assets/inf4-iar/images/processed/p_ir_sensors.png, caption: "", id: p_ir_sensors}
-  - {url: assets/inf4-iar/images/processed/p_architecture.png, caption: "", id: p_architecture}
-  - {url: assets/inf4-iar/images/processed/p_khepera_in_arena.png, caption: "", id: p_khepera_in_arena}
-  - {url: assets/inf4-iar/images/processed/p_wave_graph.png, caption: "", id: p_wave_graph}
+  - {url: assets/inf4-iar/images/processed/p_marked_map.png, caption: "Final map of the arena, used for Task 3. Nest is the official starting locations of the robot that it starts from (any orientation) and points are where we decided to place the 'food' locations for our tests. Robot needed to find food locations and bring the pellet to the nest. Pickup and dropping of the pellets were signaled by the arbiter with the press of the space bar.", id: p_marked_map}
+  - {url: assets/inf4-iar/images/processed/p_khepera.png, caption: "The Khepera II robot from up close. The black patches on the front and sides are the IR sensors.", id: p_khepera}
+  - {url: assets/inf4-iar/images/processed/p_ir_sensors.png, caption: "Sketch of IR sensors placement on the Khepera II robot.", id: p_ir_sensors}
+  - {url: assets/inf4-iar/images/processed/p_architecture.png, caption: "Flowchart depicting different components of our system for controlling the robot.", id: p_architecture}
+  - {url: assets/inf4-iar/images/processed/p_khepera_in_arena.png, caption: "Snapshot of Khepera navigating the arena.", id: p_khepera_in_arena}
+  - {url: assets/inf4-iar/images/processed/p_wave_graph.png, caption: "Experiments of particle filter-based navigation. As soon as the map layout was fixed (Task 3), we created a map of the arena, so the particle filter localisation could be used.", id: p_wave_graph}
 category: projects
 course_name: Inf4 - Intelligent Autonomous Robotics
 project_title: "Strategically navigating a fixed arena using a Khepera II robot"
@@ -27,20 +27,20 @@ For this task, we were given a Khepera II robot, that uses infrared proximity se
 {: .text-left}
 * **Task 1:** The robot must navigate the arena without collisions, follow long walls and not get stuck in corners or dead ends.
 * **Task 2:** Implement odometry for the robot so it could return to the starting location after navigating the enclosure.
-* **Task 3:** Implement a navigation algorithm to look for "food pellets" in the arena and bring them to the starting location. The goal is to gather as many as possible in 5 minutes.
+* **Task 3:** Implement a navigation algorithm to look for "food pellets" in the arena and bring them to the starting location. The goal is to gather as many as possible in 5 minutes. Food pellets respawn in their source locations when dropped in the robot's nest.
 {: .text-left}
 
 During the course of this course we have developed, tested and re-developed a large range of solutions.
 {: .text-left}
-* We turned the regression problem of finding distances from raw sensor values into a classification problem by developing an auto-calibration method that robot performs, before the run.
+* We turned the regression problem of finding distances from raw sensor values into a classification problem by developing an auto-calibration method that robot performs before the run.
 * A subsumptive architecture with exploration, obstacle avoidance and control layers allowed the robot to successfully function in a stochastic, partially observable environment.
 * Particle Filter localization was attempted to be used, yet due to noisy sensor input and sensor value discretization, the system did not provide accurate results. The accuracy could have been improved given more processing power, as even with the fully vectorized solution, the computation time with many particles was prohibitively expensive.
-* Odometry was implemented and calibrated, such that the drift remained low if no collisions were made.
-* Obstacle mapping and A*-based navigation was tested. Due to sensor noise, a reliable map could not be built.
+* Odometry was implemented and calibrated such that the drift remained low if no collisions were made.
+* Obstacle mapping and A*-based navigation was tested. Due to sensor noise a reliable map could not be built.
 * Ultimately, Bug 0 algorithm was chosen for navigation, by which the robot attempts to reach a given location while going around objects if any are encountered.
 {: .text-left}
 
-In the end, it was the simplicity of reactive approach to navigation that let us achieve the most consistent and reliable results.
+In the end it was the simplicity of reactive approach to navigation that let us achieve the most consistent and reliable results.
 {: .text-left}
 
 Reports for all 3 tasks: [Google Drive](https://drive.google.com/open?id=1NFmrsW8NIIT-TGLA41VM5yh5Kz3KCo_u){:target="_blank"}
