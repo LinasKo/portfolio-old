@@ -57,9 +57,9 @@
 
 .size-logo{
     position: absolute;
-    top: 5px;
-    right: 5px;
-    max-width: 1%;
+    top: 4px;
+    right: 4px;
+    max-width: 11% !important;
     height: auto;
 }
 
