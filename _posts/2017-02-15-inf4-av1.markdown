@@ -23,6 +23,7 @@ tech:
   - Python
   - OpenCV
   - Numpy
+size: medium
 
 ---
 

@@ -14,7 +14,22 @@
                             <div class="img-wrapper">
                                 <!-- <a href="#{{ post.modalID }}" class="portfolio-link" data-toggle="modal"> -->
                                 <a href="{{ site.baseurl }}/{{ post.category }}/{{ post.slug }}">
-                                    <img src="{{ site.baseurl }}/{{ post.thumb_image_url }}" class="img-responsive" alt="">
+
+                                    <img src="{{ site.baseurl }}/{{ post.thumb_image_url }}" class="img-responsive proj-img" alt="">
+
+                                    {% case post.size %}
+                                        {% when "trivial" %}
+                                            <img src="{{ site.baseurl }}/assets/size_tags/size-thumbnail-trivial-LOGO.png" class="size-logo">
+                                        {% when "small" %}
+                                            <img src="{{ site.baseurl }}/assets/size_tags/size-thumbnail-small-LOGO.png" class="size-logo">
+                                        {% when "medium" %}
+                                            <img src="{{ site.baseurl }}/assets/size_tags/size-thumbnail-medium-LOGO.png" class="size-logo">
+                                        {% when "large" %}
+                                            <img src="{{ site.baseurl }}/assets/size_tags/size-thumbnail-large-LOGO.png" class="size-logo">
+                                        {% when "extra-large" %}
+                                            <img src="{{ site.baseurl }}/assets/size_tags/size-thumbnail-extra-large-LOGO.png" class="size-logo">
+                                    {% endcase %}
+
                                     <p class="image-fade-text">- more -</p>
                                 </a>
                             </div>

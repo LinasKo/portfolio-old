@@ -16,7 +16,7 @@ layout: default
 		                        <div class="thumbnail">
 		                            <div class="img-wrapper">
 		                                <a href="#{{ img_obj.id }}" class="portfolio-link" data-toggle="modal">
-		                                    <img src="{{ site.baseurl }}/{{ img_obj['url'] }}" class="img-responsive img-centered" alt="">
+		                                    <img src="{{ site.baseurl }}/{{ img_obj['url'] }}" class="img-responsive img-centered proj-img" alt="">
 		                                </a>
 		                            </div>
 		                        </div>
@@ -45,7 +45,7 @@ layout: default
 		                {% if page.collaborators %}
 		                    <ul class="list-inline item-details" style="margin-top: 0px">
 		                        <li>
-		                            Collaborators: 
+		                            Collaborators:
 		                            {% for person in page.collaborators %}
 		                                <strong>{{ person }}</strong>
 		                                {% if forloop.last == false %}

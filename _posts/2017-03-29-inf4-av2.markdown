@@ -21,6 +21,7 @@ collaborators:
   - Calum McLeod
 tech:
   - Matlab
+size: medium
 
 ---
 

@@ -22,6 +22,7 @@ collaborators:
 tech:
   - Python
   - Numpy
+size: large
 ---
 For this task, we were given a Khepera II robot, that uses infrared proximity sensors to sense the environment. We were tasked with developing various algorithms for the robot, so that it could perform desired actions within an arena:
 {: .text-left}

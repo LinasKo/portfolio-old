@@ -21,6 +21,7 @@ collaborators:
   - Dalius Grazinskis
 tech:
   - Matlab
+size: medium
 
 ---
 

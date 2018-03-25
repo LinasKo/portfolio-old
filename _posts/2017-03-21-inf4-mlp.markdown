@@ -24,6 +24,7 @@ tech:
   - Jupyter Notebooks
   - TensorFlow
   - Linux
+size: large
 
 ---
 

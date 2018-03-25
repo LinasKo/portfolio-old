@@ -23,6 +23,7 @@ tech:
   - OpenCV
   - Numpy
   - Linux
+size: extra-large
 
 ---
 
