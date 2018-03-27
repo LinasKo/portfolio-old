@@ -30,3 +30,11 @@ address:
 
 # Build settings
 markdown: kramdown
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: "_posts"
+    values:
+      thumb_image_url: "assets/test_post/images/1-submarine.png"
