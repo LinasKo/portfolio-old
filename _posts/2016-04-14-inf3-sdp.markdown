@@ -1,0 +1,71 @@
+---
+layout: post
+modalID: modalSdp
+permalink: /:categories/:slug/
+main_title: System Design Project
+start_date: 2015-10-05
+end_date:   2016-04-14
+category: projects
+project_title: "System Design Project - Making a Football Playing Robot"
+thumb_text: "An AI-controlled cooperative football playing robot."
+tech:
+  - Python
+  - Numpy
+  - OpenCV
+  - Arduino
+  - Lego
+size: extra-large
+collaborators:
+  - James Renwick
+  - Filip Kiniorski
+  - Natasa Ivanis
+  - Andrew Bell
+  - Dimple Gulrajani
+  - Ramsey El Naggar
+  - Naohiro Kakimura
+  - Andrew Smith
+  - Jake Greenshields
+unlisted: true
+
+---
+
+The System Design Project was a course that showed us how large teams interact and large projects are built.
+{: .text-left}
+
+In teams of 6, we were tasked with building a robot that can autonomously play football in 2v2 matches. For the vision system, there was an overhead camera, allowing us to observe distinct colored plates on the robots. The processing of the feed happened on a PC near the playpen. We then used radio frequencies to send commands to the robot, which had an Arduino that parsed the commands and converted them into low level control actions of the robot.
+{: .text-left}
+
+### Vision System
+I have mostly worked on the vision system. Here, we joined forces with the team that we would be ultimately playing together with. We managed to create a system that reliably detects and tracks the robot, yet required a bit of manual tinkering when the video feed signal was weaker (e.g. during final matches that were also live-streamed to another room).
+{: .text-left}
+
+Each robot had a plate above it with 5 colored circles on it. One in the centre represented the team of the robot in 2v2 matches (blue, yellow). Three of the four outer circles were of one color, and the remaining one of another (green, pink). This helped determine the orientation of the robot. In addition to the robot circles, we also tracked the ball which was a red sphere on the field, approximately similar in size to the circles on the robot plate.
+{: .text-left}
+
+First, we used color-based thresholding to detect regions of color, corresponding to the colors of circles. They were clustered to produce possible robot plates. I believe that in our system both robots of our team needed to be detected for the tracking algorithm to work. Since we had the measurements of the plate, we could easily determine the position of the robots, assuming the circles were detected correctly. However that was often not the case. Due to the lighting conditions, often only about half of the circle area was successfully detected. We addressed this in several ways:
+* We developed a user interface using TKinter library that allows changing color detection thresholds before the match.
+* When we find good color thresholds, we would store them in a file, for each PC that we would use.
+{: .text-left}
+
+Secondly, the view we saw from the camera was cropped to only include the field of play. This allowed us to ignore some areas that were sometimes detected as colored circles. Furthermore, shadows of spectators were then mostly excluded from the resulting image. Then, the playing area was manually marked to split into regions of interest (both goal areas, playing field sides).
+{: .text-left}
+
+### Other Areas of Work
+In addition to the vision system, I have worked on some other areas (strategy) more than others (robot design, gyroscope calibration, communication, low level code).
+{: .text-left}
+
+#### Strategy
+For strategy, we have developed both low level behaviours (passing, blocking, kicking) and higher level behaviours such as kicking the goal, defending against an attack and positioning to receive the ball. Ultimately, we chose to specialize our robot as the goalkeeper and focused on developing algorithms for that.
+{: .text-left}
+
+#### Low level control
+The robot was calibrated to move appropriately after receiving a command via radio frequencies. This was Driven by the Arduino on the robot.
+{: .text-left}
+
+#### Communications
+The system had many versions but ultimately allowed us to have reliable communications with the robot. A key feature was a status check for the communication, as the RF stick was very unreliable.
+{: .text-left}
+
+#### Robot Design
+We had to construct a robot out of Lego, that could play football autonomously. The robot had a size limit along all dimensions, had to carry the Arduino, a battery pack, have a kicker with a motor, fit the motors for the wheels, hold a plate above for identification and have grippers for catching the ball in motion. We also had to decide if we needed any additional parts, within a given limit of 100 pounds (we decided to get 4 omniwheels). Due to space constraints, robot design was a very difficult task.
+{: .text-left}
