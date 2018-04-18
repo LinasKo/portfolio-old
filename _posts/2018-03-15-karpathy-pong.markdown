@@ -15,7 +15,7 @@ thumb_text: "A trial run of Policy Gradient learning for Atari Pong, created by 
 tech:
   - Python
   - Numpy
-size: trivial
+size: extra-small
 
 ---
 

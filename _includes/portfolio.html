@@ -18,6 +18,8 @@
                                     <img src="{{ site.baseurl }}/{{ post.thumb_image_url }}" class="img-responsive proj-img" alt="">
 
                                     {% case post.size %}
+                                        {% when "extra-small" %}
+                                            <img src="{{ site.baseurl }}/assets/size_tags/size-thumbnail-extra-small-LOGO.png" class="size-logo">
                                         {% when "trivial" %}
                                             <img src="{{ site.baseurl }}/assets/size_tags/size-thumbnail-trivial-LOGO.png" class="size-logo">
                                         {% when "small" %}
