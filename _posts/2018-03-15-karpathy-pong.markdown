@@ -3,7 +3,8 @@ layout: post
 modalID: karpathyPong
 permalink: /:categories/:slug/
 main_title: Policy Gradient learning for Atari Pong
-start_date:   2016-01-15
+start_date:   2018-03-12
+end_date:     2018-04-05
 thumb_image_url: assets/karpathy-pong/images/trained-pong.gif
 images:
   - {url: assets/karpathy-pong/images/trained-pong.gif, caption: "The visualisation of the Atari Pong game being played during training. For simplicity, the agent (right) can move up or down, but not sit idle.", id: game-visualisation}
@@ -19,18 +20,14 @@ size: extra-small
 
 ---
 
-In 2013 Andrej Karpathy described a Policy Gradient learning algorithm in his blog, that can be used to train an agent to play Pong. I have previously studied the approach, coded my version of it in TensorFlow and attempted to apply it to the Cart Pole problem in AI Gym, with little success. The moving average of the reward just fluctuated back and forth in a regular, sine wave-like patten.
-{: .text-left}
-
-I have decided to perform a training run of Karpathy's Policy Gradient training to observe the results it gives. This also gives an idea for how long simple Reinforcement Learning  methods take, and how large the fluctuations in results are. Ultimately, I wanted to see Reinforcement Learning in action.
+In 2013 Andrej Karpathy provided a description of Policy Gradient learning for Atari Pong in his blog. I have studied the approach, coded up my version of it in TensorFlow and attempted to apply it to the Cart Pole problem in AI Gym, with little success. The moving average of the reward just fluctuated back and forth in a regular, sine wave-like patten, not making any gains beyond a certain point, way below the goal. From this standpoint, this project serves the purpose of letting me see a working reinforcement learning project in action. I want to see the reward change, I want to observe the gradual convergence or the lack of it, I want to understand how long it will take to converge with the basic methods. Therefore, I have decided to perform a training run of Karpathy's Policy Gradient training to observe the results it gives.
 {: .text-left}
 
 I ran the training code irregularly on my laptop, leaving it to train while I was at work. The training was run for approximately 16 days, reaching epoch 27065. Each epoch consists of one game, which is played until 21 points are scored, cumulatively, by both sides. Each point for the agent increases its reward by 1.0 and each point scored by the default AI decreases the agent's reward by 1.0. After training for the given duration, the agent obtains an average of -1.96 points (running average over approximately 1500 games). This means that the agent became almost as good as the default AI.
 {: .text-left}
 
-Now that I have completed this project, I am planning to go bac to some of my earlier Deep Learning priojects - Cat / Dog recognition with Convolutional Neural Networks, Cart Pole learning with Policy Gradients or a group project of our deep learning study group ----- to be continued
+Now that I have completed this project, I am planning to go back to some of my earlier Deep Learning priojects - Cat / Dog recognition with Convolutional Neural Networks or Cart Pole learning with Policy Gradients.
+{: .text-left}
 
-
-
-Furthermore, we have a deep learning reading group at work, for which we will be doing group projects. As an intro to Reinforced Learning to our group, we have decided to use this example. I am therefore also running it as a way to show basic results to the team, and keep up the motivation.
+Furthermore, we have a deep learning reading group at work, for which we will be doing group projects. Karpathy's Atari learning was used as the first starting example from which we are planning to build up out knowledge. There are multiple paths to pursue from this point and the work done here will hopefully help us decide on the next steps.
 {: .text-left}
