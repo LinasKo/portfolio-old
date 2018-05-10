@@ -33,5 +33,5 @@ We have applied FAST Corner detection to detect and features of the texture on t
 
 Report: [Google Drive](https://drive.google.com/open?id=1ZpRGiCunMkxpUFoPKrcb-0iSWPA-pJkz){:target="_blank"}
 {: .text-center}
-Code Repository: [Gitlab](https://gitlab.com/LinasKo/Inf4-AV-CW2)
+Code Repository: [GitLab](https://gitlab.com/LinasKo/Inf4-AV-CW2){:target="_blank"}
 {: .text-center}

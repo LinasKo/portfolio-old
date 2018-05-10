@@ -45,5 +45,5 @@ In tasks 3 and 4 we used TensorFlow and both Densely connected neural networks, 
 
 Reports: [Google Drive](https://drive.google.com/open?id=1ivjc3oO2prNyn2vHfLZhiUSz4JXDk7lf){:target="_blank"}
 {: .text-center}
-Code Repository: [Gitlab](https://gitlab.com/LinasKo/Inf4-MLP)
+Code Repository: [GitLab](https://gitlab.com/LinasKo/Inf4-MLP){:target="_blank"}
 {: .text-center}

@@ -13,7 +13,7 @@ images:
 category: projects
 course_name: Inf3 - Introduction to Vision and Robotics
 project_title: "PID control and obstacle avoidance of self-balancing robot"
-thumb_text: Anaysis of PID control variables and implementation of obstacle avoidance behaviour in a two-wheeled self-balancing robot
+thumb_text: Analysis of PID control variables and implementation of obstacle avoidance behavior in a two-wheeled self-balancing robot
 collaborators:
   - Dalius Grazinskis
 tech:

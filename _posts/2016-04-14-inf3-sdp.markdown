@@ -7,7 +7,7 @@ start_date: 2015-10-05
 end_date:   2016-04-14
 thumb_image_url: assets/inf3-sdp/images/sdp_thumbnail.png
 images:
-  - {url: assets/inf3-sdp/images/in_game_view.png, caption: "The usual view as seen during a robot game for the operator. Robots taht are detected have their orientation shown. Rectangles represent threat (red) and defence zones (black). Note that one robot is not detected as green circles are not detected as well in that corner of the court at this moment.", id: sdp_in_game}
+  - {url: assets/inf3-sdp/images/in_game_view.png, caption: "The usual view as seen during a robot game for the operator. Robots that are detected have their orientation shown. Rectangles represent threat (red) and defense zones (black). Note that one robot is not detected as green circles are not detected as well in that corner of the court at this moment.", id: sdp_in_game}
   - {url: assets/inf3-sdp/images/sdp_color_picker.png, caption: "Color picker available to the operator during the match. If needed, they can rebalance the color detection thresholds and generally observe the state of the robot.", id: sdp_color_picker}
   - {url: assets/inf3-sdp/images/sdp_interference_example.png, caption: "Interference of the analogue camera, as seen during the development of the vision system.", id: sdp_interference_example}
 category: projects
@@ -30,7 +30,6 @@ collaborators:
   - Naohiro Kakimura
   - Andrew Smith
   - Jake Greenshields
-unlisted: true
 
 ---
 
@@ -44,7 +43,7 @@ In teams of 6, we were tasked with building a robot that can autonomously play f
 I have mostly worked on the vision system. Here, we joined forces with the team that we would be ultimately playing together with. We managed to create a system that reliably detects and tracks the robot, yet required a bit of manual tinkering when the video feed signal was weaker (e.g. during final matches that were also live-streamed to another room).
 {: .text-left}
 
-Each robot had a plate above it with 5 colored circles on it. One in the centre represented the team of the robot in 2v2 matches (blue, yellow). Three of the four outer circles were of one color, and the remaining one of another (green, pink). This helped determine the orientation of the robot. In addition to the robot circles, we also tracked the ball which was a red sphere on the field, approximately similar in size to the circles on the robot plate.
+Each robot had a plate above it with 5 colored circles on it. One in the center represented the team of the robot in 2v2 matches (blue, yellow). Three of the four outer circles were of one color, and the remaining one of another (green, pink). This helped determine the orientation of the robot. In addition to the robot circles, we also tracked the ball which was a red sphere on the field, approximately similar in size to the circles on the robot plate.
 {: .text-left}
 
 First, we used color-based thresholding to detect regions of color, corresponding to the colors of circles. They were clustered to produce possible robot plates. I believe that in our system both robots of our team needed to be detected for the tracking algorithm to work. Since we had the measurements of the plate, we could easily determine the position of the robots, assuming the circles were detected correctly. However that was often not the case. Due to the lighting conditions, often only about half of the circle area was successfully detected. We addressed this in several ways:
@@ -60,7 +59,7 @@ In addition to the vision system, I have worked on some other areas (strategy) m
 {: .text-left}
 
 #### Strategy
-For strategy, we have developed both low level behaviours (passing, blocking, kicking) and higher level behaviours such as kicking the goal, defending against an attack and positioning to receive the ball. Ultimately, we chose to specialize our robot as the goalkeeper and focused on developing algorithms for that.
+For strategy, we have developed both low level behaviors (passing, blocking, kicking) and higher level behaviors such as kicking the goal, defending against an attack and positioning to receive the ball. Ultimately, we chose to specialize our robot as the goalkeeper and focused on developing algorithms for that.
 {: .text-left}
 
 #### Low level control
@@ -72,5 +71,5 @@ The system had many versions but ultimately allowed us to have reliable communic
 {: .text-left}
 
 #### Robot Design
-We had to construct a robot out of Lego, that could play football autonomously. The robot had a size limit along all dimensions, had to carry the Arduino, a battery pack, have a kicker with a motor, fit the motors for the wheels, hold a plate above for identification and have grippers for catching the ball in motion. We also had to decide if we needed any additional parts, within a given limit of 100 pounds (we decided to get 4 omniwheels). Due to space constraints, robot design was a very difficult task.
+We had to construct a robot out of Lego, that could play football autonomously. The robot had a size limit along all dimensions, had to carry the Arduino, a battery pack, have a kicker with a motor, fit the motors for the wheels, hold a plate above for identification and have grippers for catching the ball in motion. We also had to decide if we needed any additional parts, within a given limit of 100 pounds (we decided to get 4 omni-wheels). Due to space constraints, robot design was a very difficult task.
 {: .text-left}
