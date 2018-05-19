@@ -9,35 +9,38 @@
             </div>
             <div class="row">
                 {% for post in site.posts %}
-                    <div class="col-sm-4 thumbnail-card">
-                        <div class="thumbnail">
-                            <div class="img-wrapper">
-                                <!-- <a href="#{{ post.modalID }}" class="portfolio-link" data-toggle="modal"> -->
-                                <a href="{{ site.baseurl }}/{{ post.category }}/{{ post.slug }}">
+                    {% if post.unlisted == true %}
+                    {% else %}
+                        <div class="col-sm-4 thumbnail-card">
+                            <div class="thumbnail">
+                                <div class="img-wrapper">
+                                    <!-- <a href="#{{ post.modalID }}" class="portfolio-link" data-toggle="modal"> -->
+                                    <a href="{{ site.baseurl }}/{{ post.category }}/{{ post.slug }}">
 
-                                    <img src="{{ site.baseurl }}/{{ post.thumb_image_url }}" class="img-responsive proj-img" alt="">
+                                        <img src="{{ site.baseurl }}/{{ post.thumb_image_url }}" class="img-responsive proj-img" alt="">
 
-                                    {% case post.size %}
-                                        {% when "extra-small" %}
-                                            <img src="{{ site.baseurl }}/assets/size_tags/size-thumbnail-extra-small-LOGO.png" class="size-logo">
-                                        {% when "trivial" %}
-                                            <img src="{{ site.baseurl }}/assets/size_tags/size-thumbnail-trivial-LOGO.png" class="size-logo">
-                                        {% when "small" %}
-                                            <img src="{{ site.baseurl }}/assets/size_tags/size-thumbnail-small-LOGO.png" class="size-logo">
-                                        {% when "medium" %}
-                                            <img src="{{ site.baseurl }}/assets/size_tags/size-thumbnail-medium-LOGO.png" class="size-logo">
-                                        {% when "large" %}
-                                            <img src="{{ site.baseurl }}/assets/size_tags/size-thumbnail-large-LOGO.png" class="size-logo">
-                                        {% when "extra-large" %}
-                                            <img src="{{ site.baseurl }}/assets/size_tags/size-thumbnail-extra-large-LOGO.png" class="size-logo">
-                                    {% endcase %}
+                                        {% case post.size %}
+                                            {% when "extra-small" %}
+                                                <img src="{{ site.baseurl }}/assets/size_tags/size-thumbnail-extra-small-LOGO.png" class="size-logo">
+                                            {% when "trivial" %}
+                                                <img src="{{ site.baseurl }}/assets/size_tags/size-thumbnail-trivial-LOGO.png" class="size-logo">
+                                            {% when "small" %}
+                                                <img src="{{ site.baseurl }}/assets/size_tags/size-thumbnail-small-LOGO.png" class="size-logo">
+                                            {% when "medium" %}
+                                                <img src="{{ site.baseurl }}/assets/size_tags/size-thumbnail-medium-LOGO.png" class="size-logo">
+                                            {% when "large" %}
+                                                <img src="{{ site.baseurl }}/assets/size_tags/size-thumbnail-large-LOGO.png" class="size-logo">
+                                            {% when "extra-large" %}
+                                                <img src="{{ site.baseurl }}/assets/size_tags/size-thumbnail-extra-large-LOGO.png" class="size-logo">
+                                        {% endcase %}
 
-                                    <p class="image-fade-text">- more -</p>
-                                </a>
+                                        <p class="image-fade-text">- more -</p>
+                                    </a>
+                                </div>
+                                <p align="center" class="small caption-text">{{ post.project_title }}</p>
                             </div>
-                            <p align="center" class="small caption-text">{{ post.project_title }}</p>
                         </div>
-                    </div>
+                    {% endif %}
                 {% else %}
                     <p align="center">Site under construction. Portfolio items will be added soon!</p>
                 {% endfor %}
