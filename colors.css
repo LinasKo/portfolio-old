@@ -4,45 +4,46 @@
  */
 
 :root {
-    --main-color-1: #18BC9C;
-    --main-color-2: #128f76;
-    --main-color-3: #11866f;
-    --side-color-1: #2C3E50;
-    --side-color-2: #233140;
-    --side-color-3: #1a242f;
-    --side-color-4: #161f29;
+	  --main-color-0: #545854;
+    --main-color-1: #323231;
+    --main-color-2: #292A29;
+    --main-color-3: #202122;
+    --main-color-4: #080A08;
+    --side-color-1: #94DA0F;
+    --side-color-2: #66A10D;
+    --side-color-3: #38680B;
     --text-color-1: #ffffff;
     --text-color-2: #eeeeee;
 }
-/* Example:   color: var(--main-color);   */
+/* Example:   color: var(--side-color);   */
 
 a,
 a:hover,
 a:focus,
 a:active,
 a.active {
-  color: var(--main-color);
+  color: var(--side-color);
 }
 hr.star-light {
   border-color: var(--text-color-1);
 }
 hr.star-light:after {
-  background-color: var(--main-color-1);
+  background-color: var(--side-color-1);
   color: var(--text-color-1);
 }
 hr.star-primary {
-  border-color: var(--side-color-1);
+  border-color: var(--main-color-1);
 }
 hr.star-primary:after {
   background-color: var(--text-color-1);
-  color: var(--side-color-1);
+  color: var(--main-color-1);
 }
 header {
-  background: var(--main-color-1);
+  background: var(--side-color-1);
   color: var(--text-color-1);
 }
 .navbar-custom {
-  background: var(--side-color-1);
+  background: var(--main-color-1);
 }
 .navbar-custom .navbar-brand {
   color: var(--text-color-1);
@@ -57,7 +58,7 @@ header {
   color: var(--text-color-1);
 }
 .navbar-custom .navbar-nav li a:hover {
-  color: var(--main-color-1);
+  color: var(--side-color-1);
 }
 .navbar-custom .navbar-nav li a:focus,
 .navbar-custom .navbar-nav li a:active {
@@ -65,13 +66,13 @@ header {
 }
 .navbar-custom .navbar-nav li.active a {
   color: var(--text-color-1);
-  background: var(--main-color-1);
+  background: var(--side-color-1);
 }
 .navbar-custom .navbar-nav li.active a:hover,
 .navbar-custom .navbar-nav li.active a:focus,
 .navbar-custom .navbar-nav li.active a:active {
   color: var(--text-color-1);
-  background: var(--main-color-1);
+  background: var(--side-color-1);
 }
 .navbar-custom .navbar-toggle {
   color: var(--text-color-1);
@@ -79,12 +80,12 @@ header {
 }
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
-  background-color: var(--main-color-1);
+  background-color: var(--side-color-1);
   color: var(--text-color-1);
-  border-color: var(--main-color-1);
+  border-color: var(--side-color-1);
 }
 section.success {
-  background: var(--main-color-1);
+  background: var(--side-color-1);
   color: var(--text-color-1);
 }
 #portfolio .portfolio-item .portfolio-link .caption .caption-content {
@@ -97,7 +98,7 @@ section.success {
   border-left-color: var(--text-color-2);
 }
 .floating-label-form-group-with-focus label {
-  color: var(--main-color-1);
+  color: var(--side-color-1);
 }
 form .row:first-child .floating-label-form-group {
   border-top-color: var(--text-color-2);
@@ -106,10 +107,10 @@ footer {
   color: var(--text-color-1);
 }
 footer .footer-above {
-  background-color: var(--side-color-1);
+  background-color: var(--main-color-1);
 }
 footer .footer-below {
-  background-color: var(--side-color-2);
+  background-color: var(--main-color-2);
 }
 .btn-outline {
   color: var(--text-color-1);
@@ -119,14 +120,14 @@ footer .footer-below {
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
-  color: var(--main-color-1);
+  color: var(--side-color-1);
   background: var(--text-color-1);
   border-color: var(--text-color-1);
 }
 .btn-primary {
   color: var(--text-color-1);
-  background-color: var(--side-color-1);
-  border-color: var(--side-color-1);
+  background-color: var(--main-color-1);
+  border-color: var(--main-color-1);
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -134,21 +135,21 @@ footer .footer-below {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: var(--text-color-1);
-  background-color: var(--side-color-3);
-  border-color: var(--side-color-4);
+  background-color: var(--main-color-3);
+  border-color: var(--main-color-4);
 }
 fieldset[disabled] .btn-primary.active {
-  background-color: var(--side-color-1);
-  border-color: var(--side-color-1);
+  background-color: var(--main-color-1);
+  border-color: var(--main-color-1);
 }
 .btn-primary .badge {
-  color: var(--side-color-1);
+  color: var(--main-color-1);
   background-color: var(--text-color-1);
 }
 .btn-success {
   color: var(--text-color-1);
-  background-color: var(--main-color-1);
-  border-color: var(--main-color-1);
+  background-color: var(--side-color-1);
+  border-color: var(--side-color-1);
 }
 .btn-success:hover,
 .btn-success:focus,
@@ -156,23 +157,23 @@ fieldset[disabled] .btn-primary.active {
 .btn-success.active,
 .open .dropdown-toggle.btn-success {
   color: var(--text-color-1);
-  background-color: var(--main-color-2);
-  border-color: var(--main-color-3);
+  background-color: var(--side-color-2);
+  border-color: var(--side-color-3);
 }
 fieldset[disabled] .btn-success.active {
-  background-color: var(--main-color-1);
-  border-color: var(--main-color-1);
+  background-color: var(--side-color-1);
+  border-color: var(--side-color-1);
 }
 .btn-success .badge {
-  color: var(--main-color-1);
+  color: var(--side-color-1);
   background-color: var(--text-color-1);
 }
 .btn-social {
   border-color: var(--text-color-1);
 }
 .portfolio-modal .close-modal .lr {
-  background-color: var(--side-color-1);
+  background-color: var(--main-color-1);
 }
 .portfolio-modal .close-modal .lr .rl {
-  background-color: var(--side-color-1);
+  background-color: var(--main-color-1);
 }
