@@ -63,3 +63,4 @@ Lastly, it might be worth mentioning my discoveries while working on the project
 
 Code Repository: [GitLab](https://gitlab.com/LinasKo/kaggle-dog-cat-classification){:target="_blank"}
 {: .text-center}
+  

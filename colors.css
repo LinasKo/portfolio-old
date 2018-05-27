@@ -1,6 +1,6 @@
 /*
  * Defines the colors of the website.
- * Darker colors have higher numbers near them in my system
+ * Darker colors have higher numbers near them in my system. Startng color marked with 1.
  */
 
 :root {
@@ -9,6 +9,7 @@
     --main-color-2: #292A29;
     --main-color-3: #202122;
     --main-color-4: #080A08;
+    --side-color-0: #CAF08F;
     --side-color-1: #94DA0F;
     --side-color-2: #66A10D;
     --side-color-3: #38680B;
@@ -17,6 +18,13 @@
 }
 /* Example:   color: var(--side-color);   */
 
+/* Markdown Changes */
+code {
+    color: var(--side-color-3);
+    background-color: var(--side-color-0);
+}
+
+/* Freelancer colors fixes */
 a,
 a:hover,
 a:focus,

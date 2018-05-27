@@ -12,7 +12,7 @@ layout: default
 
 		                {% for img_obj in page.images %}
 		                    <div class="col-sm-4">
-		                        <div class="thumbnail">
+		                        <div class="thumbnail thumbnail-card-no-text">
 		                            <div class="img-wrapper">
 		                                <a href="#{{ img_obj.id }}" class="portfolio-link" data-toggle="modal">
 		                                    <img src="{{ site.baseurl }}/{{ img_obj['url'] }}" class="img-responsive img-centered proj-img" alt="">
@@ -28,29 +28,35 @@ layout: default
 
 		                {{ content }}
 
-		                <ul class="list-inline item-details" style="margin-bottom: 0px">
+		                <br><br>
+		                <ul class="list-inline item-details" align="center" style="margin-bottom: 0px">
 		                    <li>
 		                        Category:
-		                        <strong>{{ page.category }}</strong>
+		                        <strong>{{ page.category | capitalize }}</strong>
 		                    </li>
 		                    <li>
 		                        Date:
-		                        <strong>{{ page.start_date | date: "%B %Y" }}</strong>
-		                        {% if page.end_date %}
-		                             <strong>- {{ page.end_date | date: "%B %Y" }}</strong>
-		                        {% endif %}
+		                        <strong>
+		                        	{{ page.start_date | date: "%B %Y" }}
+			                        {% if page.end_date %}
+			                             - {{ page.end_date | date: "%B %Y" }}
+			                        {% endif %}
+			                    </strong>
 		                    </li>
 		                </ul>
+
 		                {% if page.collaborators %}
-		                    <ul class="list-inline item-details" style="margin-top: 0px">
+		                    <ul class="list-inline item-details" align="center" style="margin-top: 0px">
 		                        <li>
 		                            Collaborators:
-		                            {% for person in page.collaborators %}
-		                                <strong>{{ person }}</strong>
-		                                {% if forloop.last == false %}
-		                                    <strong>, </strong>
-		                                {% endif %}
-		                            {% endfor %}
+		                            <strong>
+			                            {% for person in page.collaborators %}
+			                                {{ person }}
+			                                {% if forloop.last == false %}
+			                                	,
+			                                {% endif %}
+			                            {% endfor %}
+		                            </strong>
 		                        </li>
 		                    </ul>
 		                {% endif %}
@@ -60,6 +66,5 @@ layout: default
 		</div>
 	</div>
 </div>
-
 
 {% include plain_image_modals.html %}
