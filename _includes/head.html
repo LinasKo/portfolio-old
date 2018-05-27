@@ -12,7 +12,8 @@
 
     <!-- Freelancer Theme CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-freelancer/3.3.7/css/freelancer.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ '/colors.css' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="stylesheet" type="text/css" href="{{ '/freelancer-fixes.css' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="stylesheet" type="text/css" href="{{ '/colors.css'           | prepend: site.baseurl | prepend: site.url }}">
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
@@ -32,4 +33,20 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="{{ '/styles.css' | prepend: site.baseurl | prepend: site.url }}">
+
+    {% if site.show_particles == true %}
+        <!-- Particles -->
+        <script type="text/javascript">
+            window.onload = function() {
+                Particles.init({
+                    selector: '.particle-background',
+                    maxParticles: 250,
+                    speed: 0.25,
+                    color: "#202122",
+                    minDistance: 150,
+                    connectParticles: true
+                });
+            };
+        </script>
+    {% endif %}
 </head>

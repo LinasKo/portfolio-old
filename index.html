@@ -4,8 +4,15 @@ layout: default
 
 {% include header.html %}
 
-{% include portfolio.html %}
 
-{% include contact.html %}
+<div class="body-particles">
+	
+	{% if site.show_particles == true %}
+		<canvas class="particle-background"></canvas>
+	{% endif %}
+
+	{% include portfolio.html %}
+
+</div>
 
 {% include footer.html %}

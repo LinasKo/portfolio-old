@@ -17,6 +17,7 @@ Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework 
 * [Paletton](http://paletton.com/#uid=52P0D0k1d6F1Ckn1jdP5B1xeb2j)
 * [Trianglify.io](https://trianglify.io/)
 * [Cool Backgrounds](https://coolbackgrounds.io/)
+* [particles.js](https://marcbruederlin.github.io/particles.js/)
 
 
 ## Copyright and License

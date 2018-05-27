@@ -1,0 +1,4 @@
+hr.star-light:after,
+hr.star-primary:after {
+  content: "";
+}

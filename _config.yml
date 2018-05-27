@@ -38,3 +38,6 @@ defaults:
       path: "_posts"
     values:
       thumb_image_url: "assets/test_post/images/1-submarine.png"
+
+# Particles in the background
+show_particles: false
