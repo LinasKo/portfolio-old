@@ -15,7 +15,7 @@ images:
   - {url: assets/inf4-iar/images/processed/p_wave_graph.png, caption: "Experiments of particle filter-based navigation. As soon as the map layout was fixed (Task 3), we created a map of the arena, so the particle filter localization could be used.", id: p_wave_graph}
 category: projects
 course_name: Inf4 - Intelligent Autonomous Robotics
-project_title: "Strategically navigating a fixed arena using a Khepera II robot"
+project_title: "Strategically navigating a fixed arena with a Khepera II"
 thumb_text: Localization and navigation for a Khepera II robot, to search an obstacle course for "food" and home return
 collaborators:
   - Ramsey El-Naggar

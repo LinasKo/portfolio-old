@@ -13,7 +13,7 @@ images:
   - {url: assets/cat-dog-recognition/images/cat.0.jpg, caption: "A picture of my cat, from a small test set that I made for myself.", id: mundis}
   - {url: assets/cat-dog-recognition/images/cat_9171_outlier.jpg, caption: "One of the 3 outliers I found in the given dataset. This is labeled as a cat.", id: outlier-picture}
 category: projects
-project_title: "GPU-trained Convolutional Neural Network for distinguishing cats from dogs"
+project_title: "GPU-trained CNN for distinguishing cats from dogs"
 thumb_text: A CNN network for distinguishing cats from dogs, inspired by a Kaggle competition
 tech:
   - Python

@@ -11,7 +11,7 @@ images:
   - {url: assets/inf3-sdp/images/sdp_color_picker.png, caption: "Color picker available to the operator during the match. If needed, they can rebalance the color detection thresholds and generally observe the state of the robot.", id: sdp_color_picker}
   - {url: assets/inf3-sdp/images/sdp_interference_example.png, caption: "Interference of the analogue camera, as seen during the development of the vision system.", id: sdp_interference_example}
 category: projects
-project_title: "System Design Project - Making a Football Playing Robot"
+project_title: "System Design Project - Making a Football Robot"
 thumb_text: "An AI-controlled cooperative football playing robot."
 tech:
   - Python
