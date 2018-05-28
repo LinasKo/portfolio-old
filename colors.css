@@ -30,7 +30,7 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-  color: var(--side-color);
+  color: var(--side-color-2);
 }
 hr.star-light {
   border-color: var(--text-color-1);
