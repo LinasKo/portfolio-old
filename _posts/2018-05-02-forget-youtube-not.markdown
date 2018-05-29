@@ -5,7 +5,7 @@ permalink: /:categories/:slug/
 main_title:  Forget YouTube Not
 start_date:   2018-06-01
 end_date:     2018-06-02
-thumb_image_url: assets/forget-youtube-not/images/playlists-schema.png
+thumb_image_url: assets/forget-youtube-not/images/playlists-schema-cropped.png
 images:
   - {url: assets/forget-youtube-not/images/playlists-schema.png, caption: "The schema of the database. SQL injections are prevented by the use of prepared statements, eliminating the need to keep the schema secret.", id: playlist-schema}
   - {url: assets/forget-youtube-not/images/typical-results.png, caption: "Typical results obtained by querying the database directly. I might look into providing a proper front-end for the database at some point in the future.", id: typical-results}
