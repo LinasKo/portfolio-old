@@ -1,4 +1,15 @@
+/* Removing star icon from lines */
 hr.star-light:after,
 hr.star-primary:after {
   content: "";
+}
+
+/* Navbar sizes */
+@media (min-width: 768px) {
+	.navbar-custom {
+    	padding: 15px 0;
+    }
+	.navbar-custom.affix {
+	    padding: 5px 0;
+	}
 }

@@ -33,6 +33,8 @@ collaborators:
 
 ---
 
+<div class="post-content-markdown">
+
 The System Design Project was a course that showed us how large teams interact and large projects are built.
 {: .text-left}
 
@@ -73,3 +75,5 @@ The system had many versions but ultimately allowed us to have reliable communic
 #### Robot Design
 We had to construct a robot out of Lego, that could play football autonomously. The robot had a size limit along all dimensions, had to carry the Arduino, a battery pack, have a kicker with a motor, fit the motors for the wheels, hold a plate above for identification and have grippers for catching the ball in motion. We also had to decide if we needed any additional parts, within a given limit of 100 pounds (we decided to get 4 omni-wheels). Due to space constraints, robot design was a very difficult task.
 {: .text-left}
+
+</div>

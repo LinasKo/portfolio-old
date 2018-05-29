@@ -20,6 +20,8 @@ size: extra-small
 
 ---
 
+<div class="post-content-markdown">
+
 In 2013 Andrej Karpathy provided a description of Policy Gradient learning for Atari Pong in his blog. I have studied the approach, coded up my version of it in TensorFlow and attempted to apply it to the Cart Pole problem in AI Gym, with little success. The moving average of the reward just fluctuated back and forth in a regular, sine wave-like patten, not making any gains beyond a certain point, way below the goal. From this standpoint, this project serves the purpose of letting me see a working reinforcement learning project in action. I want to see the reward change, I want to observe the gradual convergence or the lack of it, I want to understand how long it will take to converge with the basic methods. Therefore, I have decided to perform a training run of Karpathy's Policy Gradient training to observe the results it gives.
 {: .text-left}
 
@@ -34,3 +36,5 @@ Furthermore, we have a deep learning reading group at work, for which we will be
 
 Original post in [Andrej Karpathy blog](http://karpathy.github.io/2016/05/31/rl/){:target="_blank"}
 {: .text-center}
+
+</div>

@@ -24,6 +24,7 @@ tech:
 size: medium
 
 ---
+<div class="post-content-markdown">
 
 ## Introduction
 After finishing my degree in Edinburgh, I have continued studying Deep Learning in my free time by participating in a study group at work, quickly looking through the material of [an online course on Kadenze](https://www.kadenze.com/courses/creative-applications-of-deep-learning-with-tensorflow/info){:target="_blank"}, trying out a bit of Reinforcement Learning.
@@ -221,3 +222,5 @@ Among the utilities that are still needed, It would be useful to have a way to s
 Also, I need to make a submission to Kaggle, for once. I have the data files and functions to generate it, but haven't come to that yet.
 
 Next, the network needs to be improved so that higher accuracies could be achieved. Currently, overtraining can be seen very well, and that needs to change. I might also investigate transfer learning or go towards image segmentation.
+
+</div>

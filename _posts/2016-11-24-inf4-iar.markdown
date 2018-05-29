@@ -24,6 +24,9 @@ tech:
   - Numpy
 size: large
 ---
+
+<div class="post-content-markdown">
+
 For this task, we were given a Khepera II robot, that uses infrared proximity sensors to sense the environment. We were tasked with developing various algorithms for the robot, so that it could perform desired actions within an arena:
 {: .text-left}
 * **Task 1:** The robot must navigate the arena without collisions, follow long walls and not get stuck in corners or dead ends.
@@ -47,3 +50,5 @@ Reports for all 3 tasks: [Google Drive](https://drive.google.com/open?id=1NFmrsW
 {: .text-center}
 Code repository: [GitLab](https://gitlab.com/iar/iar){:target="_blank"}
 {: .text-center}
+
+</div>

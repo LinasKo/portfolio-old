@@ -25,6 +25,8 @@ size: medium
 
 ---
 
+<div class="post-content-markdown">
+
 A 3D reconstruction of a textured plane has been carried out. In different sets, the plane was either still or moving either vertically, horizontally, or away with respect to the camera. Given the source images and resulting pointcloud data, the task was to evaluate the accuracy of the reconstruction.
 {: .text-left}
 
@@ -35,3 +37,5 @@ Report: [Google Drive](https://drive.google.com/open?id=1ZpRGiCunMkxpUFoPKrcb-0i
 {: .text-center}
 Code Repository: [GitLab](https://gitlab.com/LinasKo/Inf4-AV-CW2){:target="_blank"}
 {: .text-center}
+
+</div>

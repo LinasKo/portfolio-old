@@ -25,6 +25,8 @@ unlisted: true
 
 ---
 
+<div class="post-content-markdown">
+
 ## Introduction
 
 <details open><summary><h2>HEADING1</h2>
@@ -48,3 +50,5 @@ text center
 
 link in a new tab
 Code Repository: [GitLab](https://gitlab.com/LinasKo){:target="_blank"}
+
+</div>

@@ -25,6 +25,8 @@ size: medium
 
 ---
 
+<div class="post-content-markdown">
+
 This task required us to track three colored robots in a sequence of images. Images had three different background types and had to work with an unknown forth one, only revealed during assessment.
 {: .text-left}
 
@@ -38,3 +40,5 @@ Report: [Google Drive](https://drive.google.com/open?id=1wYzYK88y1drcs3xgZwLJoZG
 {: .text-center}
 If you would like to take a look at the code, please contact me.
 {: .text-center}
+
+</div>

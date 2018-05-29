@@ -117,7 +117,7 @@ li{
   z-index: 100;
 }
 
-/* Summaries in Markdown */
+/* Markdown Summaries */
 details summary::-webkit-details-marker {
   font-size: 200%;
   color: var(--side-color-2);
@@ -131,4 +131,17 @@ details[open] summary ~ * {
 @keyframes sweep {
   0%    {opacity: 0; margin-left: -10px}
   100%  {opacity: 1; margin-left: 0px}
+}
+
+/* Markdown spacing */
+.post-content-markdown details,
+.post-content-markdown h2 {
+  margin-top: 40px;
+}
+.post-content-markdown h3 {
+  margin-top: 30px;
+}
+.post-content-markdown h4 {
+  margin-top: 20px;
+  margin-bottom: 5px;
 }

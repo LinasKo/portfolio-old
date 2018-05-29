@@ -27,6 +27,8 @@ size: medium
 
 ---
 
+<div class="post-content-markdown">
+
 We were given a set of a over 6000 images, depicting one working day of a man in his office. The task was to track the person and count the number of frames he was performing a certain activity.
 {: .text-left}
 
@@ -43,3 +45,5 @@ Report: [Google Drive](https://drive.google.com/open?id=1H2Vc-TMACEamRlyMmcv_jhv
 {: .text-center}
 For code, scroll down to the end of the report or contact me.
 {: .text-center}
+
+</div>

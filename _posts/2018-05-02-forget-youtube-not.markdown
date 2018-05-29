@@ -22,6 +22,8 @@ size: extra-small
 
 ---
 
+<div class="post-content-markdown">
+
 YouTube is a wonderful source of both entertaining and useful videos, as well as a diverse source of music. Compared with Spotify, YouTube lets one find many more obscure tracks composed by less known artists, as well as less known songs or covers of renowned singers (I estimate that less than 80% of the music I like could be found on Spotify). Due to this variety available, I have created playlists with more than 3000 songs, so I could access them anytime and, most importantly, have a record of both current songs and older songs that I liked in the past. However, YouTube videos tend to be deleted every now and then. I don't mind losing access to a song, but forgetting that it exists in the first place is very annoying. That's why I made this.
 {: .text-left}
 
@@ -36,3 +38,5 @@ The aim of the project was to provide me with a log of all videos in my playlist
 
 Code Repository: [GitLab](https://gitlab.com/LinasKo/forget-youtube-not){:target="_blank"}
 {: .text-center}
+
+</div>

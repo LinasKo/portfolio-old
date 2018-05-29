@@ -28,6 +28,8 @@ size: large
 
 ---
 
+<div class="post-content-markdown">
+
 The practical provided the opportunity to put both basic deep learning ideas into practice, and explore the slightly more advanced topic of Convolutional Neural Networks on MNIST, CIFAR-10 and CIFAR-100 datasets.
 {: .text-left}
 
@@ -47,3 +49,5 @@ Reports: [Google Drive](https://drive.google.com/open?id=1ivjc3oO2prNyn2vHfLZhiU
 {: .text-center}
 Code Repository: [GitLab](https://gitlab.com/LinasKo/Inf4-MLP){:target="_blank"}
 {: .text-center}
+
+</div>

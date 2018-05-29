@@ -27,6 +27,8 @@ size: extra-large
 
 ---
 
+<div class="post-content-markdown">
+
 The robotic model of a fiddler crab is a four-wheeled vehicle, capable of omnidirectional movement, foraging behavior, predator detection, evasion, and retreat to the burrow. It uses a two-sided fisheye camera (RICOH THETA S) and a specific crab-eye filter, specifically chosen and designed to mimic the visual system of the crab.
 {: .text-left}
 
@@ -51,3 +53,5 @@ Report: [Google Drive](https://drive.google.com/open?id=1rj-FLRGEFZqU6gGy-3McNmz
 {: .text-center}
 If you would like to take a look at the code, please contact me.
 {: .text-center}
+
+</div>

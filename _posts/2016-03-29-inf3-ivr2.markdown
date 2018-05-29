@@ -22,6 +22,8 @@ size: medium
 
 ---
 
+<div class="post-content-markdown">
+
 The task given to us consisted of four stages:
 * Construct a two-wheeled robot that can balance itself. Usage of official Lego instructions for both robot design and the code was permitted, allowing us to quickly come up with a working system.
 * Experiment with different variables in the PID control and analyze the robot behavior.
@@ -33,3 +35,5 @@ Report: [Google Drive](https://drive.google.com/open?id=1SnbbNkHMdz9dvIcwKRAZnuu
 {: .text-center}
 If you would like to take a look at the code, please contact me.
 {: .text-center}
+
+</div>
