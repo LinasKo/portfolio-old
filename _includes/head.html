@@ -38,12 +38,21 @@
         <!-- Particles -->
         <script type="text/javascript">
             window.onload = function() {
+                var baseParticlesPerPixel = 250 / (1366 * 768);
+                var screenArea = screen.width * screen.height;
+                var maxParticles = Math.round(baseParticlesPerPixel * screenArea);
+
+                // var baseDistance = 150 / Math.sqrt(1366 * 1366 + 768 * 768);
+                // var screenDiagonal = Math.sqrt(screen.width * screen.width + screen.height * screen.height);
+                // var minDistance = Math.round(baseDistance * screenDiagonal);
+                var minDistance = 150;
+
                 Particles.init({
                     selector: '.particle-background',
-                    maxParticles: 250,
+                    maxParticles: maxParticles,
                     speed: 0.25,
                     color: "#202122",
-                    minDistance: 150,
+                    minDistance: minDistance,
                     connectParticles: true
                 });
             };
