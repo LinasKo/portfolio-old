@@ -120,6 +120,7 @@ li{
 /* Summaries in Markdown */
 details summary::-webkit-details-marker {
   font-size: 200%;
+  color: var(--side-color-2);
 }
 summary h2 {
     display: inline;
@@ -127,7 +128,6 @@ summary h2 {
 details[open] summary ~ * {
   animation: sweep .6s ease-in-out;
 }
-
 @keyframes sweep {
   0%    {opacity: 0; margin-left: -10px}
   100%  {opacity: 1; margin-left: 0px}

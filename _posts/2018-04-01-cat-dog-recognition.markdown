@@ -25,42 +25,199 @@ size: medium
 
 ---
 
-### Previous Work
-After finishing my degree in Edinburgh I have continued my studies of Deep Learning on my own in several ways:
-{: .text-left}
-* I've refreshed my memory of the basics by writing a simple deep neural network in python for classifying MNIST. I'm not 100\% correctness of it right now, so some testing and a writeup is due.
-* I've audited a Deep Learning course on Kadenze, learning more about Deep Dream and gaining an intuition of Variational Autoencoders, GANs, RNNs and implementation of Deep Dream.
-* I've taken part in a Deep Learning study group at work, revising DNNs, CNNs, learning more about RNNs, Keras, GANs, RL.
-* I've attempted to deliberately implement the simplest possible Reinforcement Learning network for the simplest problem I could find, with hopes of gauging the complexity, run time, and generally getting an impression for what RL is. Well, apparently, when Policy Gradient Learning is applied to the CartPole problem, at some point, the resulting score just starts oscillating, without further training. With my self-imposed constraint of not using Q-Learning or Actor-Critic methods, this becomes a fairly interesting problem that I put on hold. Having finished this Cat-Dog recognition project, I think this CartPole Policy Gradient is what I'm now going to return to.
-* With the previous RL attempt not producing good results, I wanted to see some Reinforcement Learning in action. I have therefore run Andrej Karpathy's network for a week to see how well it could do in Atari Pong. [Project Link](/portfolio/projects/karpathy-pong/){:target="_blank"}
-{: .text-left}
+## Introduction
+After finishing my degree in Edinburgh, I have continued studying Deep Learning in my free time by participating in a study group at work, quickly looking through the material of [an online course on Kadenze](https://www.kadenze.com/courses/creative-applications-of-deep-learning-with-tensorflow/info){:target="_blank"}, trying out a bit of Reinforcement Learning.
 
-### Project
-Now, at some point I realized that since I no longer have access to my university's cluster of servers and only have a 5 year old GPU, I can't really use a large dataset or a complicated network to train my models. Therefore, with a fair bit of help from my dad I have set up a deep learning environment on a server back home in Lithuania.
-{: .text-left}
+I've always wanted to do tackle a more advanced computer vision problem with neural networks than CIFAR classification, with limited resources (no good GPU) and experience, I've decided that an iterative approach will work best. I've decided to start with [Dogs vs Cats classification from Kaggle](https://www.kaggle.com/c/dogs-vs-cats-redux-kernels-edition/){:target="_blank"}.
 
-Next, I have decided to try out `Keras`, as I'm already familiar to Python. There have been a few obstacles along the way, mostly involving a memory leak in older version of `Keras` libraries, crashing my training sessions. However, I've now fully completed my goal - I feel like I can use both `Keras` and  `TensorFlow` frameworks equally well and understand the key differences between them.
-{: .text-left}
+### The Dataset
+For this project, I used the [cats and dog dataset](https://www.kaggle.com/c/dogs-vs-cats-redux-kernels-edition/data){:target="_blank"} containing 25,000 variable size images of cats and dogs. I have permanently split off 5000 to act as the validation set and used the remaining 20,000 as the training set.
 
-Then what I needed to figure out was how one needs to set up their networks such that the GPU would be used fully. Initially, when training with a very simple CNN I observed that GPU would get around 100% loaded for a moment, but would spend 10x more time idle. Ultimately, significantly deepening the network, increasing the number of CNN filters and increasing the batch size helped.
-{: .text-left}
+<details><summary><h2>Phase 1: Training on the GPU</h2>
+  <p>I set up the dataset for training, trained the network on a GPU and set up a baseline for further runs to evaluate further runs</p>
+</summary>
 
-Then for this project I have looked through a handful of papers to better understand how to shape my deep CNN. I've also looked into means of how differently sized images are typically preprocessed, reading on Sparse Networks, but ultimately deciding to just resize to the size I wanted, without regard to the aspect ratio. This is one area to improve in my network.
-However, I carried out an analysis on image sizes in the dataset to understand what size of images values would be needed to morph the data the least. I plotted a histogram of image sizes, checked out the median in heights and widths, and even managed to find 3 outliers! For more, check the [Notebook](https://gitlab.com/LinasKo/kaggle-dog-cat-classification/blob/master/notebooks/data_exploration.ipynb){:target="_blank"}.
-{: .text-left}
+### Goals
+After graduating, I realized very quickly that even if I devised a sophisticated neural network and came across a decently sized dataset, I wouldn't have anything to run it on. Therefore, with a fair bit of help from my dad, I have set up a deep learning environment on a server back home in Lithuania.
 
-Additionally, I've invested a lot of time in developing a metrics recording suite which I'll hopefully reuse for other projects. Currently it involves accuracy and loss plotting for training and validation, an easy-to-use runtime tracker, recording off the most important hyperparameters, saving of the final model and the best model, plotting of model schema, extracting the summary and plotting results after each epoch as CSV.
-{: .text-left}
+I have never trained on a GPU before, as my university only offered undergraduates CPUs. Therefore, as a start, my goals were:
+* Use Keras to find how much it differs from TensorFlow.
+* Prepare the dataset of cats and dogs for learning. Figure out how to store it correctly during training.
+* Decide on the data augmentation to be used. Prepare and store augmented images or implement augmentation on the fly.
+* Find a comfortable way of organizing a deep learning project, that works for me and would apply to projects in the future.
+* Successfully run a training run on a GPU.
+* Evaluate how efficiently GPU is being utilized.
+* Establish a baseline validation accuracy measure for further runs.
+* See if I can develop additional tools that could be reused in future projects.
 
-I am planning to continue working on this project, and here are [my notes for the next step](https://gitlab.com/LinasKo/kaggle-dog-cat-classification/blob/master/results/2018-05-16%2000:05:04%20-%2064x64_deep_cnn/notes.md){:target="_blank"}. Between actually planning my projects, I still need to decide on the format to present them. Currently, even if the website streamlines it a bit, I still feel that it's too erratic.
-{: .text-left}
+### Implementation
+#### Getting to know the server
+To start with, I got to know the server controls. Thanks to my dad, I could power on the server remotely and ssh into it. I could also log into a running Jupyter Notebook, allowing me to program remotely.
 
-Lastly, it might be worth mentioning my discoveries while working on the project:
-{: .text-left}
-* [Mendeley](https://www.mendeley.com){:target="_blank"} - They have a desktop app that's fantastic for annotating research papers
-*  and [Cookie Cutter Data Science](https://drivendata.github.io/cookiecutter-data-science/){:target="_blank"} -  A very convenient way to structure your deep learning projects.
-{: .text-left}
+#### Data Input
+After an unsuccessful attempt at using TFRecords for storing the images, I decided to just split the classes into folders and pass them to Keras. Some of it was done in Jupyter Notebook, and some with Bash. I've applied simple data augmentation, randomly horizontally flipping the images, shearing them by up to 20% and / or zooming by up to 20%. No other augmentation ratios were tested at this point.
 
-Code Repository: [GitLab](https://gitlab.com/LinasKo/kaggle-dog-cat-classification){:target="_blank"}
-{: .text-center}
-  
+#### Devising the Network
+I've chosen to make the network fairly straightforward. Here's the summary of it:
+```
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_1 (Conv2D)            (None, 64, 64, 32)        896       
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 32, 32, 32)        0         
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 32768)             0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 128)               4194432   
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 128)               0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 1)                 129       
+=================================================================
+Total params: 4,195,457
+Trainable params: 4,195,457
+Non-trainable params: 0
+```
+
+I found that using a batch size of 256 seems to be the highest multiple of 2 that doesn't cause a memory error, so I stuck with it for now.
+
+With the network ready, I have set the training to run for 2000 epochs, which took less than a day (I did not time it at this point).
+
+#### Evaluating the GPU load
+I've observed the GPU load every second by running the command `nvidia-smi -l 1`, right after starting the training.
+
+### Obstacles
+Initially, the hardest obstacle was deciding how to encode the data. I believe that initially I was trying to pack all the images into a `TFRecord` object, but ultimately gave up on the idea due to difficulties in loading it afterwards in Keras.
+
+Later, a large obstacle was a memory leak that was happening when attempting to run virtually any network. I would leave it for the night and find it crashed in the morning. I've set up a [memory callback](https://gitlab.com/LinasKo/kaggle-dog-cat-classification/blob/master/src/util/monitoring_tools.py){:target="_blank"} and observed that memory use only ever increases after each epoch. Ultimately, it was a fault in my Keras version and after half a day of digging through git issues, I've updated it, which solved it.
+
+### Results
+#### Training Run
+The training completed successfully and reached the following:
+```
+Highest validation accuracy: 0.8052, at epoch 287
+Lowest validation loss:      0.4278, at epoch 82
+Final validation accuracy:   0.7818 
+Final validation loss:       1.0482 
+```
+
+The network overtrained significantly, with validation loss reaching its minimum at epoch 82 and started increasing from then on, as the training loss went ever close to zero. Meanwhile, from around epoch 82, the validation accuracy plateaued.
+
+All results can be found on [Gitlab](https://gitlab.com/LinasKo/kaggle-dog-cat-classification/tree/master/results/2018-05-14%2000:26:04%20-%20baseline){:target="_blank"}
+
+#### GPU Evaluation
+I have immediately noticed that GPU is not being utilized very well. The usage would jump to ~90% for a second and then drop to 0% for 5-10 seconds. I believe that due to the model being fairly simple, it is computed very quickly, waiting on more data input. A more sophisticated model needs to be developed, that can be parallelized more efficiently, increasing the predictive power over the baseline and fully utilizing the GPU.
+
+</details>
+
+<details><summary><h2>Phase 2: Full GPU Utilization</h2>
+  <p>I devise a network that fully utilizes the GPU.</p>
+</summary>
+
+### Goals
+Now that I had the baseline, I had to implement a more complex network, that could be parallelized. It should:
+1. Have more predictive power.
+2. Bring the GPU utilization to at least 80%, and make it uniform, or at least more frequent.
+
+I also wanted to continue to look at the following:
+* Find a nicer way to structure the project.
+* Create better tools for displaying the results. Find out which metrics to store.
+* Store model checkpoints and other data that would allow to continue training in the future.
+* Look for a better way of equalizing images or taking in varying size images.
+
+### Implementation
+#### Data Exploration
+To explore the size distribution of the images, I explored the data in Jupyter Notebook. I plotted histograms for the heights and widths of the images from the dataset. I have also carried out a small literature review in regarding the network architecture, and a better way to scale the images before presenting them to the input pipeline.
+
+#### Project Structure
+Here, I found a brilliant solution. [Cookie Cutter Data Science](https://drivendata.github.io/cookiecutter-data-science/){:target="_blank"} had the exact solution I was looking for. Taking a very similar project structure to what they proposed, I laid out my project in a way that neatly separates all the moving parts. At the time, this helped considerately, as I understood that I need to move my model definitions and training away from Jupyte Notebooks.
+
+#### Training Run
+After some deliberation and a literature review, I have decided to adopt the following network architecture:
+```
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_1 (Conv2D)            (None, 64, 64, 100)       2800      
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 32, 32, 100)       0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 32, 32, 200)       180200    
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 16, 16, 200)       0         
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 16, 16, 300)       540300    
+_________________________________________________________________
+max_pooling2d_3 (MaxPooling2 (None, 8, 8, 300)         0         
+_________________________________________________________________
+conv2d_4 (Conv2D)            (None, 8, 8, 400)         1080400   
+_________________________________________________________________
+max_pooling2d_4 (MaxPooling2 (None, 4, 4, 400)         0         
+_________________________________________________________________
+conv2d_5 (Conv2D)            (None, 4, 4, 500)         1800500   
+_________________________________________________________________
+max_pooling2d_5 (MaxPooling2 (None, 2, 2, 500)         0         
+_________________________________________________________________
+conv2d_6 (Conv2D)            (None, 2, 2, 600)         2700600   
+_________________________________________________________________
+max_pooling2d_6 (MaxPooling2 (None, 1, 1, 600)         0         
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 600)               0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 1)                 601       
+=================================================================
+Total params: 6,305,401
+Trainable params: 6,305,401
+Non-trainable params: 0
+```
+
+This had the advantage of higher predictive power due to more hidden layers. The algorithm used a batch size of 512 and ran for 2000 epochs. This took more than 21 hours.
+
+#### GPU Utilization
+I have run GPU utilization queries after starting the training, for a few minutes:
+```
+timeout 86400 nvidia-smi --query-gpu=timestamp,name,pci.bus_id,driver_version,pstate,pcie.link.gen.max,pcie.link.gen.current,temperature.gpu,utilization.gpu,utilization.memory,memory.total,memory.free,memory.used --format=csv -l 1 > "gpu_load - `date +"%Y-%m-%d %H-%M-%S"`.csv"
+```
+
+### Results
+Ultimately, this phase was a complete success. I have both trained the network, fully utilized the GPU, found very nice project layout guidelines, created lots of useful tools for model metric tracking, and even found some unexpected outliers.
+
+Here are my [notes for the next step](https://gitlab.com/LinasKo/kaggle-dog-cat-classification/blob/master/results/2018-05-16%2000:05:04%20-%2064x64_deep_cnn/notes.md){:target="_blank"}.
+
+#### Data Exploration
+I didn't expect to find outliers in the dataset. However, when plotting top 10 most skewed photos by the ratio `abs(x_dimension - y_dimention)`, I have seen that at least three images did not contain cats or dogs and were definitely outliers. Luckily, all of these were in the training set and could be removed easily. Aside from that, I have decided that the simple scaling of images regardless of aspect ration will work good enough for now. I have chosen a better image size - `64x64`.
+
+#### Training Run
+With just a ~50% increase in the parameter count, the resulting validation accuracy has improved by almost 12%!
+```
+Highest validation accuracy: 0.9236, at epoch 1924
+Lowest validation loss:      0.2458, at epoch 29
+Final validation accuracy:   0.9128
+Final validation loss:       0.5212 
+```
+
+This shows that removal of dropout was not a good idea, or that I should have used other methods to prevent overtraining.
+
+All results can be found on [Gitlab](https://gitlab.com/LinasKo/kaggle-dog-cat-classification/tree/master/results/2018-05-16%2000:05:04%20-%2064x64_deep_cnn){:target="_blank"}
+
+#### GPU Utilization
+There is nothing much to say here except that my GPU was finally fully utilized. There may be a better way to understand it, in addition to the utilization values, but for now, I am very much satisfied with the results.
+
+#### Tools and Other Discoveries
+After moving away from Notebooks I started using PyCharm to develop the code. I found that I can mount the working directory with `sshfs`, allowing me to edit the code directly, at a cost of saving taking 5 seconds or so, instead of being instantaneous.
+
+Other tools were added:
+* CSV logger for tracking training results of every epoch.
+* Model summary generator
+* Best-epoch model saving
+* Numerous functions for tracking results of a Keras model performance.
+
+Lastly, I found [Mendeley](https://www.mendeley.com){:target="_blank"} - an amazing desktop app for annotating research papers.
+
+</details>
+
+## Afterthoughts and Further Plans
+Among the utilities that are still needed, It would be useful to have a way to shut down the server after a training run finishes.
+
+Also, I need to make a submission to Kaggle, for once. I have the data files and functions to generate it, but haven't come to that yet.
+
+Next, the network needs to be improved so that higher accuracies could be achieved. Currently, overtraining can be seen very well, and that needs to change. I might also investigate transfer learning or go towards image segmentation.
