@@ -216,15 +216,15 @@ Lastly, I found [Mendeley](https://www.mendeley.com){:target="_blank"} - an amaz
 
 </details>
 
-<details><summary><h2>Phase 3: GOptimizing for longer runs</h2>
-  <p>(In Progress) I attempt to grab some low hanging fruit by optimizing my network for running longer and, hopefully, overtraining less</p>
+<details><summary><h2>Phase 3: Optimizing for longer runs</h2>
+  <p>(In Progress) I attempt to grab some low hanging fruit by optimizing my network for longer runs and, hopefully, decreasing overtraining</p>
 </summary>
 
 ### Goals
 The next step after a successful CNN run is to reduce overtraining. Possibly, if I spread out the training over a longer period of time, I could achieve better results. Therefore, my goals for now are:
-* Reduce the learning rate. Possibly experiment with learning rate annealing.
+* Reduce the learning rate. Experiment with learning rate annealing.
 * Reintroduce dropout
-* Load previous models and submit results to Kaggle 
+* Load previous models and submit results to Kaggle.
 
 </details>
 
