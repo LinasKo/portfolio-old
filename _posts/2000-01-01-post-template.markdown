@@ -29,7 +29,7 @@ unlisted: true
 
 ## Introduction
 
-<details open><summary><h2>HEADING1</h2>
+<details><summary><h2>HEADING1</h2>
   <p>DESCRIPTION1</p>
 </summary>
 
