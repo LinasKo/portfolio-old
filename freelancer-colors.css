@@ -1,0 +1,170 @@
+@import "colors.css";
+
+
+/* Markdown Changes */
+code {
+    color: var(--side-color-3);
+    background-color: var(--side-color-0);
+}
+
+/* Freelancer colors fixes */
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+  color: var(--side-color-2);
+}
+hr.star-light {
+  border-color: var(--text-color-1);
+}
+hr.star-light:after {
+  background-color: var(--side-color-1);
+  color: var(--text-color-1);
+}
+hr.star-primary {
+  border-color: var(--main-color-1);
+}
+hr.star-primary:after {
+  background-color: var(--text-color-1);
+  color: var(--main-color-1);
+}
+header {
+  background: var(--side-color-1);
+  color: var(--text-color-1);
+}
+.navbar-custom {
+  background: var(--main-color-1);
+}
+.navbar-custom .navbar-brand {
+  color: var(--text-color-1);
+}
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus,
+.navbar-custom .navbar-brand:active,
+.navbar-custom .navbar-brand.active {
+  color: var(--text-color-1);
+}
+.navbar-custom .navbar-nav li a {
+  color: var(--text-color-1);
+}
+.navbar-custom .navbar-nav li a:hover {
+  color: var(--side-color-1);
+}
+.navbar-custom .navbar-nav li a:focus,
+.navbar-custom .navbar-nav li a:active {
+  color: var(--text-color-1);
+}
+.navbar-custom .navbar-nav li.active a {
+  color: var(--text-color-1);
+  background: var(--side-color-1);
+}
+.navbar-custom .navbar-nav li.active a:hover,
+.navbar-custom .navbar-nav li.active a:focus,
+.navbar-custom .navbar-nav li.active a:active {
+  color: var(--text-color-1);
+  background: var(--side-color-1);
+}
+.navbar-custom .navbar-toggle {
+  color: var(--text-color-1);
+  border-color: var(--text-color-1);
+}
+.navbar-custom .navbar-toggle:hover,
+.navbar-custom .navbar-toggle:focus {
+  background-color: var(--side-color-1);
+  color: var(--text-color-1);
+  border-color: var(--side-color-1);
+}
+section.success {
+  background: var(--side-color-1);
+  color: var(--text-color-1);
+}
+#portfolio .portfolio-item .portfolio-link .caption .caption-content {
+  color: var(--text-color-1);
+}
+.floating-label-form-group {
+  border-bottom-color: var(--text-color-2);
+}
+.floating-label-form-group:not(:first-child) {
+  border-left-color: var(--text-color-2);
+}
+.floating-label-form-group-with-focus label {
+  color: var(--side-color-1);
+}
+form .row:first-child .floating-label-form-group {
+  border-top-color: var(--text-color-2);
+}
+footer {
+  color: var(--text-color-1);
+}
+footer .footer-above {
+  background-color: var(--main-color-1);
+}
+footer .footer-below {
+  background-color: var(--main-color-2);
+}
+.btn-outline {
+  color: var(--text-color-1);
+  border-color: var(--text-color-1);
+}
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active,
+.btn-outline.active {
+  color: var(--side-color-1);
+  background: var(--text-color-1);
+  border-color: var(--text-color-1);
+}
+.btn-primary {
+  color: var(--text-color-1);
+  background-color: var(--main-color-1);
+  border-color: var(--main-color-1);
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: var(--text-color-1);
+  background-color: var(--main-color-3);
+  border-color: var(--main-color-4);
+}
+fieldset[disabled] .btn-primary.active {
+  background-color: var(--main-color-1);
+  border-color: var(--main-color-1);
+}
+.btn-primary .badge {
+  color: var(--main-color-1);
+  background-color: var(--text-color-1);
+}
+.btn-success {
+  color: var(--text-color-1);
+  background-color: var(--side-color-1);
+  border-color: var(--side-color-1);
+}
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.open .dropdown-toggle.btn-success {
+  color: var(--text-color-1);
+  background-color: var(--side-color-2);
+  border-color: var(--side-color-3);
+}
+fieldset[disabled] .btn-success.active {
+  background-color: var(--side-color-1);
+  border-color: var(--side-color-1);
+}
+.btn-success .badge {
+  color: var(--side-color-1);
+  background-color: var(--text-color-1);
+}
+.btn-social {
+  border-color: var(--text-color-1);
+}
+.portfolio-modal .close-modal .lr {
+  background-color: var(--main-color-1);
+}
+.portfolio-modal .close-modal .lr .rl {
+  background-color: var(--main-color-1);
+}
