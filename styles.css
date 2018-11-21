@@ -195,3 +195,8 @@ details[open] summary ~ * {
   background: var(--main-color-3);
   border-color: var(--side-color-1);
 }
+
+/* Modals */
+.modal-body button.btn-default {
+    font-size: 18px;
+}
