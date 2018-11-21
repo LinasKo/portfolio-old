@@ -7,7 +7,7 @@ start_date:   2016-09-18
 end_date:     2016-11-24
 thumb_image_url: assets/inf4-iar/images/processed/p_khepera.png
 images:
-  - {url: assets/inf4-iar/images/processed/p_marked_map.png, caption: "Final map of the arena, used for Task 3. Nest is the official starting locations of the robot that it starts from (any orientation) and points are where we decided to place the 'food' locations for our tests. Robot needed to find food locations and bring the pellet to the nest. Pickup and dropping of the pellets were signaled by the arbiter with the press of the space bar.", id: p_marked_map}
+  - {url: assets/inf4-iar/images/processed/p_marked_map.png, caption: "Final map of the arena, used for Task 3. Nest is the official starting locations of the robot that it starts from (any orientation) and points are locations with 'food'. Robot needed to find food locations and bring the pellet to the nest. Pickup and dropping of the pellets were signaled by the arbiter with the press of the space bar.", id: p_marked_map}
   - {url: assets/inf4-iar/images/processed/p_khepera.png, caption: "The Khepera II robot from up close. The black patches on the front and sides are the IR sensors.", id: p_khepera}
   - {url: assets/inf4-iar/images/processed/p_ir_sensors.png, caption: "Sketch of IR sensors placement on the Khepera II robot.", id: p_ir_sensors}
   - {url: assets/inf4-iar/images/processed/p_architecture.png, caption: "Flowchart depicting different components of our system for controlling the robot.", id: p_architecture}
