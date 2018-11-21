@@ -159,6 +159,23 @@ li{
   z-index: 100;
 }
 
+/* post title-related */
+.post-title {
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 0.3em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+.tech-list {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 0.3em;
+    margin-bottom: 3em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
 /* Markdown Summaries */
 details summary::-webkit-details-marker {
   font-size: 200%;

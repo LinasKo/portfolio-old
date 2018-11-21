@@ -19,10 +19,12 @@ project_title: "Image Classification using DNN and CNN"
 thumb_text: Deep learning classification with both ground-up Python solution on MNIST, and TensorFlow on CIFAR.
 collaborators:
 tech:
+  - Deep Learning
+  - TensorFlow
+  - TensorBoard
   - Python
   - Numpy
   - Jupyter Notebooks
-  - TensorFlow
   - Linux
 size: large
 

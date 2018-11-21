@@ -20,6 +20,7 @@ thumb_text: Tracking of three shapes in a sequence of images using basic shape a
 collaborators:
   - Dalius Grazinskis
 tech:
+  - Computer Vision
   - Matlab
 size: medium
 

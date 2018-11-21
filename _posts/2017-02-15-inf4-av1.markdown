@@ -20,8 +20,9 @@ thumb_text: Person detection in an office using different background subtraction
 collaborators:
   - Dalius Grazinskis
 tech:
-  - Python
+  - Computer Vision
   - OpenCV
+  - Python
   - Numpy
 size: medium
 

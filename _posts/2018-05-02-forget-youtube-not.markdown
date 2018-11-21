@@ -15,8 +15,8 @@ project_title: "A YouTube polling server for detecting deleted videos"
 thumb_text: A daily poll of given YouTube playlists, detecting which videos were deleted
 tech:
   - pythonanywhere
+  - Youtube API
   - Python
-  - Firebase
   - MySQL
 size: extra-small
 

@@ -14,6 +14,8 @@ category: projects
 project_title: "A trial run of A. Karpathy's Policy Gradient learning"
 thumb_text: "A trial run of Policy Gradient learning for Atari Pong, created by Andrej Karpathy."
 tech:
+  - Reinforcement Learning
+  - Slack API
   - Python
   - Numpy
 size: extra-small

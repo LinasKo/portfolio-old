@@ -20,6 +20,7 @@ thumb_text: Evaluation of 3D reconstruction data, given series of source images 
 collaborators:
   - Calum McLeod
 tech:
+  - Computer Vision
   - Matlab
 size: medium
 

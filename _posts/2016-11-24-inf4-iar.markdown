@@ -20,6 +20,8 @@ thumb_text: Localization and navigation for a Khepera II robot, to search an obs
 collaborators:
   - Ramsey El-Naggar
 tech:
+  - Robotics
+  - Localization
   - Python
   - Numpy
 size: large

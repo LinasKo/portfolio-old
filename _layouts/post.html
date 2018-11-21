@@ -26,7 +26,18 @@ layout: default
 		                    <p class="small" align="center">Click on the images to enlarge.</p>
 		                {% endif %}
 
-						<h1 style="text-align: center; margin: 2em 2em 2em 2em">{{ page.project_title }}</h1>
+						<h1 class="post-title">{{ page.project_title }}</h1>
+						{% if page.tech %}
+							<p class="tech-list" align="center">
+							{% for tech in page.tech %}
+								{{ tech }}
+								{% if forloop.last == false %}
+									 •  
+								{% endif %}
+							{% endfor %}
+							</p>
+						{% endif %}
+
 		                {{ content }}
 
 		                <br><br>

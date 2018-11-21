@@ -14,11 +14,15 @@ category: projects
 project_title: "System Design Project - Making a Football Robot"
 thumb_text: "An AI-controlled cooperative football playing robot."
 tech:
+  - Robotics
+  - Computer Vision
+  - OpenCV
   - Python
   - Numpy
-  - OpenCV
+  - Tkinter
   - Arduino
   - Lego
+  - Linux
 size: extra-large
 collaborators:
   - James Renwick

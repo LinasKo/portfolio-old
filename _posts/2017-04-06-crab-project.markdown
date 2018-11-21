@@ -19,8 +19,10 @@ project_title: Augmenting a Robotic Model of Fiddler Crab Interaction
 thumb_text: Improvements to Localization system of a robotic crab using Optical Flow
 collaborators:
 tech:
-  - Python
+  - Robotics
+  - Computer Vision
   - OpenCV
+  - Python
   - Numpy
   - Linux
 size: extra-large

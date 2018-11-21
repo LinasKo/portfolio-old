@@ -17,6 +17,8 @@ thumb_text: Analysis of PID control variables and implementation of obstacle avo
 collaborators:
   - Dalius Grazinskis
 tech:
+  - Robotics
+  - Computer Vision
   - Lego Mindstorms EV3
 size: medium
 

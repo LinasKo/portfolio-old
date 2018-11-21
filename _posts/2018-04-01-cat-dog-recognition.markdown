@@ -16,6 +16,7 @@ category: projects
 project_title: "GPU-trained CNN for distinguishing cats from dogs"
 thumb_text: A CNN network for distinguishing cats from dogs, inspired by a Kaggle competition
 tech:
+  - Deep Learning
   - Python
   - Keras
   - Matplotlib
@@ -98,8 +99,8 @@ The training completed successfully and reached the following:
 ```
 Highest validation accuracy: 0.8052, at epoch 287
 Lowest validation loss:      0.4278, at epoch 82
-Final validation accuracy:   0.7818 
-Final validation loss:       1.0482 
+Final validation accuracy:   0.7818
+Final validation loss:       1.0482
 ```
 
 The network overtrained significantly, with validation loss reaching its minimum at epoch 82 and started increasing from then on, as the training loss went ever close to zero. Meanwhile, from around epoch 82, the validation accuracy plateaued.
@@ -193,7 +194,7 @@ With just a ~50% increase in the parameter count, the resulting validation accur
 Highest validation accuracy: 0.9236, at epoch 1924
 Lowest validation loss:      0.2458, at epoch 29
 Final validation accuracy:   0.9128
-Final validation loss:       0.5212 
+Final validation loss:       0.5212
 ```
 
 This shows that removal of dropout was not a good idea, or that I should have used other methods to prevent overtraining.
