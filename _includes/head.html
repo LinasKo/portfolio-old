@@ -39,24 +39,61 @@
     {% if site.show_particles == true %}
         <!-- Particles -->
         <script type="text/javascript">
+            let baseParticlesPerPixel = 250 / (1366 * 768);
+
+            // List of screen sizes, sorted by popularity
+            let popularScreenSizes = [
+                // [1366, 768],  - default
+                [1920, 1080],
+                [1280, 800],
+                [320, 568],
+                [1440, 900],
+                [1600, 900],
+                [768, 1024],
+                [1024, 768],
+                [1680, 1050],
+                [360, 640],
+                [720, 1280],
+                [480, 800],
+                [1360, 768],
+            ];
+            popularScreenSizes.sort(function(a, b){return a[0] - b[0]});
+
+            let computeParticleCount = function(winWidth, winHeight) {
+                let windowAreaSize = winWidth * winHeight;
+                let maxParticles = Math.round(baseParticlesPerPixel * windowAreaSize);
+                return maxParticles;
+            }
+
             window.onload = function() {
-                var baseParticlesPerPixel = 250 / (1366 * 768);
-                var screenArea = screen.width * screen.height;
-                var maxParticles = Math.round(baseParticlesPerPixel * screenArea);
-
-                // var baseDistance = 150 / Math.sqrt(1366 * 1366 + 768 * 768);
-                // var screenDiagonal = Math.sqrt(screen.width * screen.width + screen.height * screen.height);
-                // var minDistance = Math.round(baseDistance * screenDiagonal);
-                var minDistance = 150;
-
-                Particles.init({
-                    selector: '.particle-background',
-                    maxParticles: maxParticles,
+                let particlesArguments = {
+                    selector: ".particle-background",
+                    maxParticles: computeParticleCount(1366, 768),
                     speed: 0.25,
-                    color: "#202122",
-                    minDistance: minDistance,
-                    connectParticles: true
+                    color: ["#202122"],
+                    minDistance: 150,
+                    connectParticles: true,
+
+                    // Breakpoints, based on window.innerWidth
+                    responsive: []
+                }
+                popularScreenSizes.forEach(function(dims) {
+                    particlesArguments.responsive.push({
+                        breakpoint: dims[0],
+                        options: {
+                            maxParticles: computeParticleCount(dims[0], dims[1])
+                        }
+                    });
                 });
+
+
+                var particles = Particles.init(particlesArguments);
+
+                // Deal with permanent drawing bug when zoomed out (at least in chrome)
+                if (window.devicePixelRatio < 1) {
+                    particles.pauseAnimation();
+                }
+
             };
         </script>
     {% endif %}
