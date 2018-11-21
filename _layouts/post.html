@@ -7,8 +7,8 @@ layout: default
 		    <div class="row">
 		        <div class="col-lg-12">
 		            <div class="modal-body">
-		                <h2>{{ page.title }}</h2>
-		                <hr class="star-primary">
+						<div style="margin: 100px;">
+						</div>
 
 		                {% for img_obj in page.images %}
 		                    <div class="col-sm-4">
@@ -26,6 +26,7 @@ layout: default
 		                    <p class="small" align="center">Click on the images to enlarge.</p>
 		                {% endif %}
 
+						<h1 style="text-align: center; margin: 2em 2em 2em 2em">{{ page.project_title }}</h1>
 		                {{ content }}
 
 		                <br><br>
