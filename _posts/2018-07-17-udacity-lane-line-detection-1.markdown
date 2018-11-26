@@ -2,7 +2,7 @@
 layout: post
 modalID: modalUdacityLaneLineDetection1
 permalink: /:categories/:slug/
-main_title: Lane Line Detection - Part 1
+main_title: Lane Line Detection - Basic
 start_date: 2018-07-14
 # end_date:   2018-07-17
 thumb_image_url: assets/udacity-lane-line-detection-1/images/challenge_no_outlier_removal.gif
@@ -19,11 +19,8 @@ images:
 
   - {url: assets/udacity-lane-line-detection-1/images/challenge_result.gif, caption: "The result, applied to the challenge video.", id: challenge_result}
 
-
-
-
 category: projects
-project_title: "Simple lane line detection in video"
+project_title: "Simple lane line detection"
 thumb_text: Lane line detection in a simple video using Hough transform
 tech:
   - Computer vision
@@ -64,7 +61,7 @@ Generally, my pipeline was composed of the following parts:
 * Extend line equations into lines in the image
 * Overlay the results
 
-## results
+## Results
 Ultimately, I believe the pipeline fairly accurately classifies the challenge video, while also displaying excellent performance on all other provided videos.
 
 Since discussion is usually my favourite part of the writeup, here's what I had:
