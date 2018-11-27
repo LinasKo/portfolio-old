@@ -193,6 +193,23 @@ details[open] summary ~ * {
   100%  {opacity: 1; margin-left: 0px}
 }
 
+/* Markdown table */
+table.md-table {
+    margin: auto;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    border: 2px solid var(--main-color-3);
+}
+
+table.md-table thead {
+    border: 2px solid var(--main-color-3);
+}
+
+table.md-table td {
+    border: 1px solid var(--main-color-3);
+    padding: 1em;
+}
+
 /* Markdown spacing */
 .post-content-markdown details,
 .post-content-markdown h2 {

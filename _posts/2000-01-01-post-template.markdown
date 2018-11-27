@@ -42,6 +42,23 @@ unlisted: true
 
 ## Afterthoughts and Further Plans
 
+| Layer         		|     Description	        					|
+|:---------------------:|:---------------------------------------------:|
+| Input         		| 32x32x3 RGB image   							|
+| Convolution 5x5, k=6  | 1x1 stride, same padding, outputs 28x28x6 	|
+| RELU					|												|
+| Max pooling	      	| 2x2 stride, outputs 14x14x6 				    |
+| Convolution 5x5, k=16 | 1x1 stride, same padding, outputs 10x10x16 	|
+| RELU					|												|
+| Max pooling	      	| 2x2 stride, outputs 5x5x6 				    |
+| Fully connected       | 120 hidden units								|
+| RELU					|												|
+| Fully connected       | 84 hidden units								|
+| RELU					|												|
+| Fully connected       | 43 hidden units								|
+| Softmax				|             									|
+{:.md-table}
+
 text left
 {: .text-left}
 
