@@ -4,14 +4,14 @@ modalID: modalKidnappedVehicle
 permalink: /:categories/:slug/
 main_title: Localization of a Kidnapped Vehicle
 start_date: 2018-12-23
-# end_date:   2018-12-25
+end_date:   2019-01-10
 thumb_image_url: assets/udacity-kidnapped-vehicle/images/running.png
 images:
 
   - {url: assets/udacity-kidnapped-vehicle/images/starting-state.png, caption: "The starting state of the simulator. You can see the map landmarks as black circles and sensor measurements (distance, yaw) as green lines. There is also a blue vehicle as the ground truth and the blue circle that shows the estimated location of the vehicle.", id: starting-state}
-  
+
   - {url: assets/udacity-kidnapped-vehicle/images/running.png, caption: "The view of the simulator as the programs are running. The vehicle will make approximately 2 laps around a set trajectory. The visual difference from the starting state is that now you can see blue lines, that show landmark associations - if the lines are blue, then an observed landmark was correctly associated with a known landmark in the map. Otherwise the lines would be bright red, which there are none in the image.", id: running}
-  
+
   - {url: assets/udacity-kidnapped-vehicle/images/with-outputs.png, caption: "Here's an example of the outputs seen in the terminal as particle filter is running. You can see the average weight of the particles and the weight of the most likely particle.", id: with-outputs}
 
 category: projects
@@ -58,11 +58,13 @@ Success! Your particle filter passed!
 ```
 
 ## Running the Code
-The instructions can be found in the README file of the [project repository](https://github.com/LinasKo/CarND-Kidnapped-Vehicle-Project). 
+The instructions can be found in the README file of the [project repository](https://github.com/LinasKo/CarND-Kidnapped-Vehicle-Project).
 
 
 ## Results
-The implementation passed the grading criteria fairly easily. I believe I have managed not only to write the code elegantly, but also trim down a fair bit of the code given to us. At the point of writing, I have not yet attempted to involve Eigen, but that is the planned next step.
+The implementation passed the grading criteria fairly easily. I believe I have managed not only to write the code elegantly, but also trim down a fair bit of the code given to us.
+
+Ultimately, I have also recoded a large part of the project in Eigen, which can be found [on a separate branch](https://github.com/LinasKo/CarND-Kidnapped-Vehicle-Project/tree/eigen-implementation/src). In the end, I did not go as far as vectorizing absolutely everything (that would require tensors, that Eigen supports experimentally), but I have gained a fair bit of intuitive understanding of the common data structures and principles used in developing with Eigen.
 
 
 ## Shortcomings
@@ -76,6 +78,9 @@ Code Repository: [GitHub](https://github.com/LinasKo/CarND-Kidnapped-Vehicle-Pro
 {: .text-center}
 
 Main Project File: [GitHub](https://github.com/LinasKo/CarND-Kidnapped-Vehicle-Project/blob/master/src/particle_filter.cpp){:target="_blank"}
+{: .text-center}
+
+Main Project File (Eigen re-implementation): [GitHub](https://github.com/LinasKo/CarND-Kidnapped-Vehicle-Project/tree/eigen-implementation/src/particle_filter.cpp){:target="_blank"}
 {: .text-center}
 
 </div>
