@@ -87,4 +87,7 @@ Code Repository: [GitHub](https://github.com/LinasKo/CarND-Path-Planning-Project
 Path Planning Video: [YouTube](https://www.youtube.com/watch?v=VBae1-AQLpY){:target="_blank"}
 {: .text-center}
 
+Sheets with `getFrenet` error: [Google Docs](https://docs.google.com/spreadsheets/d/1lPbdZdSkJSWSoUNa4XnZJV4dy5lJHc67ybA1e7k5vDs/edit?usp=sharing){:target="_blank"}
+{: .text-center}
+
 </div>
