@@ -65,7 +65,9 @@ text left
 text center
 {: .text-center}
 
-link in a new tab
+<br>
+
 Code Repository: [GitLab](https://gitlab.com/LinasKo){:target="_blank"}
+{: .text-center}
 
 </div>
