@@ -8,7 +8,7 @@ start_date: 2019-05-06
 thumb_image_url: assets/udacity-pid-control/images/calibrating-PID.gif
 images:
   - {url: assets/udacity-pid-control/images/calibrating-PID.gif, caption: "PID controller being calibrated. You can see the car being reset as it drives off the track and the lateral error becomes too large. Full video: https://www.youtube.com/watch?v=lqNxq_D42Hc.", id: calibrating-pid}
-  - {url: assets/udacity-pid-control/images/car-stuck.png, caption: "Car stuck on the side of the road near the start, on one of the first Twiddle iterations. This is why early termination with forced high error is needed when speed approaches 0.", id: car stuck}
+  - {url: assets/udacity-pid-control/images/car-stuck.png, caption: "Car stuck on the side of the road near the start, on one of the first Twiddle iterations. This is why early termination with forced high error is needed when speed approaches 0.", id: car-stuck}
   - {url: assets/udacity-pid-control/images/calibrated-PID.gif, caption: "Fully calibrated PID control of the car. Full video: https://www.youtube.com/watch?v=fgGJAvOK36g.", id: calibrated-pid}
 category: projects
 project_title: "PID Control"
