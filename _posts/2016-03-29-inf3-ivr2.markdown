@@ -5,11 +5,11 @@ permalink: /:categories/:slug/
 main_title:  Inf3 - Introduction to Vision and Robotics
 start_date:   2016-02-16
 end_date:     2016-03-29
-thumb_image_url: assets/inf3-ivr-2/images/robot_front.jpg
+thumb_image_url: assets/inf3-ivr-2/images/compressed/robot_front.jpg
 images:
-  - {url: assets/inf3-ivr-2/images/robot_front.jpg, caption: "Front of the robot as it is running.", id: robot_front}
-  - {url: assets/inf3-ivr-2/images/robot_side.jpg, caption: "Side of the robot as it is running.", id: robot_side}
-  - {url: assets/inf3-ivr-2/images/sense_code.png, caption: "Example procedure for the robot to look around and choose an obstacle-free path before going. This is also an example of the block-based language we used to write the program.", id: sense_code}
+  - {url: assets/inf3-ivr-2/images/compressed/robot_front.jpg, caption: "Front of the robot as it is running.", id: robot_front}
+  - {url: assets/inf3-ivr-2/images/compressed/robot_side.jpg, caption: "Side of the robot as it is running.", id: robot_side}
+  - {url: assets/inf3-ivr-2/images/compressed/sense_code.png, caption: "Example procedure for the robot to look around and choose an obstacle-free path before going. This is also an example of the block-based language we used to write the program.", id: sense_code}
 category: projects
 course_name: Inf3 - Introduction to Vision and Robotics
 project_title: "PID control exploration for self-balancing robot"

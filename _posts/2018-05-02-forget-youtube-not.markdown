@@ -5,11 +5,11 @@ permalink: /:categories/:slug/
 main_title:  Forget YouTube Not
 start_date:   2018-06-01
 end_date:     2018-06-02
-thumb_image_url: assets/forget-youtube-not/images/playlists-schema-cropped.png
+thumb_image_url: assets/forget-youtube-not/images/compressed/playlists-schema-cropped.png
 images:
-  - {url: assets/forget-youtube-not/images/playlists-schema.png, caption: "The schema of the database. SQL injections are prevented by the use of prepared statements, eliminating the need to keep the schema secret.", id: playlist-schema}
-  - {url: assets/forget-youtube-not/images/typical-results.png, caption: "Typical results obtained by querying the database directly. I might look into providing a proper front-end for the database at some point in the future.", id: typical-results}
-  - {url: assets/forget-youtube-not/images/deleted-before.png, caption: "Some of the videos were deleted before starting the project. Normally, I would still see the tile of the video after it gets deleted, but the 'deleted' bit would flip to 1.", id: deleted-before}
+  - {url: assets/forget-youtube-not/images/compressed/playlists-schema.png, caption: "The schema of the database. SQL injections are prevented by the use of prepared statements, eliminating the need to keep the schema secret.", id: playlist-schema}
+  - {url: assets/forget-youtube-not/images/compressed/typical-results.png, caption: "Typical results obtained by querying the database directly. I might look into providing a proper front-end for the database at some point in the future.", id: typical-results}
+  - {url: assets/forget-youtube-not/images/compressed/deleted-before.png, caption: "Some of the videos were deleted before starting the project. Normally, I would still see the tile of the video after it gets deleted, but the 'deleted' bit would flip to 1.", id: deleted-before}
 category: projects
 project_title: "A YouTube polling server for detecting deleted videos"
 thumb_text: A daily poll of given YouTube playlists, detecting which videos were deleted

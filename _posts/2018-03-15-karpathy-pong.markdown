@@ -5,11 +5,11 @@ permalink: /:categories/:slug/
 main_title: Policy Gradient learning for Atari Pong
 start_date:   2018-03-12
 end_date:     2018-04-05
-thumb_image_url: assets/karpathy-pong/images/trained-pong.gif
+thumb_image_url: assets/karpathy-pong/videos/trained-pong.gif
 images:
-  - {url: assets/karpathy-pong/images/trained-pong.gif, caption: "The visualisation of the Atari Pong game being played during training. For simplicity, the agent (right) can move up or down, but not sit idle.", id: game-visualization}
-  - {url: assets/karpathy-pong/images/live-training-reports-slack.png, caption: "Live reporting of the run, on Slack. I've hacked up a very simple bot, allowing to post and update messages directly from the training script.", id: live-training-reports-slack}
-  - {url: assets/karpathy-pong/images/pong-training.png, caption: "The outputs seen as the neural network is being trained. 1 is given for a scored point and -1 for every point the default AI scored. In total, 21 points are scored in one epoch.", id: pong-training}
+  - {url: assets/karpathy-pong/videos/trained-pong.gif, caption: "The visualisation of the Atari Pong game being played during training. For simplicity, the agent (right) can move up or down, but not sit idle.", id: game-visualization}
+  - {url: assets/karpathy-pong/images/compressed/live-training-reports-slack.png, caption: "Live reporting of the run, on Slack. I've hacked up a very simple bot, allowing to post and update messages directly from the training script.", id: live-training-reports-slack}
+  - {url: assets/karpathy-pong/images/compressed/pong-training.png, caption: "The outputs seen as the neural network is being trained. 1 is given for a scored point and -1 for every point the default AI scored. In total, 21 points are scored in one epoch.", id: pong-training}
 category: projects
 project_title: "A trial run of A. Karpathy's Policy Gradient learning"
 thumb_text: "A trial run of Policy Gradient learning for Atari Pong, created by Andrej Karpathy."

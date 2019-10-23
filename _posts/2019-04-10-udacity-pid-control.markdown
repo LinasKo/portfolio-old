@@ -5,11 +5,11 @@ permalink: /:categories/:slug/
 main_title: PID Control
 start_date: 2019-04-06
 <!-- end_date:   2019-04-11 -->
-thumb_image_url: assets/udacity-pid-control/images/calibrating-PID.gif
+thumb_image_url: assets/udacity-pid-control/videos/calibrating-PID.gif
 images:
-  - {url: assets/udacity-pid-control/images/calibrating-PID.gif, caption: "PID controller being calibrated. You can see the car being reset as it drives off the track and the lateral error becomes too large. Full video: https://www.youtube.com/watch?v=lqNxq_D42Hc.", id: calibrating-pid}
-  - {url: assets/udacity-pid-control/images/car-stuck.png, caption: "Car stuck on the side of the road near the start, on one of the first Twiddle iterations. This is why early termination with forced high error is needed when speed approaches 0.", id: car-stuck}
-  - {url: assets/udacity-pid-control/images/calibrated-PID.gif, caption: "Fully calibrated PID control of the car. Full video: https://www.youtube.com/watch?v=fgGJAvOK36g.", id: calibrated-pid}
+  - {url: assets/udacity-pid-control/videos/calibrating-PID.gif, caption: "PID controller being calibrated. You can see the car being reset as it drives off the track and the lateral error becomes too large. Full video: https://www.youtube.com/watch?v=lqNxq_D42Hc.", id: calibrating-pid}
+  - {url: assets/udacity-pid-control/images/compressed/car-stuck.png, caption: "Car stuck on the side of the road near the start, on one of the first Twiddle iterations. This is why early termination with forced high error is needed when speed approaches 0.", id: car-stuck}
+  - {url: assets/udacity-pid-control/videos/calibrated-PID.gif, caption: "Fully calibrated PID control of the car. Full video: https://www.youtube.com/watch?v=fgGJAvOK36g.", id: calibrated-pid}
 category: projects
 project_title: "PID Control and calibration using Twiddle"
 thumb_text: PID control and PID parameter calibration using Twiddle algorithm for a simulated vehicle.

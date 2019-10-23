@@ -6,11 +6,11 @@ main_title: Visual SLAM Practice (In Progress)
 start_date: 2018-12-02
 <!-- end_date:   2019-05-12 -->
 end_date: present
-thumb_image_url: assets/visual-slam-practice/images/plotting-2.png
+thumb_image_url: assets/visual-slam-practice/images/compressed/plotting-2.png
 images:
-- {url: assets/visual-slam-practice/images/plotting-1.png, caption: "The pointcloud soon after start. You can make out the green trees and blue sky", id: plotting-1}
-- {url: assets/visual-slam-practice/images/camera-0.png, caption: "The camera feed, with optical flow visualised.", id: camera-0}
-- {url: assets/visual-slam-practice/images/plotting-2.png, caption: "The pointcloud after 20-30 steps. See how the blue car trajectory is straight, but seems to go perpendicularly to the point cloud. There's an issue either with how I display points, or how I triangulate. Also, I should probably cull the points that are far away from the car.", id: plotting-2}
+- {url: assets/visual-slam-practice/images/compressed/plotting-1.png, caption: "The pointcloud soon after start. You can make out the green trees and blue sky", id: plotting-1}
+- {url: assets/visual-slam-practice/images/compressed/camera-0.png, caption: "The camera feed, with optical flow visualised.", id: camera-0}
+- {url: assets/visual-slam-practice/images/compressed/plotting-2.png, caption: "The pointcloud after 20-30 steps. See how the blue car trajectory is straight, but seems to go perpendicularly to the point cloud. There's an issue either with how I display points, or how I triangulate. Also, I should probably cull the points that are far away from the car.", id: plotting-2}
 category: projects
 project_title: "Visual SLAM Practice (In Progress)"
 thumb_text: An implementation of visual SLAM

@@ -5,14 +5,14 @@ permalink: /:categories/:slug/
 main_title:  Honours Project - Augmenting a Robotic Model of Fiddler Crab Interaction
 start_date:   2016-09-01
 end_date:     2017-04-06
-thumb_image_url: assets/crab/images/crab_robot.jpg
+thumb_image_url: assets/crab/images/compressed/crab_robot.jpg
 images:
-  - {url: assets/crab/images/crab_robot.jpg, caption: "The Crab Robot. Motors of the omnidirectional wheels are powered by the Arduino board. Images from the two-sided fisheye camera are processed by the FitPC with Linux Mint (green box). In the middle, connected with the rainbow cable, you can see a small Inertial Measurement Unit (IMU).", id: crab_robot}
-  - {url: assets/crab/images/masked_ommatidia_view.png, caption: "View from the Crab Robot, with crab ommatidia filter and robot's self-masking applied. Ommatidia are clusters of photosensitive cells in an eye of arthropods. Crab eyes allow them to see in high resolution along the horizon, but with a low resolution above and below it. The filter was created by Theodoros Stouraitis and Evripidis Gkanias", id: masked_ommatidia_view}
-  - {url: assets/crab/images/overhead_view.png, caption: "The Crab Robot, as viewed through the overhead tracking tool. I have attached colored sheets to the robot to be able to detect its orientation. Centroids of the detected sheets and the calculated orientation of the robot are displayed.", id: overhead_view}
-  - {url: assets/crab/images/fast_features.png, caption: "Tracking of FAST features as the camera is slowly rotated to the right. Here, roll, pitch and yaw are not yet correlated with actual orientation.", id: fast_features}
-  - {url: assets/crab/images/filtered_view.png, caption: "The crab view with object detection filter applied. Pink was chosen as the color for significant objects. Both the burrow (pink sheets of paper below the horizon), and the predator (pink object above the horizon) would be highlighted.", id: filtered_view}
-  - {url: assets/crab/images/color_picker_example.png, caption: "Example of a color picker in action. The regions with colors between min and max are detected, with the min and max values saved upon user input.", id: color_picker_example}
+  - {url: assets/crab/images/compressed/crab_robot.jpg, caption: "The Crab Robot. Motors of the omnidirectional wheels are powered by the Arduino board. Images from the two-sided fisheye camera are processed by the FitPC with Linux Mint (green box). In the middle, connected with the rainbow cable, you can see a small Inertial Measurement Unit (IMU).", id: crab_robot}
+  - {url: assets/crab/images/compressed/masked_ommatidia_view.png, caption: "View from the Crab Robot, with crab ommatidia filter and robot's self-masking applied. Ommatidia are clusters of photosensitive cells in an eye of arthropods. Crab eyes allow them to see in high resolution along the horizon, but with a low resolution above and below it. The filter was created by Theodoros Stouraitis and Evripidis Gkanias", id: masked_ommatidia_view}
+  - {url: assets/crab/images/compressed/overhead_view.png, caption: "The Crab Robot, as viewed through the overhead tracking tool. I have attached colored sheets to the robot to be able to detect its orientation. Centroids of the detected sheets and the calculated orientation of the robot are displayed.", id: overhead_view}
+  - {url: assets/crab/images/compressed/fast_features.png, caption: "Tracking of FAST features as the camera is slowly rotated to the right. Here, roll, pitch and yaw are not yet correlated with actual orientation.", id: fast_features}
+  - {url: assets/crab/images/compressed/filtered_view.png, caption: "The crab view with object detection filter applied. Pink was chosen as the color for significant objects. Both the burrow (pink sheets of paper below the horizon), and the predator (pink object above the horizon) would be highlighted.", id: filtered_view}
+  - {url: assets/crab/images/compressed/color_picker_example.png, caption: "Example of a color picker in action. The regions with colors between min and max are detected, with the min and max values saved upon user input.", id: color_picker_example}
 category: projects
 course_name: Honours Project
 project_title: Augmenting a Robotic Model of Fiddler Crab Interaction

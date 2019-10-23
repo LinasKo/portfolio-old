@@ -5,14 +5,14 @@ permalink: /:categories/:slug/
 main_title: Traffic Sign Classification
 start_date: 2018-08-29
 end_date:   2018-09-10
-thumb_image_url: assets/udacity-traffic-sign-classification/images/sample_signs.png
+thumb_image_url: assets/udacity-traffic-sign-classification/images/compressed/sample_signs.png
 images:
 
-  - {url: assets/udacity-traffic-sign-classification/images/unsample_signs.png, caption: "A sample of the dataset. This has shown me that there are more than one image of the same sign and prompted me to shuffle the results before visualisation, to make sure a diverse enough sample is available.", id: unsample_signs}
+  - {url: assets/udacity-traffic-sign-classification/images/compressed/unsample_signs.png, caption: "A sample of the dataset. This has shown me that there are more than one image of the same sign and prompted me to shuffle the results before visualisation, to make sure a diverse enough sample is available.", id: unsample_signs}
 
-  - {url: assets/udacity-traffic-sign-classification/images/sample_signs.png, caption: "A shuffle sample of the dataset.", id: sample_signs}
+  - {url: assets/udacity-traffic-sign-classification/images/compressed/sample_signs.png, caption: "A shuffle sample of the dataset.", id: sample_signs}
 
-  - {url: assets/udacity-traffic-sign-classification/images/my_signs.png, caption: "The signs I found online, used to validate the network", id: my_signs}
+  - {url: assets/udacity-traffic-sign-classification/images/compressed/my_signs.png, caption: "The signs I found online, used to validate the network", id: my_signs}
 
 category: projects
 project_title: "Traffic Sign Classification"
