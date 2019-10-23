@@ -30,9 +30,7 @@ var Particles = (function(window, document) {
      */
     var Plugin = (function() {
         function Plugin() {
-            var _ = this;
-
-            _.defaults = {
+            this.defaults = {
                 responsive: null,
                 selector: null,
                 maxParticles: 100,
@@ -44,15 +42,15 @@ var Particles = (function(window, document) {
                 connectParticles: false,
             };
 
-            _.element = null;
-            _.context = null;
-            _.ratio = null;
-            _.breakpoints = [];
-            _.activeBreakpoint = null;
-            _.breakpointSettings = [];
-            _.originalSettings = null;
-            _.storage = [];
-            _.usingPolyfill = false;
+            this.element = null;
+            this.context = null;
+            this.ratio = null;
+            this.breakpoints = [];
+            this.activeBreakpoint = null;
+            this.breakpointSettings = [];
+            this.originalSettings = null;
+            this.storage = [];
+            this.usingPolyfill = false;
         }
 
         return Plugin;
@@ -65,21 +63,19 @@ var Particles = (function(window, document) {
      * @param {object} settings
      */
     Plugin.prototype.init = function(settings) {
-        var _ = this;
+        this.options = this._extend(this.defaults, settings);
+        this.originalSettings = JSON.parse(JSON.stringify(this.options));
 
-        _.options = _._extend(_.defaults, settings);
-        _.originalSettings = JSON.parse(JSON.stringify(_.options));
+        this._animate = this._animate.bind(this);
 
-        _._animate = _._animate.bind(_);
+        this._initializeCanvas();
+        this._initializeEvents();
+        this._registerBreakpoints();
+        this._checkResponsive();
+        this._initializeStorage();
+        this._animate();
 
-        _._initializeCanvas();
-        _._initializeEvents();
-        _._registerBreakpoints();
-        _._checkResponsive();
-        _._initializeStorage();
-        _._animate();
-
-        return _;
+        return this;
     };
 
     /**
@@ -88,14 +84,12 @@ var Particles = (function(window, document) {
      * @public
      */
     Plugin.prototype.destroy = function() {
-        var _ = this;
+        this.storage = [];
+        this.element.remove();
 
-        _.storage = [];
-        _.element.remove();
-
-        window.removeEventListener('resize', _.listener, false);
-        window.clearTimeout(_._animation);
-        cancelAnimationFrame(_._animation);
+        window.removeEventListener('resize', this.listener, false);
+        window.clearTimeout(this._animation);
+        cancelAnimationFrame(this._animation);
     };
 
     /**
@@ -104,32 +98,30 @@ var Particles = (function(window, document) {
      * @private
      */
     Plugin.prototype._initializeCanvas = function() {
-        var _ = this;
-
-        if (!_.options.selector) {
+        if (!this.options.selector) {
             console.warn('particles.js: No selector specified! Check https://github.com/marcbruederlin/particles.js#options');
             return false;
         }
 
-        _.element = document.querySelector(_.options.selector);
-        _.context = _.element.getContext('2d');
+        this.element = document.querySelector(this.options.selector);
+        this.context = this.element.getContext('2d');
 
         const devicePixelRatio = window.devicePixelRatio || 1;
-        const backingStoreRatio = _.context.webkitBackingStorePixelRatio || _.context.mozBackingStorePixelRatio || _.context.msBackingStorePixelRatio ||
-            _.context.oBackingStorePixelRatio || _.context.backingStorePixelRatio || 1;
+        const backingStoreRatio = this.context.webkitBackingStorePixelRatio || this.context.mozBackingStorePixelRatio || this.context.msBackingStorePixelRatio ||
+            this.context.oBackingStorePixelRatio || this.context.backingStorePixelRatio || 1;
 
-        _.ratio = devicePixelRatio / backingStoreRatio;
-        _.element.width = (_.element.offsetParent) ? _.element.offsetParent.clientWidth * _.ratio : _.element.clientWidth * _.ratio;
+        this.ratio = devicePixelRatio / backingStoreRatio;
+        this.element.width = (this.element.offsetParent) ? this.element.offsetParent.clientWidth * this.ratio : this.element.clientWidth * this.ratio;
 
-        if (_.element.offsetParent && _.element.offsetParent.nodeName === 'BODY') {
-            _.element.height = window.innerHeight * _.ratio;
+        if (this.element.offsetParent && this.element.offsetParent.nodeName === 'BODY') {
+            this.element.height = window.innerHeight * this.ratio;
         } else {
-            _.element.height = (_.element.offsetParent) ? _.element.offsetParent.clientHeight * _.ratio : _.element.clientHeight * _.ratio;
+            this.element.height = (this.element.offsetParent) ? this.element.offsetParent.clientHeight * this.ratio : this.element.clientHeight * this.ratio;
         }
-        _.element.style.width = '100%';
-        _.element.style.height = '100%';
+        this.element.style.width = '100%';
+        this.element.style.height = '100%';
 
-        _.context.scale(_.ratio, _.ratio);
+        this.context.scale(this.ratio, this.ratio);
     };
 
     /**
@@ -138,12 +130,10 @@ var Particles = (function(window, document) {
      * @private
      */
     Plugin.prototype._initializeEvents = function() {
-        var _ = this;
-
-        _.listener = function() {
-            _._resize();
+        this.listener = function() {
+            this._resize();
         }.bind(this);
-        window.addEventListener('resize', _.listener, false);
+        window.addEventListener('resize', this.listener, false);
     };
 
     /**
@@ -152,12 +142,9 @@ var Particles = (function(window, document) {
      * @private
      */
     Plugin.prototype._initializeStorage = function() {
-        var _ = this;
-
-        _.storage = [];
-
-        for (var i = _.options.maxParticles; i--;) {
-            _.storage.push(new Particle(_.context, _.options));
+        this.storage = [];
+        for (var i = this.options.maxParticles; i--;) {
+            this.storage.push(new Particle(this.context, this.options));
         }
     };
 
@@ -167,29 +154,27 @@ var Particles = (function(window, document) {
      * @private
      */
     Plugin.prototype._registerBreakpoints = function() {
-        var _ = this,
-            breakpoint, currentBreakpoint, l, responsiveSettings = _.options.responsive || null;
+        const responsiveSettings = this.options.responsive || null;
 
         if (typeof responsiveSettings === 'object' && responsiveSettings !== null && responsiveSettings.length) {
-            for (breakpoint in responsiveSettings) {
-                l = _.breakpoints.length - 1;
-                currentBreakpoint = responsiveSettings[breakpoint].breakpoint;
+            for (var breakpoint in responsiveSettings) {
+                var l = this.breakpoints.length - 1;
+                var currentBreakpoint = responsiveSettings[breakpoint].breakpoint;
 
                 if (responsiveSettings.hasOwnProperty(breakpoint)) {
                     while (l >= 0) {
-                        if (_.breakpoints[l] && _.breakpoints[l] === currentBreakpoint) {
-                            _.breakpoints.splice(l, 1);
+                        if (this.breakpoints[l] && this.breakpoints[l] === currentBreakpoint) {
+                            this.breakpoints.splice(l, 1);
                         }
-
                         l--;
                     }
 
-                    _.breakpoints.push(currentBreakpoint);
-                    _.breakpointSettings[currentBreakpoint] = responsiveSettings[breakpoint].options;
+                    this.breakpoints.push(currentBreakpoint);
+                    this.breakpointSettings[currentBreakpoint] = responsiveSettings[breakpoint].options;
                 }
             }
 
-            _.breakpoints.sort(function(a, b) {
+            this.breakpoints.sort(function(a, b) {
                 return b - a;
             });
         }
@@ -201,30 +186,28 @@ var Particles = (function(window, document) {
      * @private
      */
     Plugin.prototype._checkResponsive = function() {
-        var _ = this,
-            breakpoint, targetBreakpoint = false,
-            windowWidth = window.innerWidth;
+        var targetBreakpoint = false;
 
-        if (_.options.responsive && _.options.responsive.length && _.options.responsive !== null) {
+        if (this.options.responsive && this.options.responsive.length && this.options.responsive !== null) {
             targetBreakpoint = null;
 
-            for (breakpoint in _.breakpoints) {
-                if (_.breakpoints.hasOwnProperty(breakpoint)) {
-                    if (windowWidth <= _.breakpoints[breakpoint]) {
-                        targetBreakpoint = _.breakpoints[breakpoint];
+            for (var breakpoint in this.breakpoints) {
+                if (this.breakpoints.hasOwnProperty(breakpoint)) {
+                    if (window.innerWidth <= this.breakpoints[breakpoint]) {
+                        targetBreakpoint = this.breakpoints[breakpoint];
                     }
                 }
             }
 
             if (targetBreakpoint !== null) {
-                _.activeBreakpoint = targetBreakpoint;
-                _.options = _._extend(_.options, _.breakpointSettings[targetBreakpoint]);
+                this.activeBreakpoint = targetBreakpoint;
+                this.options = this._extend(this.options, this.breakpointSettings[targetBreakpoint]);
             } else {
-                if (_.activeBreakpoint !== null) {
-                    _.activeBreakpoint = null;
+                if (this.activeBreakpoint !== null) {
+                    this.activeBreakpoint = null;
                     targetBreakpoint = null;
 
-                    _.options = _._extend(_.options, _.originalSettings);
+                    this.options = this._extend(this.options, this.originalSettings);
                 }
             }
         }
@@ -236,10 +219,8 @@ var Particles = (function(window, document) {
      * @private
      */
     Plugin.prototype._refresh = function() {
-        var _ = this;
-
-        _._initializeStorage();
-        _._draw();
+        this._initializeStorage();
+        this._draw();
     };
 
     /**
@@ -248,23 +229,21 @@ var Particles = (function(window, document) {
      * @private
      */
     Plugin.prototype._resize = function() {
-        var _ = this;
+        this.element.width = (this.element.offsetParent) ? this.element.offsetParent.clientWidth * this.ratio : this.element.clientWidth * this.ratio;
 
-        _.element.width = (_.element.offsetParent) ? _.element.offsetParent.clientWidth * _.ratio : _.element.clientWidth * _.ratio;
-
-        if (_.element.offsetParent && _.element.offsetParent.nodeName === 'BODY') {
-            _.element.height = window.innerHeight * _.ratio;
+        if (this.element.offsetParent && this.element.offsetParent.nodeName === 'BODY') {
+            this.element.height = window.innerHeight * this.ratio;
         } else {
-            _.element.height = (_.element.offsetParent) ? _.element.offsetParent.clientHeight * _.ratio : _.element.clientHeight * _.ratio;
+            this.element.height = (this.element.offsetParent) ? this.element.offsetParent.clientHeight * this.ratio : this.element.clientHeight * this.ratio;
         }
 
-        _.context.scale(_.ratio, _.ratio);
+        this.context.scale(this.ratio, this.ratio);
 
-        clearTimeout(_.windowDelay);
+        clearTimeout(this.windowDelay);
 
-        _.windowDelay = window.setTimeout(function() {
-            _._checkResponsive();
-            _._refresh();
+        this.windowDelay = window.setTimeout(function() {
+            this._checkResponsive();
+            this._refresh();
         }, 50);
     };
 
@@ -274,10 +253,8 @@ var Particles = (function(window, document) {
      * @private
      */
     Plugin.prototype._animate = function() {
-        var _ = this;
-
-        _._draw();
-        _._animation = window.requestAnimFrame(_._animate);
+        this._draw();
+        this._animation = window.requestAnimFrame(this._animate);
     };
 
     /**
@@ -286,10 +263,8 @@ var Particles = (function(window, document) {
      * @public
      */
     Plugin.prototype.resumeAnimation = function() {
-        var _ = this;
-
-        if (!_._animation) {
-            _._animate();
+        if (!this._animation) {
+            this._animate();
         }
     };
 
@@ -299,20 +274,18 @@ var Particles = (function(window, document) {
      * @public
      */
     Plugin.prototype.pauseAnimation = function() {
-        var _ = this;
-
-        if (!_._animation) {
+        if (!this._animation) {
             return;
         }
 
-        if (_.usingPolyfill) {
-            window.clearTimeout(_._animation);
+        if (this.usingPolyfill) {
+            window.clearTimeout(this._animation);
         } else {
             var cancelAnimationFrame = window.cancelAnimationFrame || window.webkitCancelAnimationFrame || window.mozCancelAnimationFrame;
-            cancelAnimationFrame(_._animation);
+            cancelAnimationFrame(this._animation);
         }
 
-        _._animation = null;
+        this._animation = null;
     };
 
     /**
@@ -321,33 +294,31 @@ var Particles = (function(window, document) {
      * @private
      */
     Plugin.prototype._draw = function() {
-        var _ = this,
-            element = _.element,
-            parentWidth = (element.offsetParent) ? element.offsetParent.clientWidth : element.clientWidth,
-            parentHeight = (element.offsetParent) ? element.offsetParent.clientHeight : element.clientHeight,
-            showParticles = _.options.showParticles,
-            storage = _.storage;
+        const parentWidth = (this.element.offsetParent) ? this.element.offsetParent.clientWidth : this.element.clientWidth;
 
-        if (element.offsetParent && element.offsetParent.nodeName === 'BODY') {
+        var parentHeight;
+        if (this.element.offsetParent && this.element.offsetParent.nodeName === 'BODY') {
             parentHeight = window.innerHeight;
+        } else {
+            parentHeight = (this.element.offsetParent) ? this.element.offsetParent.clientHeight : this.element.clientHeight;
         }
 
-        _.context.clearRect(0, 0, element.width, element.height);
-        _.context.beginPath();
+        this.context.clearRect(0, 0, this.element.width, this.element.height);
+        this.context.beginPath();
 
-        for (var i = storage.length; i--;) {
-            var particle = storage[i];
+        for (var i = this.storage.length; i--;) {
+            var particle = this.storage[i];
 
-            if (showParticles) {
+            if (this.options.showParticles) {
                 particle._draw();
             }
 
             particle._updateCoordinates(parentWidth, parentHeight);
         }
 
-        if (_.options.connectParticles) {
-            storage.sort(particleCompareFunc);
-            _._updateEdges();
+        if (this.options.connectParticles) {
+            this.storage.sort(particleCompareFunc);
+            this._updateEdges();
         }
     };
 
@@ -357,29 +328,21 @@ var Particles = (function(window, document) {
      * @private
      */
     Plugin.prototype._updateEdges = function() {
-        var _ = this,
-            minDistance = _.options.minDistance,
-            sqrt = Math.sqrt,
-            abs = Math.abs,
-            storage = _.storage,
-            storageLength = storage.length;
+        for (var i = 0; i < this.storage.length; i++) {
+            const p1 = this.storage[i];
 
-        for (var i = 0; i < storageLength; i++) {
-            var p1 = storage[i];
+            for (var j = i + 1; j < this.storage.length; j++) {
+                const p2 = this.storage[j];
+                const dx = p1.x - p2.x;
+                const dy = p1.y - p2.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
 
-            for (var j = i + 1; j < storageLength; j++) {
-                var p2 = storage[j],
-                    distance, r = p1.x - p2.x,
-                    dy = p1.y - p2.y;
-
-                distance = sqrt(r * r + dy * dy);
-
-                if (abs(r) > minDistance) {
+                if (Math.abs(dx) > this.options.minDistance) {
                     break;
                 }
 
-                if (distance <= minDistance) {
-                    _._drawEdge(p1, p2, (1.2 - distance / minDistance));
+                if (distance <= this.options.minDistance) {
+                    this._drawEdge(p1, p2, (1.2 - distance / this.options.minDistance));
                 }
             }
         }
@@ -394,22 +357,21 @@ var Particles = (function(window, document) {
      * @param {number} opacity
      */
     Plugin.prototype._drawEdge = function(p1, p2, opacity) {
-        var _ = this,
-            gradient = _.context.createLinearGradient(p1.x, p1.y, p2.x, p2.y);
+        const gradient = this.context.createLinearGradient(p1.x, p1.y, p2.x, p2.y);
 
-        var color1 = this._hex2rgb(p1.color);
-        var color2 = this._hex2rgb(p2.color);
+        const color1 = this._hex2rgb(p1.color);
+        const color2 = this._hex2rgb(p2.color);
 
         gradient.addColorStop(0, 'rgba(' + color1.r + ',' + color1.g + ',' + color1.b + ',' + opacity + ')');
         gradient.addColorStop(1, 'rgba(' + color2.r + ',' + color2.g + ',' + color2.b + ',' + opacity + ')');
 
-        _.context.beginPath();
-        _.context.strokeStyle = gradient;
-        _.context.moveTo(p1.x, p1.y);
-        _.context.lineTo(p2.x, p2.y);
-        _.context.stroke();
-        _.context.fill();
-        _.context.closePath();
+        this.context.beginPath();
+        this.context.strokeStyle = gradient;
+        this.context.moveTo(p1.x, p1.y);
+        this.context.lineTo(p2.x, p2.y);
+        this.context.stroke();
+        this.context.fill();
+        this.context.closePath();
     };
 
     /**
@@ -435,7 +397,7 @@ var Particles = (function(window, document) {
      * @return {object}
      */
     Plugin.prototype._hex2rgb = function(hex) {
-        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+        const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
 
         return result ? {
             r: parseInt(result[1], 16),
@@ -452,29 +414,24 @@ var Particles = (function(window, document) {
      * @param {object} options
      */
     var Particle = function(context, options) {
-        var _ = this,
-            random = Math.random,
-            speed = options.speed,
-            color = (options.color instanceof Array) ? options.color[Math.floor(Math.random() * options.color.length)] : options.color;
+        this.context = context;
+        this.options = options;
 
-        _.context = context;
-        _.options = options;
-
-        var canvas = document.querySelector(options.selector);
-        _.x = (canvas.offsetParent) ? random() * canvas.offsetParent.clientWidth : random() * canvas.clientWidth;
+        const canvas = document.querySelector(options.selector);
+        this.x = (canvas.offsetParent) ? Math.random() * canvas.offsetParent.clientWidth : Math.random() * canvas.clientWidth;
 
         if (canvas.offsetParent && canvas.offsetParent.nodeName === 'BODY') {
-            _.y = random() * window.innerHeight;
+            this.y = Math.random() * window.innerHeight;
         } else {
-            _.y = (canvas.offsetParent) ? random() * canvas.offsetParent.clientHeight : random() * canvas.clientHeight;
+            this.y = (canvas.offsetParent) ? Math.random() * canvas.offsetParent.clientHeight : Math.random() * canvas.clientHeight;
         }
 
-        _.vx = random() * speed * 2 - speed;
-        _.vy = random() * speed * 2 - speed;
-        _.radius = random() * random() * options.sizeVariations;
-        _.color = color;
+        this.vx = Math.random() * options.speed * 2 - options.speed;
+        this.vy = Math.random() * options.speed * 2 - options.speed;
+        this.radius = Math.random() * Math.random() * options.sizeVariations;
+        this.color = (options.color instanceof Array) ? options.color[Math.floor(Math.random() * options.color.length)] : options.color;
 
-        _._draw();
+        this._draw();
     };
 
     /**
@@ -483,16 +440,14 @@ var Particles = (function(window, document) {
      * @private
      */
     Particle.prototype._draw = function() {
-        var _ = this;
-
-        _.context.save();
-        _.context.translate(_.x, _.y);
-        _.context.moveTo(0, 0);
-        _.context.beginPath();
-        _.context.arc(0, 0, _.radius, 0, Math.PI * 2, false);
-        _.context.fillStyle = _.color;
-        _.context.fill();
-        _.context.restore();
+        this.context.save();
+        this.context.translate(this.x, this.y);
+        this.context.moveTo(0, 0);
+        this.context.beginPath();
+        this.context.arc(0, 0, this.radius, 0, Math.PI * 2, false);
+        this.context.fillStyle = this.color;
+        this.context.fill();
+        this.context.restore();
     };
 
     /**
@@ -502,12 +457,11 @@ var Particles = (function(window, document) {
      * @param parentWidth
      * @param parentHeight
      */
-    Particle.prototype._updateCoordinates = function(parentWidth, parentHeight) {
-        var _ = this,
-
-            x = _.x + this.vx,
-            y = _.y + this.vy,
-            radius = _.radius;
+    Particle.prototype._updateCoordinates = function(parentWidth, parentHeight)
+    {
+        var x = this.x + this.vx;
+        var y = this.y + this.vy;
+        var radius = this.radius;
 
         if (x + radius > parentWidth) {
             x = radius;
@@ -521,8 +475,8 @@ var Particles = (function(window, document) {
             y = parentHeight - radius;
         }
 
-        _.x = x;
-        _.y = y;
+        this.x = x;
+        this.y = y;
     };
 
     /**
@@ -531,14 +485,12 @@ var Particles = (function(window, document) {
      * @return {function}
      */
     window.requestAnimFrame = (function() {
-        var _ = this,
-            requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame;
-
+        const requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame;
         if (requestAnimationFrame) {
             return requestAnimationFrame;
         }
 
-        _._usingPolyfill = true;
+        this._usingPolyfill = true;
 
         return function(callback) {
             return window.setTimeout(callback, 1000 / 60);
@@ -546,6 +498,7 @@ var Particles = (function(window, document) {
     })();
 
     return new Plugin();
+
 })(window, document);
 
 (function() {
