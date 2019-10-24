@@ -220,7 +220,7 @@ var Particles = (function(window, document) {
      */
     Plugin.prototype._refresh = function() {
         this._initializeStorage();
-        this._draw();
+        this._drawPlugin();
     };
 
     /**
@@ -253,7 +253,7 @@ var Particles = (function(window, document) {
      * @private
      */
     Plugin.prototype._animate = function() {
-        this._draw();
+        this._drawPlugin();
         this._animation = window.requestAnimFrame(this._animate);
     };
 
@@ -293,7 +293,7 @@ var Particles = (function(window, document) {
      *
      * @private
      */
-    Plugin.prototype._draw = function() {
+    Plugin.prototype._drawPlugin = function() {
         const parentWidth = (this.element.offsetParent) ? this.element.offsetParent.clientWidth : this.element.clientWidth;
 
         var parentHeight;
@@ -304,13 +304,13 @@ var Particles = (function(window, document) {
         }
 
         this.context.clearRect(0, 0, this.element.width, this.element.height);
-        this.context.beginPath();
 
+        // TODO: can optimize drawing by sorting particles by color before drawing
         for (var i = this.storage.length; i--;) {
             var particle = this.storage[i];
 
             if (this.options.showParticles) {
-                particle._draw();
+                particle._drawParticle();
             }
 
             particle._updateCoordinates(parentWidth, parentHeight);
@@ -318,7 +318,7 @@ var Particles = (function(window, document) {
 
         if (this.options.connectParticles) {
             this.storage.sort(particleCompareFunc);
-            this._updateEdges();
+            this._drawEdges();
         }
     };
 
@@ -327,10 +327,11 @@ var Particles = (function(window, document) {
      *
      * @private
      */
-    Plugin.prototype._updateEdges = function() {
+    Plugin.prototype._drawEdges = function() {
         for (var i = 0; i < this.storage.length; i++) {
             const p1 = this.storage[i];
 
+            this.context.beginPath();
             for (var j = i + 1; j < this.storage.length; j++) {
                 const p2 = this.storage[j];
                 const dx = p1.x - p2.x;
@@ -342,9 +343,10 @@ var Particles = (function(window, document) {
                 }
 
                 if (distance <= this.options.minDistance) {
-                    this._drawEdge(p1, p2, (1.2 - distance / this.options.minDistance));
+                    this._drawLine(p1, p2, (1.2 - distance / this.options.minDistance));
                 }
             }
+            this.context.stroke();
         }
     };
 
@@ -356,22 +358,17 @@ var Particles = (function(window, document) {
      * @param {Particle} p2
      * @param {number} opacity
      */
-    Plugin.prototype._drawEdge = function(p1, p2, opacity) {
-        const gradient = this.context.createLinearGradient(p1.x, p1.y, p2.x, p2.y);
-
-        const color1 = this._hex2rgb(p1.color);
-        const color2 = this._hex2rgb(p2.color);
-
-        gradient.addColorStop(0, 'rgba(' + color1.r + ',' + color1.g + ',' + color1.b + ',' + opacity + ')');
-        gradient.addColorStop(1, 'rgba(' + color2.r + ',' + color2.g + ',' + color2.b + ',' + opacity + ')');
-
-        this.context.beginPath();
-        this.context.strokeStyle = gradient;
+    Plugin.prototype._drawLine = function(p1, p2, opacity) {
+        if (p1.color === p2.color) {
+            this.context.strokeStyle = this._addHexOpacity(p1.color, opacity);
+        } else {
+            const gradient = this.context.createLinearGradient(p1.x, p1.y, p2.x, p2.y);
+            gradient.addColorStop(0, this._addHexOpacity(p1.color, opacity));
+            gradient.addColorStop(1, this._addHexOpacity(p2.color, opacity));
+            this.context.strokeStyle = gradient;
+        }
         this.context.moveTo(p1.x, p1.y);
         this.context.lineTo(p2.x, p2.y);
-        this.context.stroke();
-        this.context.fill();
-        this.context.closePath();
     };
 
     /**
@@ -390,21 +387,16 @@ var Particles = (function(window, document) {
     };
 
     /**
-     * Converts a hex string to a rgb object.
+     * Converts floating point opacity to hex and appends to color
      *
-     * @private
-     * @param {string} hex
-     * @return {object}
+     * @param  {string} hexColor
+     * @param  {float}  opacity
+     * @return {string}
      */
-    Plugin.prototype._hex2rgb = function(hex) {
-        const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-
-        return result ? {
-            r: parseInt(result[1], 16),
-            g: parseInt(result[2], 16),
-            b: parseInt(result[3], 16)
-        } : null;
-    };
+    Plugin.prototype._addHexOpacity = function(hexColor, opacity) {
+        opacity = opacity < 0 ? 0 : opacity > 1 ? 1 : opacity;
+        return hexColor + Math.floor(opacity * 255).toString(16);
+    }
 
     /**
      * Represents a single particle.
@@ -430,8 +422,6 @@ var Particles = (function(window, document) {
         this.vy = Math.random() * options.speed * 2 - options.speed;
         this.radius = Math.random() * Math.random() * options.sizeVariations;
         this.color = (options.color instanceof Array) ? options.color[Math.floor(Math.random() * options.color.length)] : options.color;
-
-        this._draw();
     };
 
     /**
@@ -439,15 +429,12 @@ var Particles = (function(window, document) {
      *
      * @private
      */
-    Particle.prototype._draw = function() {
-        this.context.save();
-        this.context.translate(this.x, this.y);
-        this.context.moveTo(0, 0);
+    Particle.prototype._drawParticle = function() {
         this.context.beginPath();
-        this.context.arc(0, 0, this.radius, 0, Math.PI * 2, false);
+        this.context.moveTo(this.x, this.y);
         this.context.fillStyle = this.color;
+        this.context.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
         this.context.fill();
-        this.context.restore();
     };
 
     /**
