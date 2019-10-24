@@ -4,14 +4,14 @@ modalID: modalCatDogRecognition
 permalink: /:categories/:slug/
 main_title:  Cat / Dog Recognition
 start_date:   2018-04-01
-thumb_image_url: assets/cat-dog-recognition/images/compressed/cat.0.jpg
+thumb_image_url: assets/post_assets/cat-dog-recognition/images/compressed/cat.0.jpg
 images:
-  - {url: assets/cat-dog-recognition/images/compressed/test_image_dog.jpg, caption: "An example of a dog from the dataset.", id: dog-example}
-  - {url: assets/cat-dog-recognition/images/compressed/error.png, caption: "Error plot, when running the 64x64 input size CNN.", id: error-plot}
-  - {url: assets/cat-dog-recognition/images/compressed/accuracy.png, caption: "Accuracy plot, when running the 64x64 input size CNN.", id: accuracy-plot}
-  - {url: assets/cat-dog-recognition/images/compressed/cat_obscure.jpg, caption: "An example of a slightly obscure cat in the dataset.", id: cat-obscure}
-  - {url: assets/cat-dog-recognition/images/compressed/cat.0.jpg, caption: "A picture of my cat, from a small test set that I made for myself.", id: mundis}
-  - {url: assets/cat-dog-recognition/images/compressed/cat_9171_outlier.jpg, caption: "One of the 3 outliers I found in the given dataset. This is labeled as a cat.", id: outlier-picture}
+  - {url: assets/post_assets/cat-dog-recognition/images/compressed/test_image_dog.jpg, caption: "An example of a dog from the dataset.", id: dog-example}
+  - {url: assets/post_assets/cat-dog-recognition/images/compressed/error.png, caption: "Error plot, when running the 64x64 input size CNN.", id: error-plot}
+  - {url: assets/post_assets/cat-dog-recognition/images/compressed/accuracy.png, caption: "Accuracy plot, when running the 64x64 input size CNN.", id: accuracy-plot}
+  - {url: assets/post_assets/cat-dog-recognition/images/compressed/cat_obscure.jpg, caption: "An example of a slightly obscure cat in the dataset.", id: cat-obscure}
+  - {url: assets/post_assets/cat-dog-recognition/images/compressed/cat.0.jpg, caption: "A picture of my cat, from a small test set that I made for myself.", id: mundis}
+  - {url: assets/post_assets/cat-dog-recognition/images/compressed/cat_9171_outlier.jpg, caption: "One of the 3 outliers I found in the given dataset. This is labeled as a cat.", id: outlier-picture}
 category: projects
 project_title: "GPU-trained CNN for distinguishing cats from dogs"
 thumb_text: A CNN network for distinguishing cats from dogs, inspired by a Kaggle competition

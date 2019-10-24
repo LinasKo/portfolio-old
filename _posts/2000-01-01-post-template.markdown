@@ -5,14 +5,14 @@ permalink: /:categories/:slug/
 main_title: Post Template
 start_date: 1999-12-30
 end_date:   2000-01-01
-thumb_image_url: assets/test_post/images/compressed/1-submarine.png
+thumb_image_url: assets/post_assets/test_post/images/compressed/1-submarine.png
 images:
-  - {url: assets/test_post/images/compressed/1-submarine.png, caption: "", id: test-image-1}
-  - {url: assets/test_post/images/compressed/1-submarine.png, caption: "", id: test-image-2}
-  - {url: assets/test_post/images/compressed/1-submarine.png, caption: "", id: test-image-3}
-  - {url: assets/test_post/images/compressed/1-submarine.png, caption: "", id: test-image-4}
-  - {url: assets/test_post/images/compressed/1-submarine.png, caption: "", id: test-image-5}
-  - {url: assets/test_post/images/compressed/1-submarine.png, caption: "", id: test-image-6}
+  - {url: assets/post_assets/test_post/images/compressed/1-submarine.png, caption: "", id: test-image-1}
+  - {url: assets/post_assets/test_post/images/compressed/1-submarine.png, caption: "", id: test-image-2}
+  - {url: assets/post_assets/test_post/images/compressed/1-submarine.png, caption: "", id: test-image-3}
+  - {url: assets/post_assets/test_post/images/compressed/1-submarine.png, caption: "", id: test-image-4}
+  - {url: assets/post_assets/test_post/images/compressed/1-submarine.png, caption: "", id: test-image-5}
+  - {url: assets/post_assets/test_post/images/compressed/1-submarine.png, caption: "", id: test-image-6}
 category: projects
 project_title: "Project Template"
 thumb_text: A project template to be reused

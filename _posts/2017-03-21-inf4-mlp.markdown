@@ -5,14 +5,14 @@ permalink: /:categories/:slug/
 main_title:  Inf4 - Machine Learning Practical
 start_date:   2016-09-21
 end_date:     2017-03-21
-thumb_image_url: assets/inf4-mlp/images/compressed/AUGM_FLIPPED_confusion_matrix.png
+thumb_image_url: assets/post_assets/inf4-mlp/images/compressed/AUGM_FLIPPED_confusion_matrix.png
 images:
-  - {url: assets/inf4-mlp/images/compressed/cifar10_preview.png, caption: "CIFAR-10 classes with 10 examples of each.", id: cifar10_preview}
-  - {url: assets/inf4-mlp/images/compressed/Batch_Normalization_a005_error_train.png, caption: "Comparison of training errors for densely connected neural networks using batch normalization and different number of layers.", id: Batch_Normalization_a005_error_train}
-  - {url: assets/inf4-mlp/images/compressed/elastic_deformation_pre.png, caption: "Examples of digits in the MNIST dataset before data augmentation is applied.", id: elastic_deformation_pre}
-  - {url: assets/inf4-mlp/images/compressed/accuracy_e200.png, caption: "Training (blue) and validation accuracy (purple) of a densely connected neural network, training for 200 epochs, displayed in TensorBoard.", id: accuracy_e200}
-  - {url: assets/inf4-mlp/images/compressed/sample_results.png, caption: "Network configuration and results file generated at the end of the run. Due to availability of numerous machines without GPUs, I ran numerous smaller training sessions instead of one large job. Output files like these served the purpose of conveying the results quickly.", id: sample_results}
-  - {url: assets/inf4-mlp/images/compressed/elastic_deformation_post.png, caption: "Digits from MNIST dataset with elastic deformation applied to them, to generate additional training samples, as part of Data Augmentation.", id: elastic_deformation_post}
+  - {url: assets/post_assets/inf4-mlp/images/compressed/cifar10_preview.png, caption: "CIFAR-10 classes with 10 examples of each.", id: cifar10_preview}
+  - {url: assets/post_assets/inf4-mlp/images/compressed/Batch_Normalization_a005_error_train.png, caption: "Comparison of training errors for densely connected neural networks using batch normalization and different number of layers.", id: Batch_Normalization_a005_error_train}
+  - {url: assets/post_assets/inf4-mlp/images/compressed/elastic_deformation_pre.png, caption: "Examples of digits in the MNIST dataset before data augmentation is applied.", id: elastic_deformation_pre}
+  - {url: assets/post_assets/inf4-mlp/images/compressed/accuracy_e200.png, caption: "Training (blue) and validation accuracy (purple) of a densely connected neural network, training for 200 epochs, displayed in TensorBoard.", id: accuracy_e200}
+  - {url: assets/post_assets/inf4-mlp/images/compressed/sample_results.png, caption: "Network configuration and results file generated at the end of the run. Due to availability of numerous machines without GPUs, I ran numerous smaller training sessions instead of one large job. Output files like these served the purpose of conveying the results quickly.", id: sample_results}
+  - {url: assets/post_assets/inf4-mlp/images/compressed/elastic_deformation_post.png, caption: "Digits from MNIST dataset with elastic deformation applied to them, to generate additional training samples, as part of Data Augmentation.", id: elastic_deformation_post}
 category: projects
 course_name: Inf4 - Machine Learning Practical
 project_title: "Image Classification using DNN and CNN"

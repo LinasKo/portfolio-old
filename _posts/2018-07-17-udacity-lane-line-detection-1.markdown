@@ -5,19 +5,19 @@ permalink: /:categories/:slug/
 main_title: Lane Line Detection - Basic
 start_date: 2018-07-14
 # end_date:   2018-07-17
-thumb_image_url: assets/udacity-lane-line-detection-1/videos/challenge_no_outlier_removal.gif
+thumb_image_url: assets/post_assets/udacity-lane-line-detection-1/videos/challenge_no_outlier_removal.gif
 images:
-  - {url: assets/udacity-lane-line-detection-1/videos/solidWhiteRight.gif, caption: "A snapshot of solidWhiteRight.mp4. solidYellowLeft.gif is very similar to this video, so I have decided to not include it.", id: solidWhiteRight}
+  - {url: assets/post_assets/udacity-lane-line-detection-1/videos/solidWhiteRight.gif, caption: "A snapshot of solidWhiteRight.mp4. solidYellowLeft.gif is very similar to this video, so I have decided to not include it.", id: solidWhiteRight}
 
-  - {url: assets/udacity-lane-line-detection-1/images/compressed/centroids-before.png, caption: "The line clusters (average lines) found before the second outlier removal. Here on the x-axis I have the y-intercepts and on the y-axis I have the slopes of the found hough lines, from the last 10 frames (400ms). The red circles show the K-means clusters of lines in hough space. You can see that many outliers are present.", id: centroids-before}
+  - {url: assets/post_assets/udacity-lane-line-detection-1/images/compressed/centroids-before.png, caption: "The line clusters (average lines) found before the second outlier removal. Here on the x-axis I have the y-intercepts and on the y-axis I have the slopes of the found hough lines, from the last 10 frames (400ms). The red circles show the K-means clusters of lines in hough space. You can see that many outliers are present.", id: centroids-before}
 
-  - {url: assets/udacity-lane-line-detection-1/images/compressed/centroids-after.png, caption: "The line clusters (average lines) found after the second outlier removal. Here on the x-axis I have the slopes and on the y-axis I have the y-intercepts of the found hough lines, from the last 10 frames (400ms). The red circles show the K-means clusters of lines in hough space. You can see that outliers that were far from the clusters have been removed. Also, you can see the previous cluster centres marked in darker red.", id: centroids-after}
+  - {url: assets/post_assets/udacity-lane-line-detection-1/images/compressed/centroids-after.png, caption: "The line clusters (average lines) found after the second outlier removal. Here on the x-axis I have the slopes and on the y-axis I have the y-intercepts of the found hough lines, from the last 10 frames (400ms). The red circles show the K-means clusters of lines in hough space. You can see that outliers that were far from the clusters have been removed. Also, you can see the previous cluster centres marked in darker red.", id: centroids-after}
 
-  - {url: assets/udacity-lane-line-detection-1/videos/challenge.gif, caption: "A snapshot of the problematic bit of challenge.mp4", id: challenge}
+  - {url: assets/post_assets/udacity-lane-line-detection-1/videos/challenge.gif, caption: "A snapshot of the problematic bit of challenge.mp4", id: challenge}
 
-  - {url: assets/udacity-lane-line-detection-1/videos/challenge_no_outlier_removal.gif, caption: "This is how the result would look like without any outlier removal or line averaging. This also makes it easy to see how the lane mask looks like - the trapezoid shape outside which points are ignored.", id: challenge_no_outlier_removal}
+  - {url: assets/post_assets/udacity-lane-line-detection-1/videos/challenge_no_outlier_removal.gif, caption: "This is how the result would look like without any outlier removal or line averaging. This also makes it easy to see how the lane mask looks like - the trapezoid shape outside which points are ignored.", id: challenge_no_outlier_removal}
 
-  - {url: assets/udacity-lane-line-detection-1/videos/challenge_result.gif, caption: "The result, applied to the challenge video.", id: challenge_result}
+  - {url: assets/post_assets/udacity-lane-line-detection-1/videos/challenge_result.gif, caption: "The result, applied to the challenge video.", id: challenge_result}
 
 category: projects
 project_title: "Simple lane line detection"

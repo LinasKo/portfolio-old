@@ -5,20 +5,20 @@ permalink: /:categories/:slug/
 main_title: Lane Line Detection - Advanced
 start_date: 2018-07-28
 end_date:   2018-09-13
-thumb_image_url: assets/udacity-lane-line-detection-2/videos/final_project_video.gif
+thumb_image_url: assets/post_assets/udacity-lane-line-detection-2/videos/final_project_video.gif
 images:
 
-  - {url: assets/udacity-lane-line-detection-2/videos/final_project_video.gif, caption: "A fragment of the final submission video", id: final_project_video}
+  - {url: assets/post_assets/udacity-lane-line-detection-2/videos/final_project_video.gif, caption: "A fragment of the final submission video", id: final_project_video}
 
-  - {url: assets/udacity-lane-line-detection-2/videos/challenge_video.gif, caption: "A clip of the challenge video", id: challenge_video}
+  - {url: assets/post_assets/udacity-lane-line-detection-2/videos/challenge_video.gif, caption: "A clip of the challenge video", id: challenge_video}
 
-  - {url: assets/udacity-lane-line-detection-2/images/compressed/line_curvature_example.png, caption: "An visual example of the sliding window algorithm, used to find the pixels belonging to each lane line. Here, polynomial functions were also fit to the lines, estimating the curvature.", id: line_curvature_example}
+  - {url: assets/post_assets/udacity-lane-line-detection-2/images/compressed/line_curvature_example.png, caption: "An visual example of the sliding window algorithm, used to find the pixels belonging to each lane line. Here, polynomial functions were also fit to the lines, estimating the curvature.", id: line_curvature_example}
 
-  - {url: assets/udacity-lane-line-detection-2/videos/best edge threshold sob25_m30-_L_d-09 closed harder_challenge_video.gif, caption: "The final threshold applied to the harder challenge video. Observe that the lane lines can be seen even with all the noise in the system.", id: thresh_harder_challenge_video}
+  - {url: assets/post_assets/udacity-lane-line-detection-2/videos/best edge threshold sob25_m30-_L_d-09 closed harder_challenge_video.gif, caption: "The final threshold applied to the harder challenge video. Observe that the lane lines can be seen even with all the noise in the system.", id: thresh_harder_challenge_video}
 
-  - {url: assets/udacity-lane-line-detection-2/videos/best edge threshold sob25_m30-_L_d-09 closed challenge_video.gif, caption: "The final threshold applied to the challenge video. Observe the line in the middle of the road, separating the two types of asphalt used in the road.", id: thresh_challenge_video}
+  - {url: assets/post_assets/udacity-lane-line-detection-2/videos/best edge threshold sob25_m30-_L_d-09 closed challenge_video.gif, caption: "The final threshold applied to the challenge video. Observe the line in the middle of the road, separating the two types of asphalt used in the road.", id: thresh_challenge_video}
 
-  - {url: assets/udacity-lane-line-detection-2/images/compressed/Variance-based line selection.png, caption: "Variance-based line correction. The green dot on the blue line is placed based not on the width at that point, but on a fixed distance from the green point on the right line", id: variance-based-line-selection}
+  - {url: assets/post_assets/udacity-lane-line-detection-2/images/compressed/Variance-based line selection.png, caption: "Variance-based line correction. The green dot on the blue line is placed based not on the width at that point, but on a fixed distance from the green point on the right line", id: variance-based-line-selection}
 
 category: projects
 project_title: "Advanced lane line detection"
