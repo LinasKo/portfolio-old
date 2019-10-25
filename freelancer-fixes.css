@@ -6,10 +6,10 @@ hr.star-primary:after {
 
 /* Navbar sizes */
 @media (min-width: 768px) {
-	.navbar-custom {
-    	padding: 15px 0;
+    .navbar-custom {
+        padding: 15px 0;
     }
-	.navbar-custom.affix {
-	    padding: 5px 0;
-	}
+    .navbar-custom.affix {
+        padding: 5px 0;
+    }
 }

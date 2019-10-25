@@ -2,81 +2,81 @@
 layout: default
 ---
 <div class="portfolio-modals">
-	<div class="modal-content">
-		<div class="container">
-		    <div class="row">
-		        <div class="col-lg-12">
-		            <div class="modal-body">
-						<div style="margin: 100px;">
-						</div>
+    <div class="modal-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="modal-body">
+                        <div style="margin: 100px;">
+                        </div>
 
-		                {% for img_obj in page.images %}
-		                    <div class="col-sm-4">
-		                        <div class="thumbnail thumbnail-card-no-text">
-		                            <div class="img-wrapper">
-		                                <a href="#{{ img_obj.id }}" class="portfolio-link" data-toggle="modal">
-		                                    <img src="{{ site.baseurl }}/{{ img_obj['url'] }}" class="img-responsive img-centered proj-img" alt="">
-		                                </a>
-		                            </div>
-		                        </div>
-		                    </div>
-		                {% endfor %}
+                        {% for img_obj in page.images %}
+                            <div class="col-sm-4">
+                                <div class="thumbnail thumbnail-card-no-text">
+                                    <div class="img-wrapper">
+                                        <a href="#{{ img_obj.id }}" class="portfolio-link" data-toggle="modal">
+                                            <img src="{{ site.baseurl }}/{{ img_obj['url'] }}" class="img-responsive img-centered proj-img" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
 
-		                {% if page.images %}
-		                    <p class="small" align="center">Click on the images to enlarge.</p>
-		                {% endif %}
+                        {% if page.images %}
+                            <p class="small" align="center">Click on the images to enlarge.</p>
+                        {% endif %}
 
-						<h1 class="post-title">{{ page.project_title }}</h1>
-						{% if page.tech %}
-							<p class="tech-list" align="center">
-							{% for tech in page.tech %}
-								{{ tech }}
-								{% if forloop.last == false %}
-									 •  
-								{% endif %}
-							{% endfor %}
-							</p>
-						{% endif %}
+                        <h1 class="post-title">{{ page.project_title }}</h1>
+                        {% if page.tech %}
+                            <p class="tech-list" align="center">
+                            {% for tech in page.tech %}
+                                {{ tech }}
+                                {% if forloop.last == false %}
+                                     •  
+                                {% endif %}
+                            {% endfor %}
+                            </p>
+                        {% endif %}
 
-		                {{ content }}
+                        {{ content }}
 
-		                <br><br>
-		                <ul class="list-inline item-details" align="center" style="margin-bottom: 0px">
-		                    <li>
-		                        Category:
-		                        <strong>{{ page.category | capitalize }}</strong>
-		                    </li>
-		                    <li>
-		                        Date:
-		                        <strong>
-		                        	{{ page.start_date | date: "%B %Y" }}
-			                        {% if page.end_date %}
-			                             - {{ page.end_date | date: "%B %Y" }}
-			                        {% endif %}
-			                    </strong>
-		                    </li>
-		                </ul>
+                        <br><br>
+                        <ul class="list-inline item-details" align="center" style="margin-bottom: 0px">
+                            <li>
+                                Category:
+                                <strong>{{ page.category | capitalize }}</strong>
+                            </li>
+                            <li>
+                                Date:
+                                <strong>
+                                    {{ page.start_date | date: "%B %Y" }}
+                                    {% if page.end_date %}
+                                         - {{ page.end_date | date: "%B %Y" }}
+                                    {% endif %}
+                                </strong>
+                            </li>
+                        </ul>
 
-		                {% if page.collaborators %}
-		                    <ul class="list-inline item-details" align="center" style="margin-top: 0px">
-		                        <li>
-		                            Collaborators:
-		                            <strong>
-			                            {% for person in page.collaborators %}
-			                                {{ person }}
-			                                {% if forloop.last == false %}
-			                                	,
-			                                {% endif %}
-			                            {% endfor %}
-		                            </strong>
-		                        </li>
-		                    </ul>
-		                {% endif %}
-		            </div>
-		        </div>
-		    </div>
-		</div>
-	</div>
+                        {% if page.collaborators %}
+                            <ul class="list-inline item-details" align="center" style="margin-top: 0px">
+                                <li>
+                                    Collaborators:
+                                    <strong>
+                                        {% for person in page.collaborators %}
+                                            {{ person }}
+                                            {% if forloop.last == false %}
+                                                ,
+                                            {% endif %}
+                                        {% endfor %}
+                                    </strong>
+                                </li>
+                            </ul>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% include plain_image_modals.html %}
