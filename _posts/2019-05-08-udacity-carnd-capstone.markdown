@@ -8,9 +8,21 @@ start_date: 2019-04-28
 end_date: present
 thumb_image_url: assets/post_assets/udacity-carnd-capstone/images/compressed/udacity-carla-cropped.png
 images:
-  - {url: assets/post_assets/udacity-carnd-capstone/images/compressed/udacity-carla-cropped.png, caption: "The car that the code will be tested on.", id: udacity-carla}
-  - {url: assets/post_assets/udacity-carnd-capstone/videos/stops-near-red.gif, caption: "The car stops after detecting a red light.", id: stops-near-red}
-  - {url: assets/post_assets/udacity-carnd-capstone/videos/car-resets-trajectory.gif, caption: "After a manual turn with Drive-By-Wire system off, the car resets to its initial trajectory.", id: car-resets-trajectory}
+  - {
+    url: "assets/post_assets/udacity-carnd-capstone/images/compressed/udacity-carla-cropped.png",
+    caption: "The car that the code will be tested on.",
+    id: "udacity-carla"
+  }
+  - {
+    url: "assets/post_assets/udacity-carnd-capstone/videos/stops-near-red.gif",
+    caption: "The car stops after detecting a red light.",
+    id: "stops-near-red"
+  }
+  - {
+    url: "assets/post_assets/udacity-carnd-capstone/videos/car-resets-trajectory.gif",
+    caption: "After a manual turn with Drive-By-Wire system off, the car resets to its initial trajectory.",
+    id: "car-resets-trajectory"
+  }
 category: projects
 project_title: "Programming a Self-Driving Car"
 thumb_text: Programming a Self-driving car with traffic light detection

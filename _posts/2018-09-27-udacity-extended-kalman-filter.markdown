@@ -7,12 +7,21 @@ start_date: 2018-09-25
 # end_date:   2018-09-27
 thumb_image_url: assets/post_assets/udacity-extended-kalman-filter/images/compressed/dataset_2_ekf_zoom.png
 images:
-
-  - {url: assets/post_assets/udacity-extended-kalman-filter/images/compressed/dataset_2_ekf_zoom.png, caption: "A zoom-in to a moment of estimating the path in the second dataset. Red and blue circles are lidar and radar data, and the green triangles are the EKF-estimated path.", id: dataset_2_ekf_zoom}
-
-  - {url: assets/post_assets/udacity-extended-kalman-filter/images/compressed/dataset_1.png, caption: "The first dataset, without EKF path estimation. Red and blue circles are lidar and radar data.", id: dataset_1}
-
-  - {url: assets/post_assets/udacity-extended-kalman-filter/images/compressed/dataset_2_ekf.png, caption: "The second dataset with EKF path estimations. Red and blue circles are lidar and radar data, and the green triangles are the EKF-estimated path.", id: dataset_2_ekf}
+  - {
+    url: "assets/post_assets/udacity-extended-kalman-filter/images/compressed/dataset_2_ekf_zoom.png",
+    caption: "A zoom-in to a moment of estimating the path in the second dataset. Red and blue circles are lidar and radar data, and the green triangles are the EKF-estimated path.",
+    id: "dataset_2_ekf_zoom"
+  }
+  - {
+    url: "assets/post_assets/udacity-extended-kalman-filter/images/compressed/dataset_1.png",
+    caption: "The first dataset, without EKF path estimation. Red and blue circles are lidar and radar data.",
+    id: "dataset_1"
+  }
+  - {
+    url: "assets/post_assets/udacity-extended-kalman-filter/images/compressed/dataset_2_ekf.png",
+    caption: "The second dataset with EKF path estimations. Red and blue circles are lidar and radar data, and the green triangles are the EKF-estimated path.",
+    id: "dataset_2_ekf"
+  }
 
 category: projects
 project_title: "Extended Kalman Filter for position estimation"

@@ -7,12 +7,36 @@ start_date:   2016-09-18
 end_date:     2016-11-24
 thumb_image_url: assets/post_assets/inf4-iar/images/compressed-processed/p_khepera.png
 images:
-  - {url: assets/post_assets/inf4-iar/images/compressed-processed/p_marked_map.png, caption: "Final map of the arena, used for Task 3. Nest is the official starting locations of the robot that it starts from (any orientation) and points are locations with 'food'. Robot needed to find food locations and bring the pellet to the nest. Pickup and dropping of the pellets were signaled by the arbiter with the press of the space bar.", id: p_marked_map}
-  - {url: assets/post_assets/inf4-iar/images/compressed-processed/p_khepera.png, caption: "The Khepera II robot from up close. The black patches on the front and sides are the IR sensors.", id: p_khepera}
-  - {url: assets/post_assets/inf4-iar/images/compressed-processed/p_ir_sensors.png, caption: "Sketch of IR sensors placement on the Khepera II robot.", id: p_ir_sensors}
-  - {url: assets/post_assets/inf4-iar/images/compressed-processed/p_architecture.png, caption: "Flowchart depicting different components of our system for controlling the robot.", id: p_architecture}
-  - {url: assets/post_assets/inf4-iar/images/compressed-processed/p_khepera_in_arena.png, caption: "Snapshot of Khepera navigating the arena.", id: p_khepera_in_arena}
-  - {url: assets/post_assets/inf4-iar/images/compressed-processed/p_wave_graph.png, caption: "Experiments of particle filter-based navigation. As soon as the map layout was fixed (Task 3), we created a map of the arena, so the particle filter localization could be used.", id: p_wave_graph}
+  - {
+    url: "assets/post_assets/inf4-iar/images/compressed-processed/p_marked_map.png",
+    caption: "Final map of the arena, used for Task 3. Nest is the official starting locations of the robot that it starts from (any orientation) and points are locations with 'food'. Robot needed to find food locations and bring the pellet to the nest. Pickup and dropping of the pellets were signaled by the arbiter with the press of the space bar.",
+    id: "p_marked_map"
+  }
+  - {
+    url: "assets/post_assets/inf4-iar/images/compressed-processed/p_khepera.png",
+    caption: "The Khepera II robot from up close. The black patches on the front and sides are the IR sensors.",
+    id: "p_khepera"
+  }
+  - {
+    url: "assets/post_assets/inf4-iar/images/compressed-processed/p_ir_sensors.png",
+    caption: "Sketch of IR sensors placement on the Khepera II robot.",
+    id: "p_ir_sensors"
+  }
+  - {
+    url: "assets/post_assets/inf4-iar/images/compressed-processed/p_architecture.png",
+    caption: "Flowchart depicting different components of our system for controlling the robot.",
+    id: "p_architecture"
+  }
+  - {
+    url: "assets/post_assets/inf4-iar/images/compressed-processed/p_khepera_in_arena.png",
+    caption: "Snapshot of Khepera navigating the arena.",
+    id: "p_khepera_in_arena"
+  }
+  - {
+    url: "assets/post_assets/inf4-iar/images/compressed-processed/p_wave_graph.png",
+    caption: "Experiments of particle filter-based navigation. As soon as the map layout was fixed (Task 3), we created a map of the arena, so the particle filter localization could be used.",
+    id: "p_wave_graph"
+  }
 category: projects
 course_name: Inf4 - Intelligent Autonomous Robotics
 project_title: "Strategically navigating a fixed arena with a Khepera II"

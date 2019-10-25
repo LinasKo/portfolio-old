@@ -7,12 +7,36 @@ start_date:   2016-02-16
 end_date:     2016-03-29
 thumb_image_url: assets/post_assets/inf4-av-2/images/compressed/feature_displacement.jpg
 images:
-  - {url: assets/post_assets/inf4-av-2/images/compressed/feature_displacement.jpg, caption: "FAST corner matching in consecutive frames of the horizontally moving plane. Consecutive frames are superimposed in gray and cyan.", id: feature_displacement}
-  - {url: assets/post_assets/inf4-av-2/images/compressed/x_motion_plane.png, caption: "A single image of horizontally moving plane.", id: x_motion_plane}
-  - {url: assets/post_assets/inf4-av-2/images/compressed/x_motion_colour.png, caption: "RMS errors in region of interest of the horizontally moving plane, also expressing the motion. Red regions represent the highest error and blue represent the lowest.", id: y_motion_colour}
-  - {url: assets/post_assets/inf4-av-2/images/compressed/z_static_plane_side_render.png, caption: "Pointcloud data of one motionless plane frame, as viewed from the side.", id: z_static_plane_side_render}
-  - {url: assets/post_assets/inf4-av-2/images/compressed/z_static_colour.png, caption: "RMS error of the region of interest of a motionless plane. Red regions represent the highest error and blue represent the lowest.", id: z_static_colour}
-  - {url: assets/post_assets/inf4-av-2/images/compressed/z_static_plane_region_of_interest.png, caption: "Region of interest of a plane, moving away from the camera. Typically, several empirical experiments would be performed when selecting the starting region of interest, to minimize the number of datapoints with missing depth values.", id: z_static_plane_region_of_interest}
+  - {
+    url: "assets/post_assets/inf4-av-2/images/compressed/feature_displacement.jpg",
+    caption: "FAST corner matching in consecutive frames of the horizontally moving plane. Consecutive frames are superimposed in gray and cyan.",
+    id: "feature_displacement"
+  }
+  - {
+    url: "assets/post_assets/inf4-av-2/images/compressed/x_motion_plane.png",
+    caption: "A single image of horizontally moving plane.",
+    id: "x_motion_plane"
+  }
+  - {
+    url: "assets/post_assets/inf4-av-2/images/compressed/x_motion_colour.png",
+    caption: "RMS errors in region of interest of the horizontally moving plane, also expressing the motion. Red regions represent the highest error and blue represent the lowest.",
+    id: "y_motion_colour"
+  }
+  - {
+    url: "assets/post_assets/inf4-av-2/images/compressed/z_static_plane_side_render.png",
+    caption: "Pointcloud data of one motionless plane frame, as viewed from the side.",
+    id: "z_static_plane_side_render"
+  }
+  - {
+    url: "assets/post_assets/inf4-av-2/images/compressed/z_static_colour.png",
+    caption: "RMS error of the region of interest of a motionless plane. Red regions represent the highest error and blue represent the lowest.",
+    id: "z_static_colour"
+  }
+  - {
+    url: "assets/post_assets/inf4-av-2/images/compressed/z_static_plane_region_of_interest.png",
+    caption: "Region of interest of a plane, moving away from the camera. Typically, several empirical experiments would be performed when selecting the starting region of interest, to minimize the number of datapoints with missing depth values.",
+    id: "z_static_plane_region_of_interest"
+  }
 category: projects
 course_name: Inf4 - Advanced Vision
 project_title: "3D Reconstruction Evaluation"

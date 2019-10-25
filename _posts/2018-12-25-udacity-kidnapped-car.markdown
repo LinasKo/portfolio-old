@@ -7,13 +7,21 @@ start_date: 2018-12-23
 end_date:   2019-01-10
 thumb_image_url: assets/post_assets/udacity-kidnapped-vehicle/images/compressed/running.png
 images:
-
-  - {url: assets/post_assets/udacity-kidnapped-vehicle/images/compressed/starting-state.png, caption: "The starting state of the simulator. You can see the map landmarks as black circles and sensor measurements (distance, yaw) as green lines. There is also a blue vehicle as the ground truth and the blue circle that shows the estimated location of the vehicle.", id: starting-state}
-
-  - {url: assets/post_assets/udacity-kidnapped-vehicle/images/compressed/running.png, caption: "The view of the simulator as the programs are running. The vehicle will make approximately 2 laps around a set trajectory. The visual difference from the starting state is that now you can see blue lines, that show landmark associations - if the lines are blue, then an observed landmark was correctly associated with a known landmark in the map. Otherwise the lines would be bright red, which there are none in the image.", id: running}
-
-  - {url: assets/post_assets/udacity-kidnapped-vehicle/images/compressed/with-outputs.png, caption: "Here's an example of the outputs seen in the terminal as particle filter is running. You can see the average weight of the particles and the weight of the most likely particle.", id: with-outputs}
-
+  - {
+    url: "assets/post_assets/udacity-kidnapped-vehicle/images/compressed/starting-state.png",
+    caption: "The starting state of the simulator. You can see the map landmarks as black circles and sensor measurements (distance, yaw) as green lines. There is also a blue vehicle as the ground truth and the blue circle that shows the estimated location of the vehicle.",
+    id: "starting-state"
+  }
+  - {
+    url: "assets/post_assets/udacity-kidnapped-vehicle/images/compressed/running.png",
+    caption: "The view of the simulator as the programs are running. The vehicle will make approximately 2 laps around a set trajectory. The visual difference from the starting state is that now you can see blue lines, that show landmark associations - if the lines are blue, then an observed landmark was correctly associated with a known landmark in the map. Otherwise the lines would be bright red, which there are none in the image.",
+    id: "running"
+  }
+  - {
+    url: "assets/post_assets/udacity-kidnapped-vehicle/images/compressed/with-outputs.png",
+    caption: "Here's an example of the outputs seen in the terminal as particle filter is running. You can see the average weight of the particles and the weight of the most likely particle.",
+    id: "with-outputs"
+  }
 category: projects
 project_title: "Localization of a Kidnapped Vehicle"
 thumb_text: Localization of a kidnapped vehicle using particle filters

@@ -7,9 +7,21 @@ start_date: 2019-03-18
 end_date:   2019-04-11
 thumb_image_url: assets/post_assets/udacity-path-planning/videos/react-to-other-change.gif
 images:
-  - {url: assets/post_assets/udacity-path-planning/videos/react-to-other-change.gif, caption: "The path planner reacts to another car changing a lane. Full video: https://www.youtube.com/watch?v=VBae1-AQLpY", id: react-to-other-change}
-  - {url: assets/post_assets/udacity-path-planning/videos/double-lane-change.gif, caption: "The path planner waits until it has enough space on the right, and then changes a lane. Because the right lane is free, it changes again. Full video: https://www.youtube.com/watch?v=VBae1-AQLpY", id: double-lane-change}
-  - {url: assets/post_assets/udacity-path-planning/images/compressed/sd-path-zoomed.png, caption: "On a straight road, this is what kind of s,d coordinates getFrenet sometimes returns, hence the difficulties I've had.", id: sd-path-zoomed}
+  - {
+    url: "assets/post_assets/udacity-path-planning/videos/react-to-other-change.gif",
+    caption: "The path planner reacts to another car changing a lane. Full video: https://www.youtube.com/watch?v=VBae1-AQLpY",
+    id: "react-to-other-change"
+  }
+  - {
+    url: "assets/post_assets/udacity-path-planning/videos/double-lane-change.gif",
+    caption: "The path planner waits until it has enough space on the right, and then changes a lane. Because the right lane is free, it changes again. Full video: https://www.youtube.com/watch?v=VBae1-AQLpY",
+    id: "double-lane-change"
+  }
+  - {
+    url: "assets/post_assets/udacity-path-planning/images/compressed/sd-path-zoomed.png",
+    caption: "On a straight road, this is what kind of s,d coordinates getFrenet sometimes returns, hence the difficulties I've had.",
+    id: "sd-path-zoomed"
+  }
 category: projects
 project_title: "Path Planning of a simulated car (with faulty simulator)"
 thumb_text: Path Planning of a simulated car, with faulty simulator.

@@ -7,12 +7,36 @@ start_date:   2016-01-15
 end_date:     2016-02-15
 thumb_image_url: assets/post_assets/inf4-av-1/images/compressed/thumbnails/gaussian_subtractor_cropped.png
 images:
-  - {url: assets/post_assets/inf4-av-1/images/compressed/centroid.png, caption: "Detected motion of a person and the centroid. This is how the final result that uses a Gaussian model of the background looked under the hood.", id: centroid}
-  - {url: assets/post_assets/inf4-av-1/images/compressed/gaussian_detection.png, caption: "Detected motion of a person and the centroid, also using the Gaussian background model. This time, the detection boundary and centroid are superimposed on the input image.", id: gaussian_detection}
-  - {url: assets/post_assets/inf4-av-1/images/compressed/gaussian_error.png, caption: "The distance between two consecutive centroids (or potentially the median difference of more), showing large motions or outliers.", id: gaussian_error}
-  - {url: assets/post_assets/inf4-av-1/images/compressed/masks.png, caption: "Mask of the room, before being applied to the images. The static mask can be used as the viewpoint of the camera never changes.", id: masks}
-  - {url: assets/post_assets/inf4-av-1/images/compressed/gaussian_subtractor.png, caption: "Background subtraction, using the Gaussian background model, before applying morphological transformations.", id: gaussian_subtractor}
-  - {url: assets/post_assets/inf4-av-1/images/compressed/inter_frame_motion.png, caption: "Regions of motion, detected using simple background subtraction, with morphological transformations applied.", id: inter_frame_motion}
+  - {
+    url: "assets/post_assets/inf4-av-1/images/compressed/centroid.png",
+    caption: "Detected motion of a person and the centroid. This is how the final result that uses a Gaussian model of the background looked under the hood.",
+    id: "centroid"
+  }
+  - {
+    url: "assets/post_assets/inf4-av-1/images/compressed/gaussian_detection.png",
+    caption: "Detected motion of a person and the centroid, also using the Gaussian background model. This time, the detection boundary and centroid are superimposed on the input image.",
+    id: "gaussian_detection"
+  }
+  - {
+    url: "assets/post_assets/inf4-av-1/images/compressed/gaussian_error.png",
+    caption: "The distance between two consecutive centroids (or potentially the median difference of more), showing large motions or outliers.",
+    id: "gaussian_error"
+  }
+  - {
+    url: "assets/post_assets/inf4-av-1/images/compressed/masks.png",
+    caption: "Mask of the room, before being applied to the images. The static mask can be used as the viewpoint of the camera never changes.",
+    id: "masks"
+  }
+  - {
+    url: "assets/post_assets/inf4-av-1/images/compressed/gaussian_subtractor.png",
+    caption: "Background subtraction, using the Gaussian background model, before applying morphological transformations.",
+    id: "gaussian_subtractor"
+  }
+  - {
+    url: "assets/post_assets/inf4-av-1/images/compressed/inter_frame_motion.png",
+    caption: "Regions of motion, detected using simple background subtraction, with morphological transformations applied.",
+    id: "inter_frame_motion"
+  }
 category: projects
 course_name: Inf4 - Advanced Vision
 project_title: "Person Detection in series of images"
