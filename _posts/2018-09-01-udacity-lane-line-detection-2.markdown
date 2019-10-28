@@ -23,12 +23,12 @@ images:
     id: "line_curvature_example"
   }
   - {
-    url: "assets/post_assets/udacity-lane-line-detection-2/videos/best edge threshold sob25_m30-_L_d-09 closed harder_challenge_video.gif",
+    url: "assets/post_assets/udacity-lane-line-detection-2/videos/best__edge__threshold__sob25_m30-_L_d-09__closed__harder_challenge_video.gif",
     caption: "The final threshold applied to the harder challenge video. Observe that the lane lines can be seen even with all the noise in the system.",
     id: "thresh_harder_challenge_video"
   }
   - {
-    url: "assets/post_assets/udacity-lane-line-detection-2/videos/best edge threshold sob25_m30-_L_d-09 closed challenge_video.gif",
+    url: "assets/post_assets/udacity-lane-line-detection-2/videos/best__edge__threshold__sob25_m30-_L_d-09__closed__challenge_video.gif",
     caption: "The final threshold applied to the challenge video. Observe the line in the middle of the road, separating the two types of asphalt used in the road.",
     id: "thresh_challenge_video"
   }
