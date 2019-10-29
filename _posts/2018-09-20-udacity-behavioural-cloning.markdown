@@ -5,7 +5,7 @@ permalink: /:categories/:slug/
 main_title: Behavioural Cloning to Drive a Simulated Vehicle
 start_date: 2018-09-16
 end_date:   2018-10-13
-thumb_image_url: assets/post_assets/udacity-behavioural-cloning/videos/final_submission.gif
+thumb_image_url: assets/post_assets/udacity-behavioural-cloning/videos/gif/final_submission.gif
 images:
   - {
     url: "assets/post_assets/udacity-behavioural-cloning/images/compressed/left_img.jpg",
@@ -13,7 +13,7 @@ images:
     id: "left_img"
   }
   - {
-    url: "assets/post_assets/udacity-behavioural-cloning/videos/final_submission.gif",
+    url: "assets/post_assets/udacity-behavioural-cloning/videos/gif/final_submission.gif",
     caption: "A snapshot of the final submission video, showing a feed of the front camera as the car is driving through the course autonomously.",
     id: "final_submission"
   }

@@ -5,10 +5,10 @@ permalink: /:categories/:slug/
 main_title: PID Control
 start_date: 2019-04-06
 <!-- end_date:   2019-04-11 -->
-thumb_image_url: assets/post_assets/udacity-pid-control/videos/calibrating-PID.gif
+thumb_image_url: assets/post_assets/udacity-pid-control/videos/gif/calibrating-PID.gif
 images:
   - {
-    url: "assets/post_assets/udacity-pid-control/videos/calibrating-PID.gif",
+    url: "assets/post_assets/udacity-pid-control/videos/gif/calibrating-PID.gif",
     caption: "PID controller being calibrated. You can see the car being reset as it drives off the track and the lateral error becomes too large. Full video: https://www.youtube.com/watch?v=lqNxq_D42Hc.",
     id: "calibrating-pid"
   }
@@ -18,7 +18,7 @@ images:
     id: "car-stuck"
   }
   - {
-    url: "assets/post_assets/udacity-pid-control/videos/calibrated-PID.gif",
+    url: "assets/post_assets/udacity-pid-control/videos/gif/calibrated-PID.gif",
     caption: "Fully calibrated PID control of the car. Full video: https://www.youtube.com/watch?v=fgGJAvOK36g.",
     id: "calibrated-pid"
   }

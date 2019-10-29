@@ -5,10 +5,10 @@ permalink: /:categories/:slug/
 main_title: Policy Gradient learning for Atari Pong
 start_date:   2018-03-12
 end_date:     2018-04-05
-thumb_image_url: assets/post_assets/karpathy-pong/videos/trained-pong.gif
+thumb_image_url: assets/post_assets/karpathy-pong/videos/gif/trained-pong.gif
 images:
   - {
-    url: "assets/post_assets/karpathy-pong/videos/trained-pong.gif",
+    url: "assets/post_assets/karpathy-pong/videos/gif/trained-pong.gif",
     caption: "The visualisation of the Atari Pong game being played during training. For simplicity, the agent (right) can move up or down, but not sit idle.",
     id: "game-visualization"
   }

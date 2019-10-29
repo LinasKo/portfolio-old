@@ -5,10 +5,10 @@ permalink: /:categories/:slug/
 main_title: Lane Line Detection - Basic
 start_date: 2018-07-14
 # end_date:   2018-07-17
-thumb_image_url: assets/post_assets/udacity-lane-line-detection-1/videos/challenge_no_outlier_removal.gif
+thumb_image_url: assets/post_assets/udacity-lane-line-detection-1/videos/gif/challenge_no_outlier_removal.gif
 images:
   - {
-    url: "assets/post_assets/udacity-lane-line-detection-1/videos/solidWhiteRight.gif",
+    url: "assets/post_assets/udacity-lane-line-detection-1/videos/gif/solidWhiteRight.gif",
     caption: "A snapshot of solidWhiteRight.mp4. solidYellowLeft.gif is very similar to this video, so I have decided to not include it.",
     id: "solidWhiteRight"
   }
@@ -23,17 +23,17 @@ images:
     id: "centroids-after"
   }
   - {
-    url: "assets/post_assets/udacity-lane-line-detection-1/videos/challenge.gif",
+    url: "assets/post_assets/udacity-lane-line-detection-1/videos/gif/challenge.gif",
     caption: "A snapshot of the problematic bit of challenge.mp4",
     id: "challenge"
   }
   - {
-    url: "assets/post_assets/udacity-lane-line-detection-1/videos/challenge_no_outlier_removal.gif",
+    url: "assets/post_assets/udacity-lane-line-detection-1/videos/gif/challenge_no_outlier_removal.gif",
     caption: "This is how the result would look like without any outlier removal or line averaging. This also makes it easy to see how the lane mask looks like - the trapezoid shape outside which points are ignored.",
     id: "challenge_no_outlier_removal"
   }
   - {
-    url: "assets/post_assets/udacity-lane-line-detection-1/videos/challenge_result.gif",
+    url: "assets/post_assets/udacity-lane-line-detection-1/videos/gif/challenge_result.gif",
     caption: "The result, applied to the challenge video.",
     id: "challenge_result"
   }

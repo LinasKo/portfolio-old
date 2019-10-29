@@ -14,12 +14,12 @@ images:
     id: "udacity-carla"
   }
   - {
-    url: "assets/post_assets/udacity-carnd-capstone/videos/stops-near-red.gif",
+    url: "assets/post_assets/udacity-carnd-capstone/videos/gif/stops-near-red.gif",
     caption: "The car stops after detecting a red light.",
     id: "stops-near-red"
   }
   - {
-    url: "assets/post_assets/udacity-carnd-capstone/videos/car-resets-trajectory.gif",
+    url: "assets/post_assets/udacity-carnd-capstone/videos/gif/car-resets-trajectory.gif",
     caption: "After a manual turn with Drive-By-Wire system off, the car resets to its initial trajectory.",
     id: "car-resets-trajectory"
   }

@@ -1,0 +1,10 @@
+{% assign extension = content.src | split: "." | last %}
+{% if extension == "mp4" %}
+<video width="{{ content.width }}" height="{{ content.height }}" autoplay class="proj-img">
+  <source src="{{ content.src }}" type="video/mp4">
+</video>
+{% else %}
+<img src="{{ content.src }}" class="img-responsive proj-img">
+{% endif %}
+
+<!-- <img src="{{ content.src }}" class="img-responsive proj-img"> -->
