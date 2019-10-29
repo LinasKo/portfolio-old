@@ -14,9 +14,12 @@ layout: default
                             <div class="col-sm-4">
                                 <div class="thumbnail thumbnail-card-no-text">
                                     <div class="img-wrapper">
+
                                         <a href="#{{ img_obj.id }}" class="portfolio-link" data-toggle="modal">
-                                            <img src="{{ site.baseurl }}/{{ img_obj['url'] }}" class="img-responsive proj-img" alt="">
+                                            {% capture img_src %} {{ site.baseurl }}/{{ img_obj['url'] }} {% endcapture %}
+                                            {% include video_or_image.html src=img_src %}
                                         </a>
+
                                     </div>
                                 </div>
                             </div>

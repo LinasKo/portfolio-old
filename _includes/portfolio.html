@@ -14,10 +14,10 @@
                         <div class="col-sm-4 thumbnail-card">
                             <div class="thumbnail">
                                 <div class="img-wrapper">
-                                    <!-- <a href="#{{ post.modalID }}" class="portfolio-link" data-toggle="modal"> -->
-                                    <a href="{{ site.baseurl }}/{{ post.category }}/{{ post.slug }}">
 
-                                        <img src="{{ site.baseurl }}/{{ post.thumb_image_url }}" class="img-responsive proj-img" alt="">
+                                    <a href="{{ site.baseurl }}/{{ post.category }}/{{ post.slug }}">
+                                        {% capture img_src %} {{ site.baseurl }}/{{ post.thumb_image_url }} {% endcapture %}
+                                        {% include video_or_image.html src=img_src %}
 
                                         {% case post.size %}
                                             {% when "extra-small" %}
@@ -36,6 +36,7 @@
 
                                         <p class="image-fade-text">- more -</p>
                                     </a>
+
                                 </div>
                                 <p align="center" class="small caption-text">{{ post.project_title }}</p>
                             </div>
