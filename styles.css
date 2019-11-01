@@ -113,6 +113,16 @@ span.skills {
     min-height: 100%; /* optional: if you want the smallest images to fill the .thumbnail */
 }
 
+.img-wrapper a {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  text-align:center;
+}
+
 .size-logo{
     position: absolute;
     top: 4px;
@@ -233,4 +243,12 @@ table.md-table td {
 /* Modals */
 .modal-body button.btn-default {
     font-size: 18px;
+}
+
+/* Videos */
+/* Some tips: https://allthingssmitty.com/2016/12/12/responsive-video-resizing/ */
+/* Note: his second piece of advice doesn't work */
+video {
+  height: 100%;
+  transform: translate(-12.5%, 0%);  /* I have no clue why this works */
 }

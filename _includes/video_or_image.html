@@ -1,14 +1,14 @@
 
 {% assign extension = include.src | split: "." | last | rstrip %}
 {% if extension == "webm" %}
-<!-- Experimental -->
-<video class="proj-img" autoplay loop muted plays-inline>
+<video class="proj-img" autoplay loop muted playsinline>
   <source src="{{ include.src }}" width="320" height="240" type="video/webm">
 </video>
 {% elsif extension == "mp4" %}
-<!-- Experimental -->
-<video class="proj-img" autoplay loop muted plays-inline>
+<!-- Do not use this for now!!! "Decoder may not have the capability to handle the requested video format with YUV444 chroma subsampling" -->
+<video class="proj-img" autoplay loop muted playsinline>
   <source src="{{ include.src }}" width="320" height="240" type="video/mp4">
+      MP4 not supported!
 </video>
 {% else %}
 <img src="{{ include.src }}" class="img-responsive proj-img">
