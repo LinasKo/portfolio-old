@@ -1,15 +1,15 @@
-<!--
+
 {% assign extension = include.src | split: "." | last | rstrip %}
 {% if extension == "webm" %}
-<video class="proj-img" autoplay>
-  <source src="{{ include.src }}" type="video/webm">
+<!-- Experimental -->
+<video class="proj-img" autoplay loop muted plays-inline>
+  <source src="{{ include.src }}" width="320" height="240" type="video/webm">
 </video>
 {% elsif extension == "mp4" %}
-<video class="proj-img" autoplay>
-  <source src="{{ include.src }}" type="video/mp4">
+<!-- Experimental -->
+<video class="proj-img" autoplay loop muted plays-inline>
+  <source src="{{ include.src }}" width="320" height="240" type="video/mp4">
 </video>
 {% else %}
 <img src="{{ include.src }}" class="img-responsive proj-img">
 {% endif %}
- -->
-<img src="{{ include.src }}" class="img-responsive proj-img">

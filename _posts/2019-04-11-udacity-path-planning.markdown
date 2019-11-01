@@ -5,7 +5,7 @@ permalink: /:categories/:slug/
 main_title: Path Planning
 start_date: 2019-03-18
 end_date:   2019-04-11
-thumb_image_url: assets/post_assets/udacity-path-planning/videos/gif/react-to-other-change.gif
+thumb_image_url: assets/post_assets/udacity-path-planning/videos/webm/react-to-other-change.webm
 images:
   - {
     url: "assets/post_assets/udacity-path-planning/videos/gif/react-to-other-change.gif",
