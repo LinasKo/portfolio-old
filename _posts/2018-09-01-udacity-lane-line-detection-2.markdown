@@ -33,7 +33,7 @@ images:
     id: "thresh_challenge_video"
   }
   - {
-    url: "assets/post_assets/udacity-lane-line-detection-2/images/compressed/Variance-based line selection.png",
+    url: "assets/post_assets/udacity-lane-line-detection-2/images/compressed/Variance-based__line__selection.png",
     caption: "Variance-based line correction. The green dot on the blue line is placed based not on the width at that point, but on a fixed distance from the green point on the right line",
     id: "variance-based-line-selection"
   }
