@@ -9,9 +9,10 @@ html {
 }
 
 #portrait {
-  max-height: 28vh;
+  max-height: 26vh;
   margin-bottom: 0px;
   position: relative;
+  border-radius: 1000px;
 }
 #portrait-frame {
   border: 4px solid var(--main-color-3);
