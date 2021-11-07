@@ -12,7 +12,7 @@ html {
   max-height: 26vh;
   margin-bottom: 0px;
   position: relative;
-  border-radius: 1000px;
+  border-radius: 1001px;
 }
 #portrait-frame {
   border: 4px solid var(--main-color-3);
